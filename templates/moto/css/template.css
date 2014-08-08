@@ -233,7 +233,7 @@ section.icons{
     position: fixed;
     bottom:50px;
     right:0px;
-    left:0px;
+    left:28px;
 }
 
 /* СЕКЦИЯ: Нижнее меню */
@@ -243,4 +243,25 @@ section.menu_bottom{
     bottom:0px;
     right:0px;
     left:0px;
+}
+section.icons .nav_bottom li {
+    width:20%;
+}
+.nav_bottom {
+    width: 100%;
+}
+.nav_bottom ul{
+    width: 100%;
+}
+.icon_1{
+    border: 1px solid #5b5150;
+    width: 63px;
+    height: 63px;
+    float: left;
+}
+.nav_bottom ul li h4{
+    float: left;
+    font-size: 22px;
+    line-height: 24px;
+
 }

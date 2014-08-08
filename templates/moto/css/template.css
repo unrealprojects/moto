@@ -324,7 +324,7 @@ section.icons .nav_bottom li:nth-of-type(5) {
     font-family:bebas_neue_cyrillicregular;
     font-weight: 400;
 }
-.icon_div{
+section.icons nav.nav_bottom .icon_1 span{
     font-size: 33px;
     display: block;
     text-align: center;
@@ -334,13 +334,13 @@ section.icons .nav_bottom li:nth-of-type(5) {
     font-family: bebas_neue_cyrillicregular;
     font-weight: 400;
 }
-.icon_div_e {
+section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 img {
     display: block;
     margin-top:18px;
     margin-left:8px ;
 }
 
-.icon_div_m {
+section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 img {
     display: block;
     margin-top:18px;
     margin-left:6px ;

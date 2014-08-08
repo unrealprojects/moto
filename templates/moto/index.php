@@ -97,7 +97,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
-                                <span class="icon_div">?</span>
+                                <span>?</span>
                             </div>
                             <h4>РЕГИСТРАТОР<br> ИЛИ ЭКШН-КАМЕРА?</h4>
                         </a>
@@ -105,7 +105,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
-                                <span class="icon_div">+2</span>
+                                <span>+2</span>
                             </div>
                             <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
                         </a>
@@ -113,7 +113,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
-                                <img class="icon_div_e" src="templates/moto/images/Eye.png" alt="Статьи и отзывы">
+                                <img src="templates/moto/images/Eye.png" alt="Статьи и отзывы">
                             </div>
                             <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
                         </a>
@@ -121,7 +121,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
-                                <span class="icon_div">50%</span>
+                                <span>50%</span>
                             </div>
                             <h4>СКИДКА<br> НА УСТАНОВКУ</h4>
                         </a>
@@ -129,7 +129,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
-                                <img class="icon_div_m" src="templates/moto/images/moto_icon.png" alt="Бесплатный тест-драйв">
+                                <img src="templates/moto/images/moto_icon.png" alt="Бесплатный тест-драйв">
                             </div>
                             <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                         </a>

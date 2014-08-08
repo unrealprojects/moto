@@ -131,14 +131,14 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
         <!-- СЕКЦИЯ: Нижнее меню -->
         <section class="menu_bottom">
             <nav class="nav-left">
-                <a href="">
+                <a href="#">
                     <img src="templates/moto/images/gc-logo.png" alt="Мотовидеорегистратор">
                 </a>
                 <ul>
                     <li><a href="/">ИНСТРУКЦИЯ</a></li>
-                    <li class="list_dot"><a href="/">ПАРТНЁРЫ</a></li>
-                    <li class="list_dot"><a href="/">ДОСТАВКА И ОПЛАТА7</a></li>
-                    <li class="list_dot"><a href="/">КОНТАКТЫ</a></li>
+                    <li class="list_dot"><a href="#">ПАРТНЁРЫ</a></li>
+                    <li class="list_dot"><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li class="list_dot"><a href="#">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 

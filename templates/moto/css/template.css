@@ -62,7 +62,7 @@ nav li a{
 }
 
 nav{
-    display: inline-block;
+    float: left;
 }
 
 nav ul{
@@ -221,6 +221,7 @@ section.order form p{
     color: #888888;
     text-transform: uppercase;
     text-align: center;
+    line-height: 18px;
 }
 
 section.order h3{
@@ -246,6 +247,28 @@ section.icons{
     left:28px;
 }
 
+section.icons .nav_bottom li {
+    width:20%;
+}
+.nav_bottom {
+    width: 100%;
+}
+.nav_bottom ul{
+    width: 100%;
+}
+.icon_1{
+    border: 1px solid #5b5150;
+    width: 63px;
+    height: 63px;
+    float: left;
+}
+.nav_bottom ul li h4{
+    float: left;
+    font-size: 22px;
+    line-height: 24px;
+
+}
+
 /* СЕКЦИЯ: Нижнее меню */
 
 section.menu_bottom{
@@ -253,8 +276,78 @@ section.menu_bottom{
     bottom:0px;
     right:0px;
     left:0px;
+
+    border-top:1px solid #1d1d1d;
+    background: #121212;
+    padding:18px 30px 0px 30px;
 }
 
+section.menu_bottom nav.nav-right{
+    float:right;
+}
+
+section.menu_bottom nav.nav-right li{
+    margin-bottom: 16px;
+}
+
+section.menu_bottom nav.nav-left img{
+    margin-right: 35px;
+}
+
+section.menu_bottom nav.nav-left>a{
+    display: block;
+    float:left;
+}
+section.menu_bottom nav.nav-left a{
+    padding-bottom: 17px;
+}
+
+section.menu_bottom nav.nav-left li.list_dot {
+    margin-left: 35px;
+    padding-left: 12px;
+    margin-right: 0px;
+}
+
+section.menu_bottom nav.nav-left li a:hover{
+    border-bottom:1px solid #ac8019;
+}
+
+section.menu_bottom nav.nav-left li {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* МЕДИА: 1280 */
 
 @media (max-width:1280px) {
     /*  СЕКЦИЯ: Логотип */
@@ -293,25 +386,6 @@ section.menu_bottom{
         position: fixed;
         top: 104px;
     }
-}}
-section.icons .nav_bottom li {
-    width:20%;
 }
-.nav_bottom {
-    width: 100%;
-}
-.nav_bottom ul{
-    width: 100%;
-}
-.icon_1{
-    border: 1px solid #5b5150;
-    width: 63px;
-    height: 63px;
-    float: left;
-}
-.nav_bottom ul li h4{
-    float: left;
-    font-size: 22px;
-    line-height: 24px;
 
-}
+

@@ -13,7 +13,7 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'unrealprojects';
+	public $user = 'root';
 	public $password = '';
 	public $db = 'moto';
 	public $dbprefix = 'j_';

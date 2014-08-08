@@ -1,3 +1,10 @@
+@font-face {
+    font-family: BebaNeueCyrillic; /* Гарнитура шрифта */
+    src: url(../fonts/Bebas_Neue_Cyrillic.ttf); /* Для IE5-8 */
+    src: local(pompadur), url(../fonts/Bebas_Neue_Cyrillic.ttf); /* Для остальных браузеров */
+}
+
+
 article,
 aside,
 details,
@@ -266,7 +273,25 @@ section.icons .nav_bottom li {
     float: left;
     font-size: 22px;
     line-height: 24px;
-
+    margin-left: 16px;
+    margin-top: 8px;
+    font-family:BebaNeueCyrillic;
+    font-weight: 400;
+}
+.icon_div{
+    font-size: 32px;
+    display: block;
+    text-align: center;
+    top: 5px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: BebaNeueCyrillic;
+    font-weight: 400;
+}
+.icon_div_em {
+    display: block;
+    margin-top:18px;
+    margin-left:8px ;
 }
 
 /* СЕКЦИЯ: Нижнее меню */

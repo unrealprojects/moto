@@ -24,7 +24,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-	<jdoc:include type="head" />
+    <jdoc:include type="head" />
 </head>
 <body>
 
@@ -96,31 +96,41 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                 <ul>
                     <li>
                         <a href="#">
-                            <div class="icon_1"></div>
+                            <div class="icon_1">
+                                <span class="icon_div">?</span>
+                            </div>
                             <h4>РЕГИСТРАТОР<br> ИЛИ ЭКШН-КАМЕРА?</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1"></div>
+                            <div class="icon_1">
+                                <span class="icon_div">+2</span>
+                            </div>
                             <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1"></div>
+                            <div class="icon_1">
+                                <img class="icon_div_em" src="templates/moto/images/Eye.png" alt="Статьи и отзывы">
+                            </div>
                             <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1"></div>
+                            <div class="icon_1">
+                                <span class="icon_div">50%</span>
+                            </div>
                             <h4>СКИДКА<br> НА УСТАНОВКУ</h4>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1"></div>
+                            <div class="icon_1">
+                                <img class="icon_div_em" src="templates/moto/images/moto_icon.png" alt="Бесплатный тест-драйв">
+                            </div>
                             <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                         </a>
                     </li>

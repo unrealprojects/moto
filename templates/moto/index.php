@@ -113,6 +113,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
+                                <span></span>
                             </div>
                             <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
                         </a>
@@ -128,6 +129,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     <li>
                         <a href="#">
                             <div class="icon_1">
+                                <span></span>
                             </div>
                             <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                         </a>

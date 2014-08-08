@@ -84,6 +84,9 @@ body{
     top: 0px;
     opacity: 0.6;
     border-spacing: 0;
+
+    animation: Rotate 100s;
+    -webkit-animation: Rotate 100s;
 }
 
 nav li a{
@@ -267,6 +270,7 @@ section.order form input[type=submit]{
     font-size: 18px;
     color:#ac8019;
     width: 150px;
+    cursor:pointer;
 }
 
 section.order form p{
@@ -350,7 +354,15 @@ section.icons .nav_bottom li:nth-of-type(5) {
     font-weight: 400;
 }
 
-.nav_bottom ul li :hover h4{
+section.icons  .nav_bottom ul li :hover h4{
+    color:#ac8019;
+}
+
+section.icons  .nav_bottom ul li :hover .icon_1{
+    border: 1px solid #ac8019;
+}
+
+section.icons .nav_bottom ul li :hover .icon_1 span{
     color:#ac8019;
 }
 
@@ -364,7 +376,7 @@ section.icons nav.nav_bottom .icon_1 span{
     font-family: bebas_neue_cyrillicregular;
     font-weight: 400;
 }
-section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 {
+section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 span {
     display: block;
     margin-top:18px;
     margin-left:8px ;
@@ -373,7 +385,7 @@ section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 {
     height:27px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 {
+section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 span {
     display: block;
     margin-top:18px;
     margin-left:6px;
@@ -382,11 +394,11 @@ section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 {
     height:27px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(3):hover` .icon_1 {
+section.icons nav.nav_bottom li:nth-of-type(3):hover .icon_1 span {
     background: url('../images/Eye_color.png');
 }
 
-section.icons nav.nav_bottom li:nth-of-type(5) .icon_1:hover {
+section.icons nav.nav_bottom li:nth-of-type(5):hover .icon_1 span {
     background: url('../images/moto_icon_color.png');
 }
 
@@ -423,7 +435,7 @@ section.menu_bottom nav.nav-left>a{
     float:left;
 }
 section.menu_bottom nav.nav-left a{
-    padding-bottom: 17px;
+    padding-bottom: 16px;
     color: #888888;
 }
 
@@ -442,7 +454,7 @@ section.menu_bottom nav.nav-left li a:hover{
     border-bottom:1px solid #ac8019;
     position: relative;
     top: -6px;
-    padding-bottom: 23px;
+    padding-bottom: 25px;
 }
 
 section.menu_bottom nav.nav-left li {
@@ -744,3 +756,32 @@ section.menu_bottom nav.nav-left li {
 
 
 
+@keyframes Rotate{
+    from {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes Rotate{
+    from {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+    }
+}

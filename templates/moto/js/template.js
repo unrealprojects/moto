@@ -18,7 +18,7 @@
 
 
         /* Вращение фона*/
-
+/*
         $('.rotate').animate({  borderSpacing: 10000 }, {
             step: function(now,fx) {
                 $(this).css('-webkit-transform','rotate('+now+'deg)');
@@ -28,7 +28,7 @@
             duration:400000
         },'linear');
 
-
+*/
 
 
 	});

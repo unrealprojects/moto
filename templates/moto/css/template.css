@@ -346,7 +346,7 @@ section.icons .nav_bottom li:nth-of-type(5) {
 }
 .nav_bottom ul li h4{
     float: left;
-    font-size: 22px;
+    font-size: 23px;
     line-height: 24px;
     margin-left: 16px;
     margin-top: 8px;
@@ -424,6 +424,12 @@ section.menu_bottom nav.nav-right{
 
 section.menu_bottom nav.nav-right li{
     margin-bottom: 16px;
+    color: #888888;
+}
+
+section.menu_bottom nav.nav-right li.list_dot:before{
+    color: #888888;
+    margin-right: 15px;
 }
 
 section.menu_bottom nav.nav-left img{
@@ -454,12 +460,57 @@ section.menu_bottom nav.nav-left li a:hover{
     border-bottom:1px solid #ac8019;
     position: relative;
     top: -6px;
-    padding-bottom: 25px;
+    padding-bottom: 22px;
 }
 
 section.menu_bottom nav.nav-left li {
     margin-right: 5px;
 }
+
+
+section.menu_bottom nav.nav-right .list_social_f{
+    background: url('../images/facebook.png');
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+section.menu_bottom nav.nav-right .list_social_t{
+    background: url('../images/twitter.png');
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

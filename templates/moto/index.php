@@ -154,9 +154,9 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
 
             <nav class="nav-right">
                 <ul>
-                    <li class="list_social_f"><a href="/"></a></li>
-                    <li class="list_social_t"><a href="/"></a></li>
-                    <li class="list_dot"><a href="/">© 2014 FOXeye GC1</a></li>
+                    <a href="/"><li class="list_social_f"></li></a>
+                    <a href="/"><li class="list_social_t"></li></a>
+                    <li class="list_dot">© 2014 FOXeye GC1</li>
                 </ul>
             </nav>
         </section>

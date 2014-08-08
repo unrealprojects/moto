@@ -33,8 +33,12 @@ video {
 
 input:active,input:focus{
     outline: none !important;
+    border:1px solid #888888 !important;
 }
 
+input:hover{
+    border:1px solid #888888 !important;
+}
 audio:not([controls]) {
     display: none;
 }
@@ -50,6 +54,7 @@ a:focus {
 a:hover,
 a:active {
     outline: 0;
+    color: #ac8019;
 }
 *{
     margin: 0px;
@@ -64,9 +69,21 @@ li{
     list-style-type: none;
 }
 body{
-    background: url('../images/background.jpg') 50% 0%;
+    background: url('../images/background1.jpg') 50% 0%;
     background-size:cover;
     min-width: 680px;
+}
+
+.rotate {
+    background: url('../images/rotate.png') 50% 0%;
+    background-size: cover;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    opacity: 0.6;
+    border-spacing: 0;
 }
 
 nav li a{
@@ -105,7 +122,9 @@ p,h1,h2,h3,h4{
     color: white;
 }
 
-
+section{
+    z-index: 2;
+}
 /*  СЕКЦИЯ: Логотип */
 section.logo{
     position: fixed;
@@ -140,6 +159,11 @@ section.menu a{
     border-bottom:1px solid #545353;
     padding-bottom: 3px;
 }
+section.menu a:hover{
+    color: #ac8019;
+    border-bottom:1px solid #ac8019;
+
+}
 
 section.menu .nav-left li{
     margin-right: 35px;
@@ -150,6 +174,7 @@ section.menu .nav-right li{
 section.menu .nav-right li.list_dot{
     padding-left: 5px;
     margin-left: 25px;
+    color: white;
 }
 section.menu .nav-right li.list_dot a{
     border-bottom: none;
@@ -324,6 +349,11 @@ section.icons .nav_bottom li:nth-of-type(5) {
     font-family:bebas_neue_cyrillicregular;
     font-weight: 400;
 }
+
+.nav_bottom ul li :hover h4{
+    color:#ac8019;
+}
+
 section.icons nav.nav_bottom .icon_1 span{
     font-size: 33px;
     display: block;

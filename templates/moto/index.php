@@ -27,7 +27,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <jdoc:include type="head" />
 </head>
 <body>
-
+    <div class="rotate"></div>
     <header>
         <!-- СЕКЦИЯ: Логотип -->
         <section class="logo">
@@ -46,7 +46,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
             <nav class="nav-right">
                 <ul>
                     <li><a href="/">ЗАДАТЬ ВОПРОС</a></li>
-                    <li class="list_dot"><a href="/">8-800-775-31-97</a></li>
+                    <li class="list_dot">8-800-775-31-97</li>
                 </ul>
             </nav>
         </section>

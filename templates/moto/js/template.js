@@ -15,5 +15,21 @@
             scaleBackground();
         });
 
+
+
+        /* Вращение фона*/
+
+        $('.rotate').animate({  borderSpacing: 10000 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotate('+now+'deg)');
+                $(this).css('-moz-transform','rotate('+now+'deg)');
+                $(this).css('transform','rotate('+now+'deg)');
+            },
+            duration:400000
+        },'linear');
+
+
+
+
 	});
 })(jQuery);

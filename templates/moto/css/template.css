@@ -382,7 +382,7 @@ section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 {
     height:27px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(3) .icon_1:hover {
+section.icons nav.nav_bottom li:nth-of-type(3):hover` .icon_1 {
     background: url('../images/Eye_color.png');
 }
 

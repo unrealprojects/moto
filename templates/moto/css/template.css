@@ -249,9 +249,10 @@ main{
 
 section.icons{
     position: fixed;
-    bottom:50px;
+    bottom:80px;
     right:0px;
     left:28px;
+
 }
 
 section.icons .nav_bottom li {

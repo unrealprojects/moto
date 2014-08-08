@@ -15,186 +15,192 @@ $user            = JFactory::getUser();
 $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
-// Getting params from template
-$params = $app->getTemplate(true)->params;
-
-// Detecting Active Variables
-$option   = $app->input->getCmd('option', '');
-$view     = $app->input->getCmd('view', '');
-$layout   = $app->input->getCmd('layout', '');
-$task     = $app->input->getCmd('task', '');
-$itemid   = $app->input->getCmd('Itemid', '');
-$sitename = $app->get('sitename');
-
-if($task == "edit" || $layout == "form" )
-{
-	$fullWidth = 1;
-}
-else
-{
-	$fullWidth = 0;
-}
-
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' . $this->template . '/js/template.js');
-
-// Add Stylesheets
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
-// Load optional RTL Bootstrap CSS
-JHtml::_('bootstrap.loadCss', false, $this->direction);
-
-// Adjusting content width
-if ($this->countModules('position-7') && $this->countModules('position-8'))
-{
-	$span = "span6";
-}
-elseif ($this->countModules('position-7') && !$this->countModules('position-8'))
-{
-	$span = "span9";
-}
-elseif (!$this->countModules('position-7') && $this->countModules('position-8'))
-{
-	$span = "span9";
-}
-else
-{
-	$span = "span12";
-}
-
-// Logo file or site title param
-if ($this->params->get('logoFile'))
-{
-	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
-}
-elseif ($this->params->get('sitetitle'))
-{
-	$logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
-}
-else
-{
-	$logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
-}
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<jdoc:include type="head" />
-	<?php // Use of Google Font ?>
-	<?php if ($this->params->get('googleFont')) : ?>
-		<link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName'); ?>' rel='stylesheet' type='text/css' />
-		<style type="text/css">
-			h1,h2,h3,h4,h5,h6,.site-title{
-				font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName')); ?>', sans-serif;
-			}
-		</style>
-	<?php endif; ?>
-	<?php // Template color ?>
-	<?php if ($this->params->get('templateColor')) : ?>
-	<style type="text/css">
-		body.site
-		{
-			border-top: 3px solid <?php echo $this->params->get('templateColor'); ?>;
-			background-color: <?php echo $this->params->get('templateBackgroundColor'); ?>
-		}
-		a
-		{
-			color: <?php echo $this->params->get('templateColor'); ?>;
-		}
-		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
-		.btn-primary
-		{
-			background: <?php echo $this->params->get('templateColor'); ?>;
-		}
-		.navbar-inner
-		{
-			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-		}
-	</style>
-	<?php endif; ?>
-	<!--[if lt IE 9]>
-		<script src="<?php echo $this->baseurl; ?>/media/jui/js/html5.js"></script>
-	<![endif]-->
 </head>
+<body>
 
-<body class="site <?php echo $option
-	. ' view-' . $view
-	. ($layout ? ' layout-' . $layout : ' no-layout')
-	. ($task ? ' task-' . $task : ' no-task')
-	. ($itemid ? ' itemid-' . $itemid : '')
-	. ($params->get('fluidContainer') ? ' fluid' : '');
-?>">
+    <header>
+        <!-- СЕКЦИЯ: Логотип -->
+        <section class="logo">
+            <img src="templates/moto/images/logo.png" alt="Мотовидеорегистратор">
+        </section>
 
-	<!-- Body -->
-	<div class="body">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-						<?php echo $logo; ?>
-						<?php if ($this->params->get('sitedescription')) : ?>
-							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription')) . '</div>'; ?>
-						<?php endif; ?>
-					</a>
-					<div class="header-search pull-right">
-						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
-				</div>
-			</header>
-			<?php if ($this->countModules('position-1')) : ?>
-				<nav class="navigation" role="navigation">
-					<jdoc:include type="modules" name="position-1" style="none" />
-				</nav>
-			<?php endif; ?>
-			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="row-fluid">
-				<?php if ($this->countModules('position-8')) : ?>
-					<!-- Begin Sidebar -->
-					<div id="sidebar" class="span3">
-						<div class="sidebar-nav">
-							<jdoc:include type="modules" name="position-8" style="xhtml" />
-						</div>
-					</div>
-					<!-- End Sidebar -->
-				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
-					<!-- Begin Content -->
-					<jdoc:include type="modules" name="position-3" style="xhtml" />
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
-					<!-- End Content -->
-				</main>
-				<?php if ($this->countModules('position-7')) : ?>
-					<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<jdoc:include type="modules" name="position-7" style="well" />
-						<!-- End Right Sidebar -->
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<hr />
-			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right">
-				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-				</a>
-			</p>
-			<p>
-				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
-			</p>
-		</div>
-	</footer>
-	<jdoc:include type="modules" name="debug" style="none" />
+        <!-- СЕКЦИЯ: Меню -->
+        <section class="menu">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="/">Видеозаписи</a></li>
+                    <li><a href="/">Как поставить?</a></li>
+                    <li><a href="/">Команда FOXEYE™</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-right">
+                <ul>
+                    <li><a href="/">ЗАДАТЬ ВОПРОС</a></li>
+                    <li class="list_dot"><a href="/">8-800-775-31-97</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- СЕКЦИЯ: Описание сайта -->
+        <section class="info">
+            <h1>МОТОВИДЕОРЕГИСТРАТОР<br>НОВОГО ПОКОЛЕНИЯ —</h1>
+            <p>Идеальный выбор для<br>
+                владельцев мотоциклов и<br>
+                скутеров! Полностью<br>
+                влагозащищенный,<br>
+                стационарный мото<br>
+                видеорегистратор<br>
+                заменит любую экшн камеру<br>
+                и сделает вашу поездку<br>
+                более уверенной.</p>
+        </section>
+
+        <!-- СЕКЦИЯ: Сделать заказ -->
+        <section class="order">
+            <div class="order-header">
+                <h3>СДЕЛАЙ ЗАКАЗ*</h3>
+                <p>Цена: 10900 Р</p>
+            </div>
+            <form method="POST">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="phone" placeholder="Телефон">
+                <input type="submit" name="order" value="ЗАКЗАТЬ >">
+                <p>*При покупке у наc скидка 50%<br>
+                    на установку регистратора<br>
+                    в Москве и Санкт-Петербурге</p>
+            </form>
+        </section>
+    </header>
+
+    <main>
+        <!-- СЕКЦИЯ: Основной контент -->
+        <section class="main">
+            <jdoc:include type="component" />
+        </section>
+    </main>
+
+    <footer>
+        <!-- СЕКЦИЯ: Иконки в футере -->
+        <section class="icons">
+            <nav class="nav_bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="icon_1"></div>
+                            <h4>РЕГИСТРАТОР<br> ИЛИ ЭКШН-КАМЕРА?</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_1"></div>
+                            <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_1"></div>
+                            <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_1"></div>
+                            <h4>СКИДКА<br> НА УСТАНОВКУ</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon_1"></div>
+                            <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- СЕКЦИЯ: Нижнее меню -->
+        <section class="menu_bottom">
+            <nav class="nav-left">
+                <a href="">
+                    <img src="templates/moto/images/gc-logo.png" alt="Мотовидеорегистратор">
+                </a>
+                <ul>
+                    <li><a href="/">ИНСТРУКЦИЯ</a></li>
+                    <li class="list_dot"><a href="/">ПАРТНЁРЫ</a></li>
+                    <li class="list_dot"><a href="/">ДОСТАВКА И ОПЛАТА7</a></li>
+                    <li class="list_dot"><a href="/">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-right">
+                <ul>
+                    <li class="list_social_f"><a href="/"></a></li>
+                    <li class="list_social_t"><a href="/"></a></li>
+                    <li class="list_dot"><a href="/">© 2014 FOXeye GC1</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php if ($this->countModules('position-1')){ ?>
+
+
+    <section class="asdf">
+        <jdoc:include type="modules" name="position-1" style="none" />
+    </section>
+
+
+    <section class="asdf">
+        <jdoc:include type="modules" name="position-5" style="none" />
+    </section>
+
+        <jdoc:include type="message" />
+
+<?php } ?>

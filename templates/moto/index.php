@@ -16,7 +16,7 @@ $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
-
+$doc->addScript('templates/' . $this->template . '/js/template.js');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -31,7 +31,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
     <header>
         <!-- СЕКЦИЯ: Логотип -->
         <section class="logo">
-            <img src="templates/moto/images/logo.png" alt="Мотовидеорегистратор">
+            <a href="#"><img src="templates/moto/images/logo.png" alt="Мотовидеорегистратор"></a>
         </section>
 
         <!-- СЕКЦИЯ: Меню -->
@@ -72,8 +72,8 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
                 <p>Цена: 10900 Р</p>
             </div>
             <form method="POST">
-                <input type="text" name="name" placeholder="Имя">
-                <input type="text" name="phone" placeholder="Телефон">
+                <input type="text" autocomplete="off" name="name" placeholder="Имя">
+                <input type="text" autocomplete="off" name="phone" placeholder="Телефон">
                 <input type="submit" name="order" value="ЗАКЗАТЬ >">
                 <p>*При покупке у наc скидка 50%<br>
                     на установку регистратора<br>

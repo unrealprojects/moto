@@ -18,6 +18,10 @@ video {
     *zoom: 1;
 }
 
+input:active,input:focus{
+    outline: none !important;
+}
+
 audio:not([controls]) {
     display: none;
 }
@@ -47,8 +51,9 @@ li{
     list-style-type: none;
 }
 body{
-    background: url('../images/background.jpg');
+    background: url('../images/background.jpg') 50% 0%;
     background-size:cover;
+    min-width: 680px;
 }
 
 nav li a{
@@ -158,6 +163,7 @@ section.info h1{
     font-size: 24px;
     color: white;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 
@@ -183,7 +189,10 @@ section.order .order-header{
 
 section.order .order-header p{
     border:1px dashed #b88717;
-    padding: 7px 10px;
+    padding: 6px 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 section.order form{
@@ -197,6 +206,7 @@ section.order form input{
     border: 1px solid #1c1c1c;
     margin: 0px auto 20px;
     font-size: 14px;
+    color: white;
 }
 
 section.order form input[type=submit]{
@@ -243,4 +253,44 @@ section.menu_bottom{
     bottom:0px;
     right:0px;
     left:0px;
+}
+
+
+@media (max-width:1280px) {
+    /*  СЕКЦИЯ: Логотип */
+    section.logo img{
+        width: 180px;
+    }
+
+    /*  СЕКЦИЯ: Меню */
+    section.menu {
+        left: 230px;
+    }
+
+    section.menu a{
+        font-size: 14px;
+    }
+
+    /*  СЕКЦИЯ: Описание */
+    section.info p{
+        font-size: 14px;
+    }
+
+    section.info h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:980px) {
+    /*  СЕКЦИЯ: Меню */
+    section.menu .nav-right {
+        float: left;
+        margin-top: 15px;
+        margin-left: 64px;
+    }
+    /*  СЕКЦИЯ: Заказ */
+    section.order {
+        position: fixed;
+        top: 104px;
+    }
 }

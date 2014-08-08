@@ -81,13 +81,15 @@ nav{
 nav ul{
     display: inline-block;
 }
+
 nav li{
     float: left;
 }
 
-.list_dot {
-    list-style-type: disc;
+.list_dot:before {
+    content:"\2022";
     color: white;
+    margin-right: 25px;
 }
 
 nav img{
@@ -109,6 +111,9 @@ section.logo{
     position: fixed;
     top:30px;
     left:30px;
+
+    animation: SlideDawnLogo 1s;
+    -webkit-animation: SlideDawnLogo 1s;
 }
 
 /*  СЕКЦИЯ: Меню */
@@ -125,13 +130,15 @@ section.menu{
     border-bottom: 1px solid #1c1c1c;
     border-left: 1px solid #1c1c1c;
     font-size: 16px;
+
+    animation: SlideLeftMenu 1s;
+    -webkit-animation: SlideLeftMenu 1s;
 }
 
 section.menu a{
     color: white;
     border-bottom:1px solid #545353;
     padding-bottom: 3px;
-
 }
 
 section.menu .nav-left li{
@@ -142,7 +149,7 @@ section.menu .nav-right li{
 }
 section.menu .nav-right li.list_dot{
     padding-left: 5px;
-    margin-left: 34px;
+    margin-left: 25px;
 }
 section.menu .nav-right li.list_dot a{
     border-bottom: none;
@@ -164,6 +171,10 @@ section.info{
     position: fixed;
     top: 164px;
     left:30px;
+
+
+    animation: SlideInfoLeft 1s;
+    -webkit-animation: SlideInfoLeft 1s;
 }
 
 section.info p{
@@ -194,6 +205,9 @@ section.order{
     border-bottom: 1px solid #1c1c1c;
     border-left: 1px solid #1c1c1c;
     font-size: 16px;
+
+    animation: SlideLeftOrder 1s;
+    -webkit-animation: SlideLeftOrder 1s;
 }
 
 section.order .order-header{
@@ -250,6 +264,9 @@ main{
     position: relative;
     margin:200px 0px 0px 400px;
     right:20px;
+
+    animation: FadeIn 1.5s;
+    -webkit-animation: FadeIn 1.5s;
 }
 
 /* СЕКЦИЯ: Иконки в футере */
@@ -260,6 +277,9 @@ section.icons{
     right:0px;
     left:28px;
 
+
+    animation: SlideIconsRight 1s;
+    -webkit-animation: SlideIconsRight 1s;
 }
 
 section.icons .nav_bottom li {
@@ -331,6 +351,9 @@ section.menu_bottom{
     border-top:1px solid #1d1d1d;
     background: #121212;
     padding:18px 30px 0px 30px;
+
+    animation: SlideBottom 1s;
+    -webkit-animation: SlideBottom 1s;
 }
 
 section.menu_bottom nav.nav-right{
@@ -351,16 +374,25 @@ section.menu_bottom nav.nav-left>a{
 }
 section.menu_bottom nav.nav-left a{
     padding-bottom: 17px;
+    color: #888888;
 }
 
 section.menu_bottom nav.nav-left li.list_dot {
-    margin-left: 35px;
-    padding-left: 12px;
+    margin-left: 25px;
     margin-right: 0px;
+}
+
+section.menu_bottom nav.nav-left li.list_dot:before{
+    color: #888888;
+    font-size: 12px;
+    margin-right: 25px;
 }
 
 section.menu_bottom nav.nav-left li a:hover{
     border-bottom:1px solid #ac8019;
+    position: relative;
+    top: -6px;
+    padding-bottom: 23px;
 }
 
 section.menu_bottom nav.nav-left li {
@@ -492,5 +524,167 @@ section.menu_bottom nav.nav-left li {
         width:13%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Анммация */
+
+@-webkit-keyframes SlideDawnLogo{
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes SlideDawnLogo{
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftMenu{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 350px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeftMenu{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 350px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftOrder{
+    from {
+        top:-300px;
+        opacity: 0;
+    }
+    to {
+        top: 65px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInfoLeft{
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideInfoLeft{
+    from {
+        left:-100px;
+        opacity: 0;
+    }
+    to {
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideIconsRight{
+    from {
+        left: -2000px;
+        opacity: 0;
+    }
+    to {
+        left: 28px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideIconsRight{
+    from {
+        left:-2000px;
+        opacity: 0;
+    }
+    to {
+        left: 28px;
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes SlideBottom{
+    from {
+        bottom: -60px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideBottom{
+    from {
+        bottom:-60px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes FadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes FadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
 
 

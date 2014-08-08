@@ -334,16 +334,30 @@ section.icons nav.nav_bottom .icon_1 span{
     font-family: bebas_neue_cyrillicregular;
     font-weight: 400;
 }
-section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 img {
+section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 {
     display: block;
     margin-top:18px;
     margin-left:8px ;
+    background: url('../images/Eye.png');
+    width:48px;
+    height:27px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 img {
+section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 {
     display: block;
     margin-top:18px;
-    margin-left:6px ;
+    margin-left:6px;
+    background: url('../images/moto_icon.png');
+    width:48px;
+    height:27px;
+}
+
+section.icons nav.nav_bottom li:nth-of-type(3) .icon_1:hover {
+    background: url('../images/Eye_color.png');
+}
+
+section.icons nav.nav_bottom li:nth-of-type(5) .icon_1:hover {
+    background: url('../images/moto_icon_color.png');
 }
 
 /* СЕКЦИЯ: Нижнее меню */

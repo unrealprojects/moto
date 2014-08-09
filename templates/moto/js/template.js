@@ -22,15 +22,14 @@
 
         function slide(){
 
-             $('.slide[number='+number+'] img').hide("puff");
+             $('.slide[number='+number+']').fadeOut('1000');
                  if(number<4){
                      number++;
                  }else{
                      number = 1;
                  }
 
-             $('.slide[number='+number+'] img').show("scale",
-                 {percent: 100, direction: 'both' },3000);
+             $('.slide[number='+number+']').fadeIn('3000');
         }
         setInterval(slide,3000);
 

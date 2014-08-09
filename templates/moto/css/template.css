@@ -101,7 +101,7 @@ li{
 body{
     background: url('../images/background1.jpg') 50% 0%;
     background-size:cover;
-    min-width: 680px;
+    min-width: 1024px;
 }
 
 .rotate {
@@ -674,10 +674,6 @@ section.menu_bottom nav.nav-right .list_social_t{
 
 /* КОНТЕНТ: Слайды */
 main .slide{
-
-}
-
-main .slide img{
     display: none;
 }
 

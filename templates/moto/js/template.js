@@ -22,16 +22,15 @@
 
         function slide(){
 
-             $('.slide[number='+number+']').fadeOut('1000');
+             $('.slide[number='+number+']').fadeOut(1000);
                  if(number<4){
                      number++;
                  }else{
                      number = 1;
                  }
-
-             $('.slide[number='+number+']').fadeIn('3000');
+             $('.slide[number='+number+']').fadeIn(5000);
         }
-        setInterval(slide,3000);
+        setInterval(slide,5000);
 
 
 

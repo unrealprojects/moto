@@ -344,7 +344,7 @@ section.order form{
 }
 
 section.order form input{
-    width: 150px;
+    width: 160px;
     padding: 8px 10px;
     background: none;
     border: 1px solid #1c1c1c;
@@ -377,6 +377,7 @@ section.order form p{
     text-transform: uppercase;
     text-align: center;
     line-height: 18px;
+
 }
 
 section.order h3{
@@ -697,9 +698,103 @@ main .slider{
 
 .slidecontent{
     text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
 }
 
 
+.info_icon{
+    position: absolute;
+    width:95px;
+    height:95px;
+    background: rgba(0,0,0,0.2);
+    font-size: 12px;
+}
+
+.info_icon span{
+    display: block;
+    margin: 10px auto 5px;
+    opacity: 0.7;
+}
+
+.info_icon p{
+    color: #b8b7b3;
+}
+
+.info_icon div {
+    background: rgba(0,0,0,0.2);
+    color: #b8b7b3;
+    left: 95px;
+    width: 0px;
+    height: 75px;
+    position: relative;
+    top: -85px;
+    text-align: left;
+    padding: 10px 0px;
+    border: none;
+    overflow: hidden;
+    font-size: 14px;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.info_icon:hover div{
+    border-left: 1px solid #4A4848;
+    width: 300px;
+    padding: 10px;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.info_icon:nth-of-type(1){
+    top: -37px;
+    left: 248px;
+}
+.info_icon:nth-of-type(1) span{
+    background: url('/templates/moto/images/water.png');
+    width: 38px;
+    height: 40px;
+
+}
+.info_icon:nth-of-type(2){
+    top: 68px;
+    right: 101px;
+}
+
+.info_icon:nth-of-type(2) span{
+    background: url('/templates/moto/images/microphone.png');
+    width: 38px;
+    height: 40px;
+}
+
+.info_icon:nth-of-type(3){
+    bottom: 61px;
+    left: 67px;
+}
+
+.info_icon:nth-of-type(3) span{
+    background: url('/templates/moto/images/usb.png');
+    width: 38px;
+    height: 40px;
+}
+
+.info_icon:nth-of-type(4){
+    bottom: 13px;
+    right: 184px;
+}
+
+.info_icon:nth-of-type(4) span{
+    background: url('/templates/moto/images/enginner.png');
+    width: 38px;
+    height: 40px;
+}
 
 
 

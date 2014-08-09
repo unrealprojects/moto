@@ -93,12 +93,41 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                  <div class="slides">
                      <div class="slide" number="1" style="display: block">
                          <div class="slidecontent">
-                             <img src="/templates/moto/images/photo1.png" alt="">
+                             <img src="/templates/moto/images/photo2.png" alt="">
+                             <div class="info_icon">
+                                 <span></span>
+                                 <p>Защита<br>от влаги</p>
+                                 <div>
+                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                 </div>
+                             </div>
+                             <div class="info_icon">
+                                 <span></span>
+                                 <p>Встроенный<br>микрофон</p>
+                                 <div>
+                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                 </div>
+                             </div>
+                             <div class="info_icon">
+                                 <span></span>
+                                 <p>USB<br>зарядка</p>
+                                 <div>
+                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                 </div>
+                             </div>
+                             <div class="info_icon">
+                                 <span></span>
+                                 <p>Инженеры<br>Тайвань</p>
+                                 <div>
+                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                 </div>
+                             </div>
+
                          </div>
                      </div>
                      <div class="slide" number="2">
                          <div class="slidecontent">
-                            <img src="/templates/moto/images/photo2.png" alt="">
+                            <img src="/templates/moto/images/photo1.png" alt="">
                          </div>
                      </div>
                      <div class="slide" number="3">

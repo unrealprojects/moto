@@ -17,7 +17,7 @@
 
 
         /* Слайдер */
-        number = 1;
+      /*  number = 1;
 
 
         function slide(){
@@ -30,7 +30,7 @@
                  }
              $('.slide[number='+number+']').fadeIn(5000);
         }
-        setInterval(slide,10000);
+        setInterval(slide,10000);*/
 
 
 

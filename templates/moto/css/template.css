@@ -221,7 +221,12 @@ section.menu a{
 }
 section.menu a:hover{
     color: #ac8019;
-    border-bottom:1px solid #ac8019;
+    border-bottom:none;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 section.menu a:active{
@@ -257,8 +262,8 @@ section.menu .nav-right{
 
 section.info{
     position: fixed;
-    top: 164px;
-    left:30px;
+    top: 160px;
+    left:60px;
 
 
     animation: SlideInfoLeft 1s;
@@ -275,8 +280,11 @@ section.info h1{
     font-size: 24px;
     color: white;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    line-height: 32px;
     font-family:bebas_neue_cyrillicregular;
+
+
 }
 
 
@@ -452,9 +460,9 @@ main{
 
 section.icons{
     position: fixed;
-    bottom:70px;
+    bottom:68px;
     right:0px;
-    left:28px;
+    left:20px;
 
 
     animation: SlideIconsRight 1s;
@@ -468,10 +476,10 @@ section.icons .nav_bottom li:nth-of-type(1){
     width:23%;
 }
 section.icons .nav_bottom li:nth-of-type(2) {
-    width:25%;
+    width:22%;
 }
 section.icons .nav_bottom li:nth-of-type(3) {
-    width:19%;
+    width:22%;
 }
 section.icons .nav_bottom li:nth-of-type(4) {
     width:20%;
@@ -744,10 +752,10 @@ main .slider{
         width:23%;
     }
     section.icons .nav_bottom li:nth-of-type(2) {
-        width:25%;
+        width:22%;
     }
     section.icons .nav_bottom li:nth-of-type(3) {
-        width:17%;
+        width:19%;
     }
     section.icons .nav_bottom li:nth-of-type(4) {
         width:18%;
@@ -780,12 +788,18 @@ main .slider{
     }
 
     /*  СЕКЦИЯ: Описание */
+
+    section.info {
+        top: 120px;
+    }
+
     section.info p{
         font-size: 14px;
     }
 
     section.info h1 {
         font-size: 18px;
+        line-height: 26px;
     }
     /*  СЕКЦИЯ: Футер */
     section.icons .nav_bottom li:nth-of-type(1){
@@ -932,7 +946,7 @@ main .slider{
         opacity: 0;
     }
     to {
-        left: 30px;
+        left: 60px;
         opacity: 1;
     }
 }
@@ -954,7 +968,7 @@ main .slider{
         opacity: 0;
     }
     to {
-        left: 28px;
+        left: 20px;
         opacity: 1;
     }
 }

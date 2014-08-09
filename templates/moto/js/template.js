@@ -30,7 +30,7 @@
                  }
              $('.slide[number='+number+']').fadeIn(5000);
         }
-        setInterval(slide,5000);
+        setInterval(slide,10000);
 
 
 

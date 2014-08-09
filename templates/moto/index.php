@@ -16,14 +16,17 @@ $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
+
+$doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
+
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
     <jdoc:include type="head" />
 </head>
 <body>
@@ -31,7 +34,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <header>
         <!-- СЕКЦИЯ: Логотип -->
         <section class="logo">
-            <a href="#"><img src="templates/moto/images/logo.png" alt="Мотовидеорегистратор"></a>
+            <a href="#"><span></span></a>
         </section>
 
         <!-- СЕКЦИЯ: Меню -->
@@ -69,7 +72,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
         <section class="order">
             <div class="order-header">
                 <h3>СДЕЛАЙ ЗАКАЗ*</h3>
-                <p>Цена: 10900 Р</p>
+                <p>Цена: 11900 Р</p>
             </div>
             <form method="POST">
                 <input type="text" autocomplete="off" name="name" placeholder="Имя">
@@ -85,7 +88,34 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <main>
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
-            <jdoc:include type="component" />
+<!--            <jdoc:include type="component" />-->
+            <div class="slider">
+                 <div class="slides">
+                     <div class="slide" number="1" style="display: block">
+                         <div class="slidecontent">
+                             <img src="/templates/moto/images/photo1.png" alt="">
+                         </div>
+                     </div>
+                     <div class="slide" number="2">
+                         <div class="slidecontent">
+                            <img src="/templates/moto/images/photo2.png" alt="">
+                         </div>
+                     </div>
+                     <div class="slide" number="3">
+                         <div class="slidecontent">
+                            <img src="/templates/moto/images/moto.png" alt="">\
+                         </div>
+                     </div>
+                     <div class="slide" number="4">
+                         <div class="slidecontent">
+                             <img src="/templates/moto/images/photo2.png" alt="">
+                         </div>
+                     </div>
+                 </div>
+                <div class="slide_left"></div>
+                <div class="slide_right"></div>
+            </div>
+
         </section>
     </main>
 
@@ -96,7 +126,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                 <ul>
                     <li>
                         <a href="#">
-                            <div class="icon_1">
+                            <div class="icon_wrap">
                                 <span>?</span>
                             </div>
                             <h4>РЕГИСТРАТОР<br> ИЛИ ЭКШН-КАМЕРА?</h4>
@@ -104,7 +134,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1">
+                            <div class="icon_wrap">
                                 <span>+2</span>
                             </div>
                             <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
@@ -112,7 +142,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1">
+                            <div class="icon_wrap">
                                 <span></span>
                             </div>
                             <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
@@ -120,7 +150,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1">
+                            <div class="icon_wrap">
                                 <span>50%</span>
                             </div>
                             <h4>СКИДКА<br> НА УСТАНОВКУ</h4>
@@ -128,7 +158,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                     </li>
                     <li>
                         <a href="#">
-                            <div class="icon_1">
+                            <div class="icon_wrap">
                                 <span></span>
                             </div>
                             <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>

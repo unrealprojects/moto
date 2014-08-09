@@ -35,9 +35,18 @@ input:active,input:focus{
     outline: none !important;
     border:1px solid #888888 !important;
 }
-
+input{
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+}
 input:hover{
     border:1px solid #888888 !important;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
 }
 audio:not([controls]) {
     display: none;
@@ -47,14 +56,35 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
+
+a{
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+}
 a:focus {
     outline: none;
     outline: none;
 }
+
 a:hover,
 a:active {
     outline: 0;
     color: #ac8019;
+
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
 }
 *{
     margin: 0px;
@@ -82,9 +112,13 @@ body{
     position: fixed;
     width: 100%;
     top: 0px;
+    bottom:0px;
+    left:0px;
+    right: 0px;
     opacity: 0.6;
     border-spacing: 0;
 
+    transition-timing-function:linear;
     animation: Rotate 100s;
     -webkit-animation: Rotate 100s;
 }
@@ -138,6 +172,29 @@ section.logo{
     -webkit-animation: SlideDawnLogo 1s;
 }
 
+section.logo span{
+    width: 264px;
+    height: 99px;
+    display: block;
+    background: url('/templates/moto/images/logo.png');
+    background-size: 100%;
+
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+section.logo span:hover{
+    background: url('/templates/moto/images/logo_hover.png');
+    background-size: 100%;
+
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
 /*  СЕКЦИЯ: Меню */
 
 section.menu{
@@ -165,7 +222,10 @@ section.menu a{
 section.menu a:hover{
     color: #ac8019;
     border-bottom:1px solid #ac8019;
+}
 
+section.menu a:active{
+    border-bottom:none;
 }
 
 section.menu .nav-left li{
@@ -236,11 +296,21 @@ section.order{
 
     animation: SlideLeftOrder 1s;
     -webkit-animation: SlideLeftOrder 1s;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 section.order .order-header{
     padding: 0px 30px 30px 30px;
     border-bottom: 1px solid #1c1c1c;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 section.order .order-header p{
@@ -249,20 +319,36 @@ section.order .order-header p{
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 section.order form{
     padding: 30px 30px 0px 30px;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 section.order form input{
-    width: 130px;
+    width: 150px;
     padding: 8px 10px;
     background: none;
     border: 1px solid #1c1c1c;
     margin: 0px auto 20px;
     font-size: 14px;
     color: white;
+    box-sizing: border-box;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 section.order form input[type=submit]{
@@ -271,6 +357,10 @@ section.order form input[type=submit]{
     color:#ac8019;
     width: 150px;
     cursor:pointer;
+}
+
+section.order form input[type=submit]:hover{
+    border:1px solid #ac8019 !important;
 }
 
 section.order form p{
@@ -286,23 +376,83 @@ section.order h3{
     font-weight: 400;
 }
 
+/* Анимация заказа */
+
+section.order:hover{
+    right:100px;
+    top:160px;
+    padding: 60px 0px 30px 0px;
+    border: 1px solid #1c1c1c;
+    background: rgba(0,0,0,0.8);
+
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+
+}
+
+section.order:hover form input{
+    width:300px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+section.order:hover form input[type=submit]{
+    width:300px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+section.order:hover .order-header{
+    padding: 0px 60px 30px 60px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+section.order:hover form{
+    padding: 30px 60px 30px 60px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+section.order:hover form p {
+    font-size: 14px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
 
 /* СЕКЦИЯ: Основной контент */
 
 main{
     position: relative;
-    margin:200px 0px 0px 400px;
+    margin: 165px 370px 0px 370px;
     right:20px;
 
-    animation: FadeIn 1.5s;
-    -webkit-animation: FadeIn 1.5s;
+
+    animation: FadeIn 5s;
+    -webkit-animation: FadeIn 5s;
 }
 
 /* СЕКЦИЯ: Иконки в футере */
 
 section.icons{
     position: fixed;
-    bottom:80px;
+    bottom:70px;
     right:0px;
     left:28px;
 
@@ -314,7 +464,6 @@ section.icons{
 section.icons .nav_bottom li {
     width:20%;
 }
-
 section.icons .nav_bottom li:nth-of-type(1){
     width:23%;
 }
@@ -332,41 +481,58 @@ section.icons .nav_bottom li:nth-of-type(5) {
 }
 
 
-.nav_bottom {
+section.icons .nav_bottom {
     width: 100%;
 }
-.nav_bottom ul{
+section.icons .nav_bottom ul{
     width: 100%;
 }
-.icon_1{
+section.icons .icon_wrap{
     border: 1px solid #5b5150;
     width: 63px;
     height: 63px;
     float: left;
+
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
 }
+
 .nav_bottom ul li h4{
     float: left;
     font-size: 23px;
     line-height: 24px;
-    margin-left: 16px;
-    margin-top: 8px;
+    padding-left: 16px;
+    padding-top: 8px;
     font-family:bebas_neue_cyrillicregular;
     font-weight: 400;
+
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
 }
 
 section.icons  .nav_bottom ul li :hover h4{
     color:#ac8019;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
 }
 
-section.icons  .nav_bottom ul li :hover .icon_1{
+section.icons  .nav_bottom ul li :hover .icon_wrap{
     border: 1px solid #ac8019;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
 }
 
-section.icons .nav_bottom ul li :hover .icon_1 span{
-    color:#ac8019;
-}
 
-section.icons nav.nav_bottom .icon_1 span{
+
+section.icons nav.nav_bottom .icon_wrap span{
     font-size: 33px;
     display: block;
     text-align: center;
@@ -376,7 +542,7 @@ section.icons nav.nav_bottom .icon_1 span{
     font-family: bebas_neue_cyrillicregular;
     font-weight: 400;
 }
-section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 span {
+section.icons nav.nav_bottom li:nth-of-type(3) .icon_wrap span {
     display: block;
     margin-top:18px;
     margin-left:8px ;
@@ -385,22 +551,28 @@ section.icons nav.nav_bottom li:nth-of-type(3) .icon_1 span {
     height:27px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(5) .icon_1 span {
+section.icons nav.nav_bottom li:nth-of-type(5) .icon_wrap span {
     display: block;
     margin-top:18px;
     margin-left:6px;
     background: url('../images/moto_icon.png');
-    width:48px;
-    height:27px;
+    width: 50px;
+    height: 26px;
 }
 
-section.icons nav.nav_bottom li:nth-of-type(3):hover .icon_1 span {
+/*
+section.icons .nav_bottom ul li :hover .icon_wrap span{
+    color:#ac8019;
+}
+
+section.icons nav.nav_bottom li:nth-of-type(3):hover .icon_wrap span {
     background: url('../images/Eye_color.png');
 }
 
-section.icons nav.nav_bottom li:nth-of-type(5):hover .icon_1 span {
+section.icons nav.nav_bottom li:nth-of-type(5):hover .icon_wrap span {
     background: url('../images/moto_icon_color.png');
 }
+*/
 
 /* СЕКЦИЯ: Нижнее меню */
 
@@ -423,7 +595,6 @@ section.menu_bottom nav.nav-right{
 }
 
 section.menu_bottom nav.nav-right li{
-    margin-bottom: 16px;
     color: #888888;
 }
 
@@ -441,9 +612,29 @@ section.menu_bottom nav.nav-left>a{
     float:left;
 }
 section.menu_bottom nav.nav-left a{
-    padding-bottom: 16px;
+    padding-bottom: 14px;
     color: #888888;
+    position: relative;
+    top: 0px;
+
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
 }
+
+section.menu_bottom nav.nav-left li a:hover{
+    border-bottom:1px solid #ac8019;
+    position: relative;
+    top: -6px;
+    padding-bottom: 25px;
+
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
+}
+
 
 section.menu_bottom nav.nav-left li.list_dot {
     margin-left: 25px;
@@ -456,12 +647,7 @@ section.menu_bottom nav.nav-left li.list_dot:before{
     margin-right: 25px;
 }
 
-section.menu_bottom nav.nav-left li a:hover{
-    border-bottom:1px solid #ac8019;
-    position: relative;
-    top: -6px;
-    padding-bottom: 22px;
-}
+
 
 section.menu_bottom nav.nav-left li {
     margin-right: 5px;
@@ -486,12 +672,28 @@ section.menu_bottom nav.nav-right .list_social_t{
 
 
 
+/* КОНТЕНТ: Слайды */
+main .slide{
 
+}
 
+main .slide img{
+    display: none;
+}
 
+main .slider{
+    position: relative;
+    top:50px;
+}
 
+.slide {
+    position: absolute;
+    width: 100%;
+}
 
-
+.slidecontent{
+    text-align: center;
+}
 
 
 
@@ -567,8 +769,9 @@ section.menu_bottom nav.nav-right .list_social_t{
 
 @media (max-width:1280px) {
     /*  СЕКЦИЯ: Логотип */
-    section.logo img{
+    section.logo span{
         width: 180px;
+        height: 67px;
     }
 
     /*  СЕКЦИЯ: Меню */

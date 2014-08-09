@@ -1,5 +1,4 @@
-(function($)
-{
+(function($){
 	$(document).ready(function(){
 
         /* Ресайз для высоцких экранов под hdmi*/
@@ -17,18 +16,25 @@
 
 
 
-        /* Вращение фона*/
-/*
-        $('.rotate').animate({  borderSpacing: 10000 }, {
-            step: function(now,fx) {
-                $(this).css('-webkit-transform','rotate('+now+'deg)');
-                $(this).css('-moz-transform','rotate('+now+'deg)');
-                $(this).css('transform','rotate('+now+'deg)');
-            },
-            duration:400000
-        },'linear');
+        /* Слайдер */
+        number = 1;
 
-*/
+
+        function slide(){
+
+             $('.slide[number='+number+'] img').hide("puff");
+                 if(number<4){
+                     number++;
+                 }else{
+                     number = 1;
+                 }
+
+             $('.slide[number='+number+'] img').show("scale",
+                 {percent: 100, direction: 'both' },3000);
+        }
+        setInterval(slide,3000);
+
+
 
 
 	});

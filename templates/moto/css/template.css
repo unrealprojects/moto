@@ -728,8 +728,8 @@ main .slider{
     left: 95px;
     width: 0px;
     height: 75px;
-    position: relative;
-    top: -85px;
+    position: absolute;
+    top: 0px;
     text-align: left;
     padding: 10px 0px;
     border: none;
@@ -753,50 +753,95 @@ main .slider{
     transition: all 0.2s;
 }
 
-.info_icon:nth-of-type(1){
+/* Слайд 1 */
+#slide1 .info_icon:nth-of-type(1){
     top: -37px;
     left: 248px;
 }
-.info_icon:nth-of-type(1) span{
+#slide1 .info_icon:nth-of-type(1) span{
     background: url('/templates/moto/images/water.png');
     width: 38px;
     height: 40px;
 
 }
-.info_icon:nth-of-type(2){
+#slide1 .info_icon:nth-of-type(2){
     top: 68px;
     right: 101px;
 }
 
-.info_icon:nth-of-type(2) span{
+#slide1 .info_icon:nth-of-type(2) span{
     background: url('/templates/moto/images/microphone.png');
     width: 38px;
     height: 40px;
 }
 
-.info_icon:nth-of-type(3){
+#slide1 .info_icon:nth-of-type(3){
     bottom: 61px;
     left: 67px;
 }
 
-.info_icon:nth-of-type(3) span{
+#slide1 .info_icon:nth-of-type(3) span{
     background: url('/templates/moto/images/Usb.png');
     width: 38px;
     height: 40px;
 }
 
-.info_icon:nth-of-type(4){
+#slide1 .info_icon:nth-of-type(4){
     bottom: 13px;
     right: 184px;
 }
 
-.info_icon:nth-of-type(4) span{
+#slide1 .info_icon:nth-of-type(4) span{
     background: url('/templates/moto/images/enginner.png');
     width: 38px;
     height: 40px;
 }
 
+/* Слайд 2 */
+#slide2 .info_icon:nth-of-type(1){
+    top: 64px;
+    left: 79px;
+}
+#slide2 .info_icon:nth-of-type(1) span{
+    background: url('/templates/moto/images/wi-fi.png');
+    width: 61px;
+    height: 45px;
 
+
+}
+#slide2 .info_icon:nth-of-type(2){
+    top: 43px;
+    right: 112px;
+}
+
+#slide2 .info_icon:nth-of-type(2) span{
+    background: url('/templates/moto/images/fullhd.png');
+    width: 44px;
+    height: 39px;
+}
+
+#slide2 .info_icon:nth-of-type(3){
+    bottom: -22px;
+    left: 148px;
+}
+
+#slide2 .info_icon:nth-of-type(3) span{
+    background: url('/templates/moto/images/32gb.png');
+    width: 61px;
+    height: 41px;
+}
+
+#slide2 .info_icon:nth-of-type(4){
+    bottom: 51px;
+    right: 87px;
+}
+
+#slide2 .info_icon:nth-of-type(4) span{
+    background: url('/templates/moto/images/128.png');
+    width: 76px;
+    height: 34px;
+    margin-top: 15px;
+}
 
 
 

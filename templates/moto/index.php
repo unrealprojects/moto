@@ -18,6 +18,7 @@ $this->direction = $doc->direction;
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
 ?>
@@ -88,6 +89,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <main>
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
+            <jdoc:include type="component" />
             <h1 class="header">КОМАНДА FOXEYE</h1>
             <section class="group">
                     <div class="command">

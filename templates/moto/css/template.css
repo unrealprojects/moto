@@ -111,16 +111,16 @@ body{
     min-height: 100%;
     position: fixed;
     width: 100%;
-    top: 0px;
-    bottom:0px;
-    left:0px;
-    right: 0px;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
     opacity: 0.6;
     border-spacing: 0;
 
     transition-timing-function:linear;
-    animation: Rotate 100s;
-    -webkit-animation: Rotate 100s;
+    animation: Rotate 7000s;
+    -webkit-animation: Rotate 7000s;
 }
 
 nav li a{
@@ -393,6 +393,7 @@ section.order:hover{
     padding: 60px 0px 30px 0px;
     border: 1px solid #1c1c1c;
     background: rgba(0,0,0,0.8);
+    z-index: 200;
 
 
     -webkit-transition: all 1s;
@@ -448,9 +449,11 @@ section.order:hover form p {
 /* СЕКЦИЯ: Основной контент */
 
 main{
-    position: relative;
-    margin: 165px 370px 0px 370px;
-    right:20px;
+    position: absolute;
+    margin: -350px 370px 0px 370px;
+    right: 0px;
+    left: 0px;
+    top: 50%;
 
 
     animation: FadeIn 5s;
@@ -510,7 +513,7 @@ section.icons .icon_wrap{
 
 .nav_bottom ul li h4{
     float: left;
-    font-size: 23px;
+    font-size: 27px;
     line-height: 24px;
     padding-left: 16px;
     padding-top: 8px;
@@ -633,10 +636,10 @@ section.menu_bottom nav.nav-left a{
 }
 
 section.menu_bottom nav.nav-left li a:hover{
-    border-bottom:1px solid #ac8019;
+    border-bottom: 2px solid #ac8019;
     position: relative;
     top: -6px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 
     -webkit-transition: top 0.3s;
     -moz-transition: top 0.3s;
@@ -656,18 +659,12 @@ section.menu_bottom nav.nav-left li.list_dot:before{
     margin-right: 25px;
 }
 
-
-
-section.menu_bottom nav.nav-left li {
-    margin-right: 5px;
-}
-
-
 section.menu_bottom nav.nav-right .list_social_f{
     background: url('../images/facebook.png');
     width: 25px;
     height: 25px;
     margin-right: 15px;
+    margin-top: -3px;
 }
 
 section.menu_bottom nav.nav-right .list_social_t{
@@ -675,6 +672,7 @@ section.menu_bottom nav.nav-right .list_social_t{
     width: 25px;
     height: 25px;
     margin-right: 15px;
+    margin-top: -3px;
 }
 
 
@@ -688,7 +686,7 @@ main .slide{
 
 main .slider{
     position: relative;
-    top:50px;
+    top: 30px;
 }
 
 .slide {
@@ -714,7 +712,7 @@ main .slider{
 
 .info_icon span{
     display: block;
-    margin: 10px auto 5px;
+    margin: 10px auto 5px ;
     opacity: 0.7;
 }
 
@@ -746,11 +744,17 @@ main .slider{
     border-left: 1px solid #4A4848;
     width: 300px;
     padding: 10px;
+    background: rgba(0,0,0,0.7);
 
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+}
+
+.info_icon:hover{
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
 }
 
 /* Слайд 1 */
@@ -771,7 +775,7 @@ main .slider{
 
 #slide1 .info_icon:nth-of-type(2) span{
     background: url('/templates/moto/images/microphone.png');
-    width: 38px;
+    width: 36px;
     height: 40px;
 }
 
@@ -843,6 +847,140 @@ main .slider{
     margin-top: 15px;
 }
 
+/* Слайд 3 */
+#slide3 .info_icon:nth-of-type(1){
+    top: 93px;
+    left: 87px;
+}
+#slide3 .info_icon:nth-of-type(1) span{
+    background: url('/templates/moto/images/circle.png');
+    width: 53px;
+    height: 42px;
+}
+
+#slide3 .info_icon:nth-of-type(2){
+    top: 19px;
+    right: 473px;
+}
+
+#slide3 .info_icon:nth-of-type(2) span{
+    background: url('/templates/moto/images/gensor.png');
+    width: 17px;
+    height: 37px;
+    margin-top: 20px;
+}
+
+#slide3 .info_icon:nth-of-type(3){
+    bottom: 47px;
+    left: 165px;
+}
+
+#slide3 .info_icon:nth-of-type(3) span{
+    background: url('/templates/moto/images/cowboy.png');
+    width: 34px;
+    height: 42px;
+}
+
+#slide3 .info_icon:nth-of-type(4){
+    bottom: 99px;
+    right: 124px;
+}
+
+#slide3 .info_icon:nth-of-type(4) span{
+    background: url('/templates/moto/images/automatic.png');
+    width: 78px;
+    height: 34px;
+    margin-top: 15px;
+}
+
+/* Слайд 4 */
+#slide4 .info_icon:nth-of-type(1){
+    top: 64px;
+    left: 79px;
+}
+#slide4 .info_icon:nth-of-type(1) span{
+    background: url('/templates/moto/images/wi-fi.png');
+    width: 61px;
+    height: 45px;
+
+
+}
+#slide4 .info_icon:nth-of-type(2){
+    top: 43px;
+    right: 112px;
+}
+
+#slide4 .info_icon:nth-of-type(2) span{
+    background: url('/templates/moto/images/fullhd.png');
+    width: 44px;
+    height: 39px;
+}
+
+#slide4 .info_icon:nth-of-type(3){
+    bottom: -22px;
+    left: 148px;
+}
+
+#slide4 .info_icon:nth-of-type(3) span{
+    background: url('/templates/moto/images/32gb.png');
+    width: 61px;
+    height: 41px;
+}
+
+#slide4 .info_icon:nth-of-type(4){
+    bottom: 51px;
+    right: 87px;
+}
+
+#slide4 .info_icon:nth-of-type(4) span{
+    background: url('/templates/moto/images/128.png');
+    width: 76px;
+    height: 34px;
+    margin-top: 15px;
+}
+
+/* Навигация */
+.slide_left{
+    position: absolute;
+    background: url('/templates/moto/images/ARROW_LEFT.png');
+    width: 55px;
+    height: 111px;
+    top: 230px;
+    left: 100px;
+    cursor:pointer;
+    opacity: 0.5;
+
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.slide_right{
+    position: absolute;
+    background: url('/templates/moto/images/ARROW_RIGHT.png');
+    width: 55px;
+    height: 111px;
+    top: 230px;
+    right: 100px;
+    cursor:pointer;
+    opacity: 0.5;
+
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.slide_right:hover, .slide_left:hover{
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+
 /* Команда Фоксай заголовок */
 section.main h1.header{
     font-size: 32px;
@@ -903,7 +1041,7 @@ div.info {
 
 }
 
- /* Команда Фоксай фото 2  */
+/* Команда Фоксай фото 2  */
 section.group div.command div.photo_filial_1{
     width: 194px;
     height: 129px;
@@ -968,27 +1106,6 @@ section.group div.command div.photo_it_director{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* МЕДИА: 1600 */
 @media (max-width:1600px) {
     /*  СЕКЦИЯ: Футер */
@@ -1017,6 +1134,251 @@ section.group div.command div.photo_it_director{
         width: 174px;
         height: 109px;
         border: 6px solid #1c1c1c;
+    }
+
+
+    /* Слайдер */
+
+    .info_icon{
+        width:75px;
+        height:75px;
+    }
+    .info_icon span{
+        background-size: 100% !important;
+    }
+    main {
+        position: absolute;
+        margin: -250px 300px 0px 300px;
+    }
+    .slide_right{
+        right:-40px;
+        top: 160px;
+    }
+    .slide_left{
+        left:-40px;
+        top: 160px;
+    }
+
+
+
+    .slidecontent img {
+        width: 400px;
+    }
+    .slidecontent {
+        width: 400px;
+    }
+
+    #slide1 img{
+        margin-top: 60px;
+        margin-top: 60px;
+    }
+
+    main .slider {
+        position: relative;
+        top: 0px;
+    }
+
+    .info_icon p {
+        font-size: 9px;
+    }
+
+    /* Слайд 1 */
+    #slide1 .info_icon:nth-of-type(1){
+        top: 24px;
+        left: 93px;
+    }
+    #slide1 .info_icon:nth-of-type(1) span{
+        background: url('/templates/moto/images/water.png');
+        width: 32px;
+        height: 33px;
+
+    }
+    #slide1 .info_icon:nth-of-type(2){
+        top: 90px;
+        right: 3px;
+    }
+
+    #slide1 .info_icon:nth-of-type(2) span{
+        background: url('/templates/moto/images/microphone.png');
+        width: 30px;
+        height: 33px;
+    }
+
+    #slide1 .info_icon:nth-of-type(3){
+        bottom: 25px;
+        left: -18px;
+    }
+
+    #slide1 .info_icon:nth-of-type(3) span{
+        background: url('/templates/moto/images/Usb.png');
+        width: 36px;
+        height: 31px;
+    }
+
+    #slide1 .info_icon:nth-of-type(4){
+        bottom: -4px;
+        right: 56px;
+    }
+
+    #slide1 .info_icon:nth-of-type(4) span{
+        background: url('/templates/moto/images/enginner.png');
+        width: 25px;
+        height: 31px;
+    }
+
+    /* Слайд 2 */
+    #slide2 .info_icon:nth-of-type(1){
+        top: 49px;
+        left: -46px;
+    }
+    #slide2 .info_icon:nth-of-type(1) span{
+        background: url('/templates/moto/images/wi-fi.png');
+        width: 48px;
+        height: 35px;
+        margin-bottom: 0px;
+    }
+    #slide2 .info_icon:nth-of-type(2) {
+        top: 30px;
+        right: -22px;
+    }
+
+    #slide2 .info_icon:nth-of-type(2) span{
+        background: url('/templates/moto/images/fullhd.png');
+        width: 36px;
+        height: 31px;
+    }
+
+    #slide2 .info_icon:nth-of-type(3){
+        bottom: -18px;
+        left: 7px;
+    }
+
+    #slide2 .info_icon:nth-of-type(3) span{
+        background: url('/templates/moto/images/32gb.png');
+        width: 52px;
+        height: 30px;
+    }
+
+    #slide2 .info_icon:nth-of-type(4){
+        bottom: 40px;
+        right: -41px;
+    }
+
+    #slide2 .info_icon:nth-of-type(4) span{
+        background: url('/templates/moto/images/128.png');
+        width: 58px;
+        height: 25px;
+        margin-top: 15px;
+    }
+
+    /* Слайд 3 */
+    #slide3 .info_icon:nth-of-type(1){
+        top: 59px;
+        left: -24px;
+    }
+
+    #slide3 .info_icon:nth-of-type(1) span{
+        background: url('/templates/moto/images/circle.png');
+        width: 45px;
+        height: 30px;
+    }
+
+    #slide3 .info_icon:nth-of-type(2){
+        top: 8px;
+        right: 249px;
+    }
+
+    #slide3 .info_icon:nth-of-type(2) span{
+        background: url('/templates/moto/images/gensor.png');
+        width: 14px;
+        height: 30px;
+        margin-top: 20px;
+    }
+
+    #slide3 .info_icon:nth-of-type(3){
+        bottom: 24px;
+        left: 32px;
+    }
+
+    #slide3 .info_icon:nth-of-type(3) span{
+        background: url('/templates/moto/images/cowboy.png');
+        width: 26px;
+        height: 32px;
+    }
+
+    #slide3 .info_icon:nth-of-type(4){
+        bottom: 63px;
+        right: 4px;
+    }
+
+    #slide3 .info_icon:nth-of-type(4) span{
+        background: url('/templates/moto/images/automatic.png');
+        width: 57px;
+        height: 25px;
+        margin-top: 15px;
+    }
+
+    /* Слайд 4 */
+    #slide4 .info_icon:nth-of-type(1){
+        top: 49px;
+        left: -46px;
+    }
+    #slide4 .info_icon:nth-of-type(1) span{
+        background: url('/templates/moto/images/wi-fi.png');
+        width: 48px;
+        height: 35px;
+        margin-bottom: 0px;
+    }
+    #slide4 .info_icon:nth-of-type(2) {
+        top: 30px;
+        right: -22px;
+    }
+
+    #slide4 .info_icon:nth-of-type(2) span{
+        background: url('/templates/moto/images/fullhd.png');
+        width: 36px;
+        height: 31px;
+    }
+
+    #slide4 .info_icon:nth-of-type(3){
+        bottom: -18px;
+        left: 7px;
+    }
+
+    #slide4 .info_icon:nth-of-type(3) span{
+        background: url('/templates/moto/images/32gb.png');
+        width: 52px;
+        height: 30px;
+    }
+
+    #slide4 .info_icon:nth-of-type(4){
+        bottom: 40px;
+        right: -41px;
+    }
+
+    #slide4 .info_icon:nth-of-type(4) span{
+        background: url('/templates/moto/images/128.png');
+        width: 58px;
+        height: 25px;
+        margin-top: 15px;
+    }
+
+
+    .info_icon div {
+        left: 75px;
+        width: 0px;
+        height: 55px;
+        position: absolute;
+        top: 0px;
+        text-align: left;
+        padding: 10px 0px;
+        border: none;
+        overflow: hidden;
+        font-size: 11px;
+    }
+
+    .info_icon:hover div{
+        width: 250px;
     }
 }
 
@@ -1079,6 +1441,15 @@ section.group div.command div.photo_it_director{
         width: 174px;
         height: 109px;
         border: 6px solid #1c1c1c;
+    }
+
+    /* СЕКЦИЯ: ФУТЕР*/
+    section.menu_bottom nav.nav-left li.list_dot {
+        margin-left: 10px;
+    }
+
+    section.menu_bottom nav.nav-left li.list_dot:before {
+        margin-right: 10px;
     }
 }
 
@@ -1288,13 +1659,13 @@ section.group div.command div.photo_it_director{
         -webkit-transform:rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
-        -ms-transform:rotate(360deg);
-        -moz-transform:rotate(360deg);
-        -webkit-transform:rotate(360deg);
+        transform:rotate(36000deg);
+        -ms-transform:rotate(36000deg);
+        -moz-transform:rotate(36000deg);
+        -webkit-transform:rotate(36000deg);
     }
 }
-/*
+
 @-webkit-keyframes Rotate{
     from {
         transform:rotate(0deg);
@@ -1303,10 +1674,9 @@ section.group div.command div.photo_it_director{
         -webkit-transform:rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
-        -ms-transform:rotate(360deg);
-        -moz-transform:rotate(360deg);
-        -webkit-transform:rotate(360deg);
+        transform:rotate(36000deg);
+        -ms-transform:rotate(36000deg);
+        -moz-transform:rotate(36000deg);
+        -webkit-transform:rotate(36000deg);
     }
 }
-*/

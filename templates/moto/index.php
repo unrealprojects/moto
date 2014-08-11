@@ -19,23 +19,42 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.nicescroll.min.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
+$uri = JUri::getInstance();
+$path = $uri->getPath();
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <jdoc:include type="head" />
+
+    <?php if($path!='/'){ ?>
+        <style>
+            .rotate{
+                animation:none;
+                background: rgba(0,0,0,0.9);
+                opacity: 1;
+                -webkit-animation: none;
+                top:0px;
+                left:0px;
+                right: 0px;
+                bottom:0px;
+            }
+
+        </style>
+    <?php }?>
 </head>
 <body>
     <div class="rotate"></div>
     <header>
         <!-- СЕКЦИЯ: Логотип -->
         <section class="logo">
-            <a href="#"><span></span></a>
+            <a href="/"><span></span></a>
         </section>
 
         <!-- СЕКЦИЯ: Меню -->
@@ -44,7 +63,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
                 <ul>
                     <li><a href="/">Видеозаписи</a></li>
                     <li><a href="/">Как поставить?</a></li>
-                    <li><a href="/">Команда FOXEYE™</a></li>
+                    <li><a href="/teem" class="ajax">Команда FOXEYE™</a></li>
                 </ul>
             </nav>
             <nav class="nav-right">
@@ -90,65 +109,6 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
             <jdoc:include type="component" />
-            <h1 class="header">КОМАНДА FOXEYE</h1>
-            <section class="group">
-                    <div class="command">
-                        <div class="photo_project_manager"></div>
-                        <div class="info"><h2 class="group_name">МОЛОТОК МАКСИМ</h2>
-                        <p class="group_info">
-                             Руководитель проекта<br>Мотоцикл: HONDA CBR 900 RR<br></p>
-                        <hr class="line_1"/>
-                        <p class="mail">molotok@foxeye.ru</p>
-
-                        </div>
-                    </div>
-                    <div class="command">
-                        <div class="photo_filial_1"></div>
-                           <div class="info"><h2 class="group_name">БУШМАН СЕРГЕЙ</h2>
-                             <p class="group_info">
-                                 Филиал Северо-запад<br>Мотоцикл: SUZUKI RMZ250<br>
-                             </p>
-                             <hr class="line_1"/>
-                             <p class="mail">bushman@foxeye.ru</p>
-
-                         </div>
-                     </div>
-                     <div class="command">
-                         <div class="photo_manager_development"></div>
-                         <div class="info"><h2 class="group_name">АЛЕХАНКОВ СЕРГЕЙ</h2>
-                             <p class="group_info">
-                                 Менеджер по развитию регионов<br>Скутер: YAMAHA VINO<br>
-                             </p>
-                                 <hr class="line_1"/>
-                             <p class="mail">plehanov@foxeye.ru</p>
-
-                         </div>
-                     </div>
-                     <div class="command">
-                         <div class="photo_filial_2">
-                         </div>
-                         <div class="info"><h2 class="group_name">СЛАСТЕЛИН ДМИТРИЙ</h2>
-                              <p class="group_info">
-                                  Филиал Северо-запад<br>Мотоцфикл: SUZUKI RMZ250<br>
-                              </p>
-                              <hr class="line_1"/>
-                              <p class="mail">bushman@foxeye.ru</p>
-
-                          </div>
-                      </div>
-                      <div class="command">
-                          <div class="photo_it_director">
-                          </div>
-                          <div class="info"><h2 class="group_name">ФИРСАНОВ АЛЕКСЕЙ</h2>
-                              <p class="group_info">
-                                  IT-директор<br> Мотоцикл: HONDA CBR 900 RR<br>
-                              </p>
-                              <hr class="line_1"/>
-                              <p class="mail">molotok@foxeye.ru</p>
-
-                          </div>
-                      </div>
-              </section>
           </section>
       </main>
 

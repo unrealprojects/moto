@@ -15,6 +15,9 @@
         });
 
 
+//        $(".main").niceScroll({cursorcolor:"rgb(0,0,0)",cursorwidth:'7',cursorborderradius:'0',cursorborder:'none',zindex:"9999"});
+
+
         /* Слайдер */
         number = 1;
 

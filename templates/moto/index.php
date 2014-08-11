@@ -26,7 +26,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
+   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <jdoc:include type="head" />
 </head>
 <body>
@@ -77,7 +77,7 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
             <form method="POST">
                 <input type="text" autocomplete="off" name="name" placeholder="Имя">
                 <input type="text" autocomplete="off" name="phone" placeholder="Телефон">
-                <input type="submit" name="order" value="ЗАКЗАТЬ >">
+                <input type="submit" name="order" value="ЗАКАЗАТЬ >">
                 <p>*При покупке у наc скидка 50%<br>
                     на установку регистратора<br>
                     в Москве и Санкт-Петербурге</p>
@@ -88,98 +88,70 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <main>
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
-<!--            <jdoc:include type="component" />-->
-            <div class="slider">
-                 <div class="slides">
+            <h1 class="header">КОМАНДА FOXEYE</h1>
+            <section class="group">
+                    <div class="command">
+                        <div class="photo_project_manager"></div>
+                        <div class="info"><h2 class="group_name">МОЛОТОК МАКСИМ</h2>
+                        <p class="group_info">
+                             Руководитель проекта<br>Мотоцикл: HONDA CBR 900 RR<br></p>
+                        <hr class="line_1"/>
+                        <p class="mail">molotok@foxeye.ru</p>
 
-                     <div class="slide" number="1"  id="slide1">
-                         <div class="slidecontent">
-                             <img src="/templates/moto/images/photo2.png" alt="">
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Защита<br>от влаги</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Встроенный<br>микрофон</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>USB<br>зарядка</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Инженеры<br>Тайвань</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="photo_filial_1"></div>
+                           <div class="info"><h2 class="group_name">БУШМАН СЕРГЕЙ</h2>
+                             <p class="group_info">
+                                 Филиал Северо-запад<br>Мотоцикл: SUZUKI RMZ250<br>
+                             </p>
+                             <hr class="line_1"/>
+                             <p class="mail">bushman@foxeye.ru</p>
+
                          </div>
                      </div>
+                     <div class="command">
+                         <div class="photo_manager_development"></div>
+                         <div class="info"><h2 class="group_name">АЛЕХАНКОВ СЕРГЕЙ</h2>
+                             <p class="group_info">
+                                 Менеджер по развитию регионов<br>Скутер: YAMAHA VINO<br>
+                             </p>
+                                 <hr class="line_1"/>
+                             <p class="mail">plehanov@foxeye.ru</p>
 
-                     <div class="slide" number="2" id="slide2" style="display: block">
-                         <div class="slidecontent">
-                            <img src="/templates/moto/images/photo1.png" alt="">
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Wi-fi<br>управление</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Высокое<br>разрешение</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Внутренняя<br>память</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Широкий<br>угол обзора</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                         </div>
-
-                     </div>
-                     <div class="slide" number="3">
-                         <div class="slidecontent">
-                            <img src="/templates/moto/images/moto.png" alt="">\
                          </div>
                      </div>
-                     <div class="slide" number="4">
-                         <div class="slidecontent">
-                             <img src="/templates/moto/images/photo2.png" alt="">
+                     <div class="command">
+                         <div class="photo_filial_2">
                          </div>
-                     </div>
-                 </div>
-                <div class="slide_left"></div>
-                <div class="slide_right"></div>
-            </div>
+                         <div class="info"><h2 class="group_name">СЛАСТЕЛИН ДМИТРИЙ</h2>
+                              <p class="group_info">
+                                  Филиал Северо-запад<br>Мотоцфикл: SUZUKI RMZ250<br>
+                              </p>
+                              <hr class="line_1"/>
+                              <p class="mail">bushman@foxeye.ru</p>
 
-        </section>
-    </main>
+                          </div>
+                      </div>
+                      <div class="command">
+                          <div class="photo_it_director">
+                          </div>
+                          <div class="info"><h2 class="group_name">ФИРСАНОВ АЛЕКСЕЙ</h2>
+                              <p class="group_info">
+                                  IT-директор<br> Мотоцикл: HONDA CBR 900 RR<br>
+                              </p>
+                              <hr class="line_1"/>
+                              <p class="mail">molotok@foxeye.ru</p>
 
-    <footer>
-        <!-- СЕКЦИЯ: Иконки в футере -->
+                          </div>
+                      </div>
+              </section>
+          </section>
+      </main>
+
+      <footer>
+          <!-- СЕКЦИЯ: Иконки в футере -->
         <section class="icons">
             <nav class="nav_bottom">
                 <ul>

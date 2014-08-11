@@ -843,6 +843,110 @@ main .slider{
     margin-top: 15px;
 }
 
+/* Команда Фоксай заголовок */
+section.main h1.header{
+    font-size: 32px;
+    margin-bottom: 9px;
+}
+/* Команда Фоксай фото 1  */
+
+section.group  div.command div.photo_project_manager {
+    width: 194px;
+    height: 129px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo_project_manager.png');
+    background-size: 100% !important;
+    float: left;
+    display: block;
+}
+
+section.group  div.command{
+    float: left;
+    margin-bottom: 31px;
+    width: 50%;
+}
+
+section.group  div.command h2.group_name{
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    margin-top: -5px;
+}
+
+
+section.group  div.command hr.line_1{
+    border: none;
+    border-top: 1px solid #4e4e4e;
+    width: 174px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+section.group  div.command p.mail{
+    border-bottom: 1px solid #4e4e4e;
+    font-size: 14px;
+    display: inline-block;
+    font-family: 'PT Sans', sans-serif;
+    padding-bottom: 3px;
+}
+
+section.group  div.command p.group_info {
+    font-size: 13px;
+    line-height: 22px;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+div.info {
+    float:left;
+    margin-left: 10px;
+
+}
+
+ /* Команда Фоксай фото 2  */
+section.group div.command div.photo_filial_1{
+    width: 194px;
+    height: 129px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo_filial_1.png');
+    background-size: 100% !important;
+    float: left;
+}
+
+div.photo_filial_1{
+    float:left;
+}
+
+/* Команда Фоксай фото 3  */
+section.group div.command div.photo_manager_development{
+    width: 194px;
+    height: 129px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo_manager_development.png');
+    background-size: 100% !important;
+    float: left;
+}
+
+/* Команда Фоксай фото 4  */
+section.group div.command div.photo_filial_2{
+    width: 194px;
+    height: 129px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo_filial_2.png');
+    background-size: 100% !important;
+    float: left;
+}
+
+/* Команда Фоксай фото 5  */
+section.group div.command div.photo_it_director{
+    width: 194px;
+    height: 129px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo_it_director.png');
+    background-size: 100% !important;
+    float: left;
+}
+
 
 
 
@@ -906,6 +1010,14 @@ main .slider{
     .nav_bottom ul li h4 {
         font-size: 27px;
     }
+    /* Команда Фоксай фото */
+    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
+    section.group div.command div.photo_manager_development, section.group div.command div.photo_filial_2,
+    section.group div.command div.photo_it_director {
+        width: 174px;
+        height: 109px;
+        border: 6px solid #1c1c1c;
+    }
 }
 
 
@@ -959,6 +1071,14 @@ main .slider{
     }
     .nav_bottom ul li h4 {
         font-size: 17px;
+    }
+    /* Команда Фоксай фото */
+    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
+    section.group div.command div.photo_manager_development, section.group div.command div.photo_filial_2,
+    section.group div.command div.photo_it_director {
+        width: 174px;
+        height: 109px;
+        border: 6px solid #1c1c1c;
     }
 }
 
@@ -1174,7 +1294,7 @@ main .slider{
         -webkit-transform:rotate(360deg);
     }
 }
-
+/*
 @-webkit-keyframes Rotate{
     from {
         transform:rotate(0deg);
@@ -1189,3 +1309,4 @@ main .slider{
         -webkit-transform:rotate(360deg);
     }
 }
+*/

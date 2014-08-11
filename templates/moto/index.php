@@ -18,6 +18,7 @@ $this->direction = $doc->direction;
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
 ?>
@@ -88,92 +89,9 @@ $doc->addScript('templates/' . $this->template . '/js/template.js');
     <main>
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
-<!--            <jdoc:include type="component" />-->
-            <div class="slider">
-                 <div class="slides">
+            <jdoc:include type="component" />
+<!--            -->
 
-                     <div class="slide" number="1"  id="slide1">
-                         <div class="slidecontent">
-                             <img src="/templates/moto/images/photo2.png" alt="">
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Защита<br>от влаги</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Встроенный<br>микрофон</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>USB<br>зарядка</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Инженеры<br>Тайвань</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-
-                     <div class="slide" number="2" id="slide2" style="display: block">
-                         <div class="slidecontent">
-                            <img src="/templates/moto/images/photo1.png" alt="">
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Wi-fi<br>управление</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Высокое<br>разрешение</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Внутренняя<br>память</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                             <div class="info_icon">
-                                 <span></span>
-                                 <p>Широкий<br>угол обзора</p>
-                                 <div>
-                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                 </div>
-                             </div>
-                         </div>
-
-                     </div>
-                     <div class="slide" number="3">
-                         <div class="slidecontent">
-                            <img src="/templates/moto/images/moto.png" alt="">\
-                         </div>
-                     </div>
-                     <div class="slide" number="4">
-                         <div class="slidecontent">
-                             <img src="/templates/moto/images/photo2.png" alt="">
-                         </div>
-                     </div>
-                 </div>
-                <div class="slide_left"></div>
-                <div class="slide_right"></div>
-            </div>
 
         </section>
     </main>

@@ -15,24 +15,45 @@
         });
 
 
+        /* Паралакс */
+//        $('.info_icon span').parallax({ decay: '0.1'});
 
         /* Слайдер */
-      /*  number = 1;
-
+        number = 1;
 
         function slide(){
-
-             $('.slide[number='+number+']').fadeOut(1000);
+             $('#slide'+number).fadeOut(1000);
                  if(number<4){
                      number++;
                  }else{
                      number = 1;
                  }
-             $('.slide[number='+number+']').fadeIn(5000);
+             $('#slide'+number).fadeIn(5000);
         }
-        setInterval(slide,10000);*/
+        interval=setInterval(slide,10000);
 
+        $('.slide_right').click(function(){
 
+            clearInterval(interval);
+            $('#slide'+number).stop().fadeOut({easing:'easeInQuad',duration:500});
+            if(number<4){
+                number++;
+            }else{
+                number = 1;
+            }
+            $('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
+        });
+
+        $('.slide_left').click(function(){
+            clearInterval(interval);
+            $('#slide'+number).stop().fadeOut({easing:'easeInQuad',duration:500});
+            if(number>1){
+                number--;
+            }else{
+                number = 4;
+            }
+            $('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
+        });
 
 
 	});

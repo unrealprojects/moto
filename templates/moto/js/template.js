@@ -15,9 +15,6 @@
         });
 
 
-        /* Паралакс */
-//        $('.info_icon span').parallax({ decay: '0.1'});
-
         /* Слайдер */
         number = 1;
 

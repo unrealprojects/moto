@@ -683,7 +683,7 @@ main .slider{
     padding: 10px 0px;
     border: none;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 11px;
 
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -693,7 +693,7 @@ main .slider{
 
 .info_icon:hover div{
     border-left: 1px solid #4A4848;
-    width: 300px;
+    width: 350px;
     padding: 10px;
     background: rgba(0,0,0,0.7);
 
@@ -1106,7 +1106,7 @@ section.group div.command div.photo_it_director{
 
 
 /* Медиа 1440*/
-@media (max-width:1440px) {
+@media (max-width:1439px) {
 
     /* Слайдер */
 

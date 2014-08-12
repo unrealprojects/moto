@@ -58,6 +58,12 @@ $path = $uri->getPath();
                     margin-right: 260px;
                 }
             }
+            @media (max-width: 1439px){
+                main {
+                    position: absolute;
+                    margin: -330px 300px 0px 300px;
+                 }
+            }
         </style>
     <?php }?>
 </head>

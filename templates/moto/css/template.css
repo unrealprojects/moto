@@ -1088,7 +1088,9 @@ section.group div.command div.photo_it_director{
 }
 
 
-
+.static_page__close{
+    position: absolute;
+}
 
 
 

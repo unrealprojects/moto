@@ -28,7 +28,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 <![endif]-->
 </head>
 <body class="contentpane modal">
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
+<jdoc:include type="message" />
+<jdoc:include type="component" />
 </body>
 </html>

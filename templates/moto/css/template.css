@@ -1093,8 +1093,39 @@ section.group div.command div.photo_it_director{
 }
 
 
+/* Как поставить? */
+/* Размер фоток при ХД поставить 254 на 191 */
+section.main div.video_moto div.photo_video_moto {
+    width: 214px;
+    height: 151px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/photo3.png');
+    background-size: 100% !important;
+}
 
+section.main div.installation_scheme_1 div.photo_installation_scheme_1 {
+    width: 214px;
+    height: 151px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/schema_1.png');
+    background-size: 100% !important;
+}
 
+section.main div.video_scooter div.photo_video_scooter {
+    width: 214px;
+    height: 151px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/motorcyclist.png');
+    background-size: 100% !important;
+}
+
+section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
+    width: 214px;
+    height: 151px;
+    border: 8px solid #1c1c1c;
+    background: url('../images/schema_2.png');
+    background-size: 100% !important;
+}
 
 
 

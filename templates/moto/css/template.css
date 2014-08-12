@@ -1483,6 +1483,12 @@ section.group div.command div.photo_it_director{
         -webkit-animation: SlideInfoLeftSmall 1s;
     }
 
+    /* СЕКЦИЯ: МЕНЮ */
+    section.menu{
+        animation: SlideLeftMenuSmall 1s;
+        -webkit-animation: SlideLeftMenuSmall 1s;
+    }
+
     /* Контент: слайды*/
     .slide_right{
         right:-40px;
@@ -1667,6 +1673,32 @@ section.group div.command div.photo_it_director{
     }
     to {
         left: 350px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftMenuSmall{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 230px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeftMenuSmall{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 230px;
         right: 0px;
         opacity: 1;
     }

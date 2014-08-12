@@ -15,6 +15,28 @@
         });
 
 
+        $("section.order form input[name=phone]").mask("8 ( 999 ) 999-99-99");
+
+        $('section.order form input[type=submit]').click(function(){
+
+
+            var phone = $("section.order form input[name=phone]").val();
+            var name =$("section.order form input[name=name]").val();
+            if(!phone && !name){
+                $('section.order form input[type=submit]').after('<p style="color:red; margin-bottom:10px;">Заполните все поля</p>');
+            }else{
+                $.ajax({
+                        type: 'POST',
+                        url: 'mail.php',
+                        data: 'phone='+phone+'&name='+name,
+                        success: function(data){
+                            $('section.order form input,section.order form p').remove();
+                            $('section.order form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, Олег.<br/>Мы перезвоним Вам в ближайшее время!</p>");
+                        }
+                    });
+            }
+            return false;
+        });
 //        $(".main").niceScroll({cursorcolor:"rgb(0,0,0)",cursorwidth:'7',cursorborderradius:'0',cursorborder:'none',zindex:"9999"});
 
 

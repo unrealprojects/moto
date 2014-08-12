@@ -415,7 +415,7 @@ main{
 
 section.icons{
     position: fixed;
-    bottom:68px;
+    bottom:71px;
     right:0px;
     left:20px;
 
@@ -443,6 +443,15 @@ section.icons .nav_bottom li:nth-of-type(5) {
     width:13%;
 }
 
+
+section.icons .nav_bottom li:nth-of-type(5) .icon_wrap{
+    float: right;
+}
+
+section.icons .nav_bottom li:nth-of-type(5) h4{
+    float: right;
+    margin-right: 20px;
+}
 
 section.icons .nav_bottom {
     width: 100%;
@@ -676,14 +685,16 @@ main .slider{
     color: #b8b7b3;
     left: 95px;
     width: 0px;
-    height: 75px;
+    min-height: 75px;
     position: absolute;
     top: 0px;
     text-align: left;
     padding: 10px 0px;
+    padding-bottom: 10px !important;
     border: none;
     overflow: hidden;
     font-size: 11px;
+    max-height: 120px;
 
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -728,6 +739,8 @@ main .slider{
     background: url('/templates/moto/images/microphone.png');
     width: 36px;
     height: 40px;
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 #slide3 .info_icon:nth-of-type(3){
@@ -748,8 +761,9 @@ main .slider{
 
 #slide3 .info_icon:nth-of-type(4) span{
     background: url('/templates/moto/images/enginner.png');
-    width: 38px;
+    width: 36px;
     height: 40px;
+
 }
 
 /* Слайд 2 */
@@ -892,7 +906,7 @@ main .slider{
 
 
 #slide3 {
-    top: 40px;
+    top: 20px;
 }
 
 /* Навигация */
@@ -904,11 +918,11 @@ main .slider{
     top: 230px;
     left: 100px;
     cursor:pointer;
-
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+    background-size: 100%;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
 }
 
 .slide_right{
@@ -919,27 +933,31 @@ main .slider{
     top: 230px;
     right: 100px;
     cursor:pointer;
-
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+    background-size: 100%;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
 }
 
 .slide_right:hover{
+    background-size: 100%!important;
     background: url('/templates/moto/images/ARROW_RIGHT_YELLOW.png');
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
 }
 
 .slide_left:hover{
+    background-size: 100% !important;
     background: url('/templates/moto/images/ARROW_LEFT_YELLOW.png');
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
 }
 
 
@@ -1090,6 +1108,9 @@ section.group div.command div.photo_it_director{
 
 .static_page__close{
     position: absolute;
+    background: url('/templates/moto/images/close.png');
+    width: 19px;
+    height: 19px;
 }
 
 
@@ -1118,6 +1139,16 @@ section.group div.command div.photo_it_director{
     section.icons .nav_bottom li:nth-of-type(5) {
         width:16%;
     }
+
+    section.icons .nav_bottom li:nth-of-type(5) .icon_wrap{
+        float: right;
+    }
+
+    section.icons .nav_bottom li:nth-of-type(5) h4{
+        float: right;
+        margin-right: 20px;
+    }
+
     .nav_bottom ul li h4 {
         font-size: 27px;
     }
@@ -1138,8 +1169,9 @@ section.group div.command div.photo_it_director{
         left:0px;
     }
 
-
-
+    section.icons{
+        bottom:66px;
+    }
 }
 
 
@@ -1177,7 +1209,7 @@ section.group div.command div.photo_it_director{
     .info_icon div {
         left: 75px;
         width: 0px;
-        height: 55px;
+        min-height: 55px;
         position: absolute;
         top: 0px;
         text-align: left;
@@ -1230,6 +1262,7 @@ section.group div.command div.photo_it_director{
     #slide3 .info_icon:nth-of-type(2) span{
         background: url('/templates/moto/images/microphone.png');
         width: 32px;
+        margin-top: 11px;
         height: 35px;
     }
 
@@ -1496,6 +1529,15 @@ section.group div.command div.photo_it_director{
         width:17%;
     }
 
+    section.icons .nav_bottom li:nth-of-type(5) .icon_wrap{
+        float: right;
+    }
+
+    section.icons .nav_bottom li:nth-of-type(5) h4{
+        float: right;
+        margin-right: 20px;
+    }
+
     /* Команда Фоксай фото */
     section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
     section.group div.command div.photo_manager_development, section.group div.command div.photo_filial_2,
@@ -1529,19 +1571,26 @@ section.group div.command div.photo_it_director{
 
     /* Контент: слайды*/
     .slide_right{
-        right:-40px;
+        right:40px;
         top: 195px;
         background-size: 100%;
         width: 27px;
         height: 55px;
-
+        background: url('/templates/moto/images/ARROW_RIGHT_SMALL.png');
     }
     .slide_left{
-        left:-40px;
+        left:40px;
         top: 195px;
         background-size: 100%;
         width: 27px;
         height: 55px;
+        background: url('/templates/moto/images/ARROW_LEFT_SMALL.png');
+    }
+    .slide_left:hover{
+        background: url('/templates/moto/images/ARROW_LEFT_YELLOW_SMALL.png');
+    }
+    .slide_right:hover{
+        background: url('/templates/moto/images/ARROW_RIGHT_YELLOW_SMALL.png');
     }
 
     #slide3 {
@@ -1560,6 +1609,17 @@ section.group div.command div.photo_it_director{
 
     section.order .order-header {
         padding: 0px 30px 20px 30px;
+    }
+}
+/* МЕДИА: 980 */
+@media (max-width:1180px) {
+    /* Контент: слайды*/
+    .slide_right{
+        right:-40px;
+
+    }
+    .slide_left{
+        left:-40px;
     }
 }
 
@@ -1596,13 +1656,22 @@ section.group div.command div.photo_it_director{
     .nav_bottom ul li h4 {
         font-size: 17px;
     }
+
+    section.icons .nav_bottom li:nth-of-type(5) .icon_wrap{
+        float: right;
+    }
+
+    section.icons .nav_bottom li:nth-of-type(5) h4{
+        float: right;
+        margin-right: 20px;
+    }
 }
 
 
 
 
-/* МЕДИА: 980 */
-@media (min-width:1440px) {
+/* МЕДИА: 1280 */
+@media (min-width:1280px) {
     /* Анимация заказа */
     section.order:hover{
         right:100px;

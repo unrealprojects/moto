@@ -20,6 +20,8 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.nicescroll.min.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.maskedinput.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.color.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
 $uri = JUri::getInstance();
@@ -45,22 +47,21 @@ $path = $uri->getPath();
                 right: 0px;
                 bottom:0px;
             }
-
         </style>
     <?php }?>
-    <style>
-        .rotate{
-            animation:none;
-            background: rgba(0,0,0,0.9);
-            opacity: 1;
-            -webkit-animation: none;
-            top:0px;
-            left:0px;
-            right: 0px;
-            bottom:0px;
-        }
-
-    </style>
+<!--    <style>-->
+<!--        .rotate{-->
+<!--            animation:none;-->
+<!--            background: rgba(0,0,0,0.9);-->
+<!--            opacity: 1;-->
+<!--            -webkit-animation: none;-->
+<!--            top:0px;-->
+<!--            left:0px;-->
+<!--            right: 0px;-->
+<!--            bottom:0px;-->
+<!--        }-->
+<!---->
+<!--    </style>-->
 </head>
 <body>
     <div class="rotate"></div>
@@ -110,7 +111,7 @@ $path = $uri->getPath();
             <form method="POST">
                 <input type="text" autocomplete="off" name="name" placeholder="Имя">
                 <input type="text" autocomplete="off" name="phone" placeholder="Телефон">
-                <input type="submit" name="order" value="ЗАКАЗАТЬ >">
+                <input type="submit" name="order" value="ЗАКАЗАТЬ">
                 <p>*При покупке у наc скидка 50%<br>
                     на установку регистратора<br>
                     в Москве и Санкт-Петербурге</p>
@@ -164,10 +165,11 @@ $path = $uri->getPath();
                     </li>
                     <li>
                         <a href="#">
+
+                            <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                             <div class="icon_wrap">
                                 <span></span>
                             </div>
-                            <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                         </a>
                     </li>
                 </ul>

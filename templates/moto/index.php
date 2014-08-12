@@ -47,21 +47,19 @@ $path = $uri->getPath();
                 right: 0px;
                 bottom:0px;
             }
+
+            main {
+                margin-left: 350px;
+                margin-right: 260px;
+            }
+            @media (max-width: 1280px){
+                main {
+                    margin-left: 230px;
+                    margin-right: 260px;
+                }
+            }
         </style>
     <?php }?>
-<!--    <style>-->
-<!--        .rotate{-->
-<!--            animation:none;-->
-<!--            background: rgba(0,0,0,0.9);-->
-<!--            opacity: 1;-->
-<!--            -webkit-animation: none;-->
-<!--            top:0px;-->
-<!--            left:0px;-->
-<!--            right: 0px;-->
-<!--            bottom:0px;-->
-<!--        }-->
-<!---->
-<!--    </style>-->
 </head>
 <body>
     <div class="rotate"></div>

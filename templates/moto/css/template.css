@@ -1505,6 +1505,18 @@ section.group div.command div.photo_it_director{
         top: 10px;
     }
 
+    /* СЕКЦИЯ заказ */
+    section.order {
+        padding: 15px 0px 15px 0px;
+    }
+
+    section.order form {
+        padding: 15px 30px 0px 30px;
+    }
+
+    section.order .order-header {
+        padding: 0px 30px 20px 30px;
+    }
 }
 
 

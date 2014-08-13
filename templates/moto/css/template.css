@@ -513,6 +513,12 @@ section.icons nav.nav_bottom .icon_wrap span{
     font-family: bebas_neue_cyrillicregular;
     font-weight: 400;
 }
+
+section.icons nav.nav_bottom .icon_wrap span strong {
+    font-weight: 400;
+    line-height: 11px;
+}
+
 section.icons nav.nav_bottom li:nth-of-type(3) .icon_wrap span {
     display: block;
     margin-top:18px;
@@ -859,9 +865,10 @@ main .slider{
 
 #slide1 .info_icon:nth-of-type(4) span{
     background: url('/templates/moto/images/automatic.png');
-    width: 78px;
-    height: 34px;
+    width: 58px;
+    height: 29px;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 /* Слайд 4 */
@@ -1183,10 +1190,6 @@ section.main div.static_page p.installation_center{
 
 }
 
-section.main div.item-page {
-    margin-bottom: 250px;
-}
-
 div.static_page div.inst_line_1 h2.string_above_photo, div.static_page div.inst_line_2 h2.string_above_photo {
     font-size: 28px;
     font-family: 'bebas_neue_cyrillicregular';
@@ -1477,9 +1480,10 @@ div.static_page hr.line_inst{
 
     #slide1 .info_icon:nth-of-type(4) span{
         background: url('/templates/moto/images/automatic.png');
-        width: 57px;
+        width: 46px;
         height: 23px;
-        margin-top: 11px;
+        margin-top: 13px;
+        margin-bottom: 6px;
     }
 
     /* Слайд 4 */
@@ -1602,6 +1606,36 @@ div.static_page hr.line_inst{
     }
 }
 
+
+@media (max-width:1370px) {
+    .slide_right{
+        right:80px;
+        top: 195px;
+        background-size: 100%;
+        width: 27px;
+        height: 55px;
+        background: url('/templates/moto/images/ARROW_RIGHT_SMALL.png');
+    }
+
+    .slide_left{
+        left:80px;
+        top: 195px;
+        background-size: 100%;
+        width: 27px;
+        height: 55px;
+        background: url('/templates/moto/images/ARROW_LEFT_SMALL.png');
+    }
+
+    .slide_left:hover{
+        background: url('/templates/moto/images/ARROW_LEFT_YELLOW_SMALL.png');
+    }
+
+    .slide_right:hover{
+        background: url('/templates/moto/images/ARROW_RIGHT_YELLOW_SMALL.png');
+    }
+}
+
+
 /* МЕДИА: 1280 */
 
 @media (max-width:1280px) {
@@ -1698,6 +1732,7 @@ div.static_page hr.line_inst{
         height: 55px;
         background: url('/templates/moto/images/ARROW_RIGHT_SMALL.png');
     }
+
     .slide_left{
         left:40px;
         top: 195px;
@@ -1705,12 +1740,6 @@ div.static_page hr.line_inst{
         width: 27px;
         height: 55px;
         background: url('/templates/moto/images/ARROW_LEFT_SMALL.png');
-    }
-    .slide_left:hover{
-        background: url('/templates/moto/images/ARROW_LEFT_YELLOW_SMALL.png');
-    }
-    .slide_right:hover{
-        background: url('/templates/moto/images/ARROW_RIGHT_YELLOW_SMALL.png');
     }
 
     #slide3 {
@@ -1886,194 +1915,7 @@ div.static_page hr.line_inst{
 
 }
 
-
-
-
-/* Анммация */
-
-@-webkit-keyframes SlideDawnLogo{
-    from {
-        margin-top: -100px;
-        opacity: 0;
-    }
-    to {
-        margin-top: 0px;
-        opacity: 1;
-    }
-}
-@keyframes SlideDawnLogo{
-    from {
-        margin-top: -100px;
-        opacity: 0;
-    }
-    to {
-        margin-top: 0px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideLeftMenu{
-    from {
-        left: 1000px;
-        right:-1000px;
-        opacity: 0;
-    }
-    to {
-        left: 350px;
-        right: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes SlideLeftMenu{
-    from {
-        left: 1000px;
-        right:-1000px;
-        opacity: 0;
-    }
-    to {
-        left: 350px;
-        right: 0px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideLeftMenuSmall{
-    from {
-        left: 1000px;
-        right:-1000px;
-        opacity: 0;
-    }
-    to {
-        left: 230px;
-        right: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes SlideLeftMenuSmall{
-    from {
-        left: 1000px;
-        right:-1000px;
-        opacity: 0;
-    }
-    to {
-        left: 230px;
-        right: 0px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideLeftOrder{
-    from {
-        top:-300px;
-        opacity: 0;
-    }
-    to {
-        top: 65px;
-        opacity: 1;
-    }
-}
-
-@keyframes SlideInfoLeft{
-    from {
-        left: -100px;
-        opacity: 0;
-    }
-    to {
-        left: 60px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideInfoLeft{
-    from {
-        left:-100px;
-        opacity: 0;
-    }
-    to {
-        left: 60px;
-        opacity: 1;
-    }
-}
-
-
-@keyframes SlideInfoLeftSmall{
-    from {
-        left: -100px;
-        opacity: 0;
-    }
-    to {
-        left: 40px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideInfoLeftSmall{
-    from {
-        left:-100px;
-        opacity: 0;
-    }
-    to {
-        left: 40px;
-        opacity: 1;
-    }
-}
-
-@keyframes SlideIconsRight{
-    from {
-        left: -2000px;
-        opacity: 0;
-    }
-    to {
-        left: 28px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideIconsRight{
-    from {
-        left:-2000px;
-        opacity: 0;
-    }
-    to {
-        left: 20px;
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes SlideBottom{
-    from {
-        bottom: -60px;
-        opacity: 0;
-    }
-    to {
-        bottom: 0px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes SlideBottom{
-    from {
-        bottom:-60px;
-        opacity: 0;
-    }
-    to {
-        bottom: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes FadeIn{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+/* Анимация */
 
 @-webkit-keyframes FadeIn{
     from {
@@ -2081,41 +1923,6 @@ div.static_page hr.line_inst{
     }
     to {
         opacity: 1;
-    }
-}
-
-
-
-
-
-
-@keyframes Rotate{
-    from {
-        transform:rotate(0deg);
-        -ms-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -webkit-transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(36000deg);
-        -ms-transform:rotate(36000deg);
-        -moz-transform:rotate(36000deg);
-        -webkit-transform:rotate(36000deg);
-    }
-}
-
-@-webkit-keyframes Rotate{
-    from {
-        transform:rotate(0deg);
-        -ms-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -webkit-transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(36000deg);
-        -ms-transform:rotate(36000deg);
-        -moz-transform:rotate(36000deg);
-        -webkit-transform:rotate(36000deg);
     }
 }
 

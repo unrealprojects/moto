@@ -1,0 +1,222 @@
+/* Анммация */
+
+@-webkit-keyframes SlideDawnLogo{
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes SlideDawnLogo{
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftMenu{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 350px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeftMenu{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 350px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftMenuSmall{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 230px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeftMenuSmall{
+    from {
+        left: 1000px;
+        right:-1000px;
+        opacity: 0;
+    }
+    to {
+        left: 230px;
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideLeftOrder{
+    from {
+        top:-300px;
+        opacity: 0;
+    }
+    to {
+        top: 65px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInfoLeft{
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 60px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideInfoLeft{
+    from {
+        left:-100px;
+        opacity: 0;
+    }
+    to {
+        left: 60px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes SlideInfoLeftSmall{
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 40px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideInfoLeftSmall{
+    from {
+        left:-100px;
+        opacity: 0;
+    }
+    to {
+        left: 40px;
+        opacity: 1;
+    }
+}
+
+@keyframes SlideIconsRight{
+    from {
+        left: -2000px;
+        opacity: 0;
+    }
+    to {
+        left: 28px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideIconsRight{
+    from {
+        left:-2000px;
+        opacity: 0;
+    }
+    to {
+        left: 20px;
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes SlideBottom{
+    from {
+        bottom: -60px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SlideBottom{
+    from {
+        bottom:-60px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes FadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+@keyframes Rotate{
+    from {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(36000deg);
+        -ms-transform:rotate(36000deg);
+        -moz-transform:rotate(36000deg);
+        -webkit-transform:rotate(36000deg);
+    }
+}
+
+@-webkit-keyframes Rotate{
+    from {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(36000deg);
+        -ms-transform:rotate(36000deg);
+        -moz-transform:rotate(36000deg);
+        -webkit-transform:rotate(36000deg);
+    }
+}

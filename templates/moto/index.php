@@ -32,12 +32,16 @@ $path = $uri->getPath();
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <jdoc:include type="head" />
 
     <?php if($path!='/'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/inner.css');
-    }?>
+    }
+    if($path=='/'){
+        $doc->addStyleSheet('templates/' . $this->template . '/css/main.css');
+    }
+    ?>
 
 </head>
 <body>
@@ -120,7 +124,7 @@ $path = $uri->getPath();
                     <li>
                         <a href="/guarantee">
                             <div class="icon_wrap">
-                                <span>+2</span>
+                                <span><strong>+</strong>2</span>
                             </div>
                             <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
                         </a>
@@ -130,7 +134,7 @@ $path = $uri->getPath();
                             <div class="icon_wrap">
                                 <span></span>
                             </div>
-                            <h4>СТАТЬИ<br> И ОТЫВЫ</h4>
+                            <h4>СТАТЬИ<br> И ОТЗЫВЫ</h4>
                         </a>
                     </li>
                     <li>

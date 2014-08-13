@@ -23,7 +23,7 @@
             var phone = $("section.order form input[name=phone]").val();
             var name =$("section.order form input[name=name]").val();
             if(!phone && !name){
-                $('section.order form input[type=submit]').after('<p style="color:red; margin-bottom:10px;">Заполните все поля</p>');
+                $('section.order form input[type=submit]').after('<p style="color:#ac8019   ; margin-bottom:10px;">Заполните все поля</p>');
             }else{
                 $.ajax({
                         type: 'POST',
@@ -31,13 +31,13 @@
                         data: 'phone='+phone+'&name='+name,
                         success: function(data){
                             $('section.order form input,section.order form p').remove();
-                            $('section.order form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, Олег.<br/>Мы перезвоним Вам в ближайшее время!</p>");
+                            $('section.order form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, "+name+".<br/>Мы перезвоним Вам в ближайшее время!</p>");
                         }
                     });
             }
             return false;
         });
-//        $(".main").niceScroll({cursorcolor:"rgb(0,0,0)",cursorwidth:'7',cursorborderradius:'0',cursorborder:'none',zindex:"9999"});
+        $("body").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"9999999"});
 
 
         /* Слайдер */
@@ -50,9 +50,17 @@
                  }else{
                      number = 1;
                  }
-             $('#slide'+number).fadeIn(5000);
+             $('#slide'+number).fadeIn(4000);
         }
-        interval=setInterval(slide,10000);
+        interval=setInterval(slide,6000);
+
+        $('.slide').mouseover(function(){
+            clearInterval(interval);
+        });
+
+        $('.slide').mouseout(function(){
+            interval=setInterval(slide,6000);
+        });
 
         $('.slide_right').click(function(){
 
@@ -77,6 +85,56 @@
             $('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
         });
 
+
+
+        /* Всплывающие окна на слайдах */
+        $('#slide1').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/slide1?tmpl=component',
+                success: function(data){
+                  $('.main').html(data+"" +
+                      "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
+                            "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
+                }
+            });
+        });
+
+        $('#slide2').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/slide2?tmpl=component',
+                success: function(data){
+                    $('.main').html(data+"" +
+                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
+                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
+                }
+            });
+        });
+
+        $('#slide3').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/slide3?tmpl=component',
+                success: function(data){
+                    $('.main').html(data+"" +
+                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
+                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
+                }
+            });
+        });
+
+        $('#slide4').click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/slide4?tmpl=component',
+                success: function(data){
+                    $('.main').html(data+"" +
+                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
+                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
+                }
+            });
+        });
 
 	});
 })(jQuery);

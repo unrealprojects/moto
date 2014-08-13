@@ -48,24 +48,34 @@ $path = $uri->getPath();
                 bottom:0px;
             }
 
+            section.icons .icon_wrap{
+                background: rgba(0,0,0,0.8);
+            }
+
             main {
-                margin-left: 350px;
-                margin-right: 260px;
+                top:0px;
+                margin: 100px 260px 0px 350px;
             }
-            @media (max-width: 1280px){
-                main {
-                    margin-left: 230px;
-                    margin-right: 260px;
-                }
-            }
+
             @media (max-width: 1439px){
                 main {
                     position: absolute;
-                    margin: -330px 300px 0px 300px;
+                    /*margin: 80px 300px 0px 300px;*/
+                    top:0px;
                  }
+            }
+            @media (max-width: 1280px){
+                main {
+                    top: 0px;
+                    margin: 100px 260px 0px 250px;
+                }
+            }
+            section.menu{
+                background: rgba(0,0,0,0.8);
             }
         </style>
     <?php }?>
+
 </head>
 <body>
     <div class="rotate"></div>
@@ -81,7 +91,7 @@ $path = $uri->getPath();
                 <ul>
                     <li><a href="/">Видеозаписи</a></li>
                     <li><a href="/">Как поставить?</a></li>
-                    <li><a href="/teem" class="ajax">Команда FOXEYE™</a></li>
+                    <li><a href="/" class="ajax">Команда FOXEYE™</a></li>
                 </ul>
             </nav>
             <nav class="nav-right">

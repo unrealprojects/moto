@@ -1,6 +1,8 @@
 <?php
-$to  = "Mary <olegblud@gmail.com>, " ;
-$to .= "Kelly <kelly@example.com>";
+$to  = "Oleg <olegblud@gmail.com>, " ;
+$to .= "Afonin <Afonin.design@gmail.com>,";
+$to .= "Info <info@foxeye.ru>";
+
 
 $name=$_POST['name'];
 $phone=$_POST['phone'];
@@ -18,7 +20,7 @@ $message = '
     </html>
 ';
 
-$headers  = "Content-type: text/html; charset=windows-1251 \r\n";
+$headers  = "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: foxeye <info@foxeye.ru>\r\n";
 $headers .= "Bcc: info@foxeye.ru\r\n";
 

@@ -415,11 +415,9 @@ main{
 
 section.icons{
     position: fixed;
-    bottom:68px;
+    bottom: 74px;
     right:0px;
     left:20px;
-
-
     animation: SlideIconsRight 1s;
     -webkit-animation: SlideIconsRight 1s;
 }
@@ -437,10 +435,10 @@ section.icons .nav_bottom li:nth-of-type(3) {
     width:22%;
 }
 section.icons .nav_bottom li:nth-of-type(4) {
-    width:20%;
+    width:19%;
 }
 section.icons .nav_bottom li:nth-of-type(5) {
-    width:13%;
+    width:14%;
 }
 
 
@@ -465,6 +463,7 @@ section.icons .icon_wrap{
     height: 63px;
     float: left;
 
+
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -o-transition: border 0.3s;
@@ -475,7 +474,7 @@ section.icons .icon_wrap{
     float: left;
     font-size: 27px;
     line-height: 24px;
-    padding-left: 16px;
+    padding-left: 20px;
     padding-top: 8px;
     font-family:bebas_neue_cyrillicregular;
     font-weight: 400;
@@ -661,19 +660,25 @@ main .slider{
     position: relative;
 }
 
+.slidecontent img{
+    cursor: pointer;
+}
+
 
 .info_icon{
     position: absolute;
     width:95px;
     height:95px;
     background: rgba(0,0,0,0.2);
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 14px;
 }
 
 .info_icon span{
     display: block;
-    margin: 10px auto 5px ;
+    margin: 10px auto 2px;
     opacity: 0.7;
+
 }
 
 .info_icon p{
@@ -685,7 +690,7 @@ main .slider{
     color: #b8b7b3;
     left: 95px;
     width: 0px;
-    min-height: 75px;
+    min-height: 70px;
     position: absolute;
     top: 0px;
     text-align: left;
@@ -693,8 +698,10 @@ main .slider{
     padding-bottom: 10px !important;
     border: none;
     overflow: hidden;
-    font-size: 11px;
+    font-size: 14px;
+    line-height: 16px;
     max-height: 120px;
+
 
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -705,7 +712,7 @@ main .slider{
 .info_icon:hover div{
     border-left: 1px solid #4A4848;
     width: 350px;
-    padding: 10px;
+    padding: 15px;
     background: rgba(0,0,0,0.7);
 
     -webkit-transition: all 0.2s;
@@ -739,7 +746,7 @@ main .slider{
     background: url('/templates/moto/images/microphone.png');
     width: 36px;
     height: 40px;
-    margin-top: 16px;
+    margin-top: 8px;
     margin-bottom: 8px;
 }
 
@@ -1102,6 +1109,7 @@ section.group div.command div.photo_it_director{
 
 .static_page__bottom {
     float: left;
+    margin-bottom: 150px;
 }
 
 
@@ -1110,8 +1118,14 @@ section.group div.command div.photo_it_director{
     background: url('/templates/moto/images/close.png');
     width: 19px;
     height: 19px;
+    right: 0px;
+    top: 5px;
+    cursor:pointer;
 }
 
+.static_page__close:hover{
+    background: url('/templates/moto/images/close_orange.png');
+}
 
 /* Как поставить? */
 /* Размер фоток при ХД поставить 254 на 191 */
@@ -1206,9 +1220,6 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
        width: 134px;
        height:69px;
    }
-    section.icons{
-        bottom:66px;
-    }
 }
 
 
@@ -1216,10 +1227,10 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
 @media (max-width:1439px) {
 
     /* Слайдер */
-
     .info_icon{
         width:75px;
         height:75px;
+        margin: 8px auto 5px;
     }
     .info_icon span{
         background-size: 100% !important;
@@ -1246,14 +1257,14 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
     .info_icon div {
         left: 75px;
         width: 0px;
-        min-height: 55px;
+        min-height: 50px;
         position: absolute;
         top: 0px;
         text-align: left;
         padding: 10px 0px;
         border: none;
         overflow: hidden;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .info_icon:hover div{
@@ -1277,7 +1288,8 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
     }
 
     .info_icon p {
-        font-size: 10px;
+        font-size: 12px;
+        line-height: 12px;
     }
 
     /* Слайд 3 */
@@ -1298,9 +1310,10 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
 
     #slide3 .info_icon:nth-of-type(2) span{
         background: url('/templates/moto/images/microphone.png');
-        width: 32px;
-        margin-top: 11px;
-        height: 35px;
+        width: 26px;
+        margin-top: 10px;
+        height: 28px;
+        margin-bottom: 5px;
     }
 
     #slide3 .info_icon:nth-of-type(3){
@@ -1389,9 +1402,10 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
 
     #slide1 .info_icon:nth-of-type(2) span{
         background: url('/templates/moto/images/gensor.png');
-        width: 12px;
-        height: 26px;
+        width: 15px;
+        height: 32px;
         margin-top: 10px;
+        margin-bottom: 9px;
     }
 
     #slide1 .info_icon:nth-of-type(3){
@@ -1478,6 +1492,7 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
     }
     .nav_bottom ul li h4 {
         padding-top: 6px;
+        padding-left: 16px;
     }
 
     section.icons nav.nav_bottom li:nth-of-type(3) .icon_wrap span {
@@ -1536,7 +1551,9 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
         font-size: 28px;
     }
 
-
+    section.icons{
+        bottom:66px;
+    }
 }
 
 /* МЕДИА: 1280 */
@@ -1782,8 +1799,8 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
 
 
 
-/* МЕДИА: 980 */
-@media (min-width:1440px) {
+/* МЕДИА: 1280 */
+@media (min-width:1280px) {
     /* Анимация заказа */
     section.order:hover{
         right:100px;

@@ -1128,42 +1128,107 @@ section.group div.command div.photo_it_director{
 }
 
 /* Как поставить? */
-/* Размер фоток при ХД поставить 254 на 191 */
-section.main div.video_moto div.photo_video_moto {
-    width: 214px;
-    height: 151px;
-    border: 8px solid #1c1c1c;
-    background: url('../images/photo3.png');
-    background-size: 100% !important;
-}
 
-section.main div.installation_scheme_1 div.photo_installation_scheme_1 {
-    width: 214px;
-    height: 151px;
+section.main div.video_moto img.photo_video_moto {
+    width: 80%;
+    height: 80%;
     border: 8px solid #1c1c1c;
-    background: url('../images/schema_1.png');
-    background-size: 100% !important;
-}
-
-section.main div.video_scooter div.photo_video_scooter {
-    width: 214px;
-    height: 151px;
-    border: 8px solid #1c1c1c;
-    background: url('../images/motorcyclist.png');
-    background-size: 100% !important;
-}
-
-section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
-    width: 214px;
-    height: 151px;
-    border: 8px solid #1c1c1c;
-    background: url('../images/schema_2.png');
-    background-size: 100% !important;
 }
 
 
+section.main div.installation_scheme_1 img.photo_installation_scheme_1 {
+    width: 80%;
+    height: 80%;
+    border: 8px solid #1c1c1c;
+
+}
+
+section.main div.video_scooter img.photo_video_scooter {
+    width: 80%;
+    height: 80%;
+    border: 8px solid #1c1c1c;
+
+}
+
+section.main div.installation_scheme_2 img.photo_installation_scheme_2 {
+    width: 80%;
+    height: 80%;
+    border: 8px solid #1c1c1c;
+
+}
+
+div.static_page div.inst_line_1, div.static_page div.inst_line_2{
+    float: left;
+    width: 100%;
+}
+
+section.main div.video_moto, section.main div.video_scooter,
+section.main div.installation_scheme_1,
+section.main div.installation_scheme_2 {
+    width: 49%;
+    color: #ffffff;
+    float: left;
+}
+
+section.main div.video_moto {
+    margin-bottom:40px;
+}
+
+h1.header_question{
+    font-size: 48px;
+    font-family: 'bebas_neue_cyrillicregular';
+    margin-bottom: 5px;
+}
 
 
+section.main div.static_page p.installation_center{
+        color: #b88717;
+        margin-top: 25px;
+        border-bottom-color: #ffffff;
+        font-size:16px;
+        clear:both;
+
+}
+
+section.main div.item-page {
+    margin-bottom: 250px;
+}
+
+div.static_page div.inst_line_1 h2.string_above_photo, div.static_page div.inst_line_2 h2.string_above_photo {
+    font-size: 28px;
+    font-family: 'bebas_neue_cyrillicregular';
+    margin-bottom: 10px;
+}
+
+div.static_page p.text_question {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 45px;
+}
+div.static_page span.string_under_photo{
+    display:block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+div.static_page div.video_scooter span.string_under_photo{
+    margin-bottom: 59px;
+}
+
+div.static_page hr.line_inst{
+    border: none;
+    border-top: 1px solid #4e4e4e;
+    width: 100%;
+    margin-top: 9px;
+}
+
+/* МЕДИА: 1920 */
+@media (min-width:1600px) {
+    div.static_page div.inst_line_1, div.static_page div.inst_line_2{
+        float: left;
+        width: 49%;
+    }
+}
 
 /* МЕДИА: 1600 */
 @media (max-width:1599px) {
@@ -1715,6 +1780,14 @@ section.main div.installation_scheme_2 div.photo_installation_scheme_2 {
 
     section.main div.item-page div.static_page__top {
         margin-bottom: 3px;
+    }
+
+    /* Как поставить?*/
+    section.main div.video_moto,
+    section.main div.video_scooter,
+    section.main div.installation_scheme_1,
+    section.main div.installation_scheme_2{
+        width: 39%;
     }
 }
 /* МЕДИА: 980 */

@@ -976,20 +976,18 @@ section.main h1.header{
 }
 /* Команда Фоксай фото 1  */
 
-section.group  div.command div.photo_project_manager {
-    width: 194px;
-    height: 129px;
+section.group  div.command img.photo_project_manager {
+    width: 35%;
+    height: 35%;
     border: 8px solid #1c1c1c;
-    background: url('../images/photo_project_manager.png');
-    background-size: 100% !important;
     float: left;
-    display: block;
+    display: inline-block;
 }
 
 section.group  div.command{
     float: left;
     margin-bottom: 31px;
-    width: 50%;
+    width: 49%;
 }
 
 section.group  div.command h2.group_name{
@@ -1025,50 +1023,45 @@ section.group  div.command p.group_info {
 div.info {
     float:left;
     margin-left: 22px;
+    margin-top: 3px;
 }
 
 /* Команда Фоксай фото 2  */
-section.group div.command div.photo_filial_1{
-    width: 194px;
-    height: 129px;
+section.group div.command img.photo_filial_1{
+    width: 35%;
+    height: 35%;
     border: 8px solid #1c1c1c;
-    background: url('../images/photo_filial_1.png');
-    background-size: 100% !important;
     float: left;
-}
+    display: inline-block;
 
-div.photo_filial_1{
-    float:left;
 }
 
 /* Команда Фоксай фото 3  */
-section.group div.command div.photo_manager_development{
-    width: 194px;
-    height: 129px;
+section.group div.command img.photo_manager_development{
+    width: 35%;
+    height: 35%;
     border: 8px solid #1c1c1c;
-    background: url('../images/photo_manager_development.png');
-    background-size: 100% !important;
     float: left;
+    display: inline-block;
+
 }
 
 /* Команда Фоксай фото 4  */
-section.group div.command div.photo_filial_2{
-    width: 194px;
-    height: 129px;
+section.group div.command img.photo_filial_2{
+    width: 35%;
+    height: 35%;
     border: 8px solid #1c1c1c;
-    background: url('../images/photo_filial_2.png');
-    background-size: 100% !important;
     float: left;
+    display: inline-block;
 }
 
 /* Команда Фоксай фото 5  */
-section.group div.command div.photo_it_director{
-    width: 194px;
-    height: 129px;
+section.group div.command img.photo_it_director{
+    width: 35%;
+    height: 35%;
     border: 8px solid #1c1c1c;
-    background: url('../images/photo_it_director.png');
-    background-size: 100% !important;
     float: left;
+    display: inline-block;
 }
 
 
@@ -1278,13 +1271,6 @@ div.static_page hr.line_inst{
         width: 40%;
     }
 
-   section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
-   section.group div.command div.photo_manager_development,
-   section.group div.command div.photo_filial_2,
-   section.group div.command div.photo_it_director{
-       width: 134px;
-       height:69px;
-   }
 }
 
 
@@ -1542,10 +1528,6 @@ div.static_page hr.line_inst{
     }
 
 
-
-
-
-
     section.icons .icon_wrap {
         width: 48px;
         height: 48px;
@@ -1599,8 +1581,7 @@ div.static_page hr.line_inst{
     section.group div.command div.photo_manager_development,
     section.group div.command div.photo_filial_2,
     section.group div.command div.photo_it_director{
-        width: 194px;
-        height:129px;
+
     }
 
     /* Регистратор или экшн камера */
@@ -1683,9 +1664,7 @@ div.static_page hr.line_inst{
     section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
     section.group div.command div.photo_manager_development, section.group div.command div.photo_filial_2,
     section.group div.command div.photo_it_director {
-        width: 174px;
-        height: 109px;
-        border: 6px solid #1c1c1c;
+
     }
 
 
@@ -1755,13 +1734,7 @@ div.static_page hr.line_inst{
         width: 100%;
     }
 
-    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
-    section.group div.command div.photo_manager_development,
-    section.group div.command div.photo_filial_2,
-    section.group div.command div.photo_it_director{
-        width: 194px;
-        height:129px;
-    }
+
 
     /* Регистратор или экшн камера */
 
@@ -1843,27 +1816,6 @@ div.static_page hr.line_inst{
     section.icons .nav_bottom li:nth-of-type(5) h4{
         float: right;
         margin-right: 20px;
-    }
-}
-
-    /* Команда Фоксай фото */
-
-    section.group div.command  {
-        width: 100%;
-    }
-
-    div.info {
-        margin-top: 22px;
-    }
-
-/* МЕДИА: 1280 */
-@media (min-width:1280px) {
-    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
-    section.group div.command div.photo_manager_development,
-    section.group div.command div.photo_filial_2,
-    section.group div.command div.photo_it_director{
-        width: 194px;
-        height:129px;
     }
 }
 

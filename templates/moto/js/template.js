@@ -1,6 +1,5 @@
 (function($){
 	$(document).ready(function(){
-
         /* Ресайз для высоцких экранов под hdmi*/
         function scaleBackground(){
             if($(window).width()<$(window).height()*1.777){
@@ -22,13 +21,14 @@
 
             var phone = $("section.order form input[name=phone]").val();
             var name =$("section.order form input[name=name]").val();
+            var email =$("section.order form input[name=email]").val();
             if(!phone && !name){
                 $('section.order form input[type=submit]').after('<p style="color:#ac8019   ; margin-bottom:10px;">Заполните все поля</p>');
             }else{
                 $.ajax({
                         type: 'POST',
                         url: 'mail.php',
-                        data: 'phone='+phone+'&name='+name,
+                        data: 'phone='+phone+'&name='+name+'&email='+email,
                         success: function(data){
                             $('section.order form input,section.order form p').remove();
                             $('section.order form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, "+name+".<br/>Мы перезвоним Вам в ближайшее время!</p>");
@@ -37,6 +37,7 @@
             }
             return false;
         });
+
         $("body").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"9999999"});
 
 
@@ -86,55 +87,25 @@
         });
 
 
-
         /* Всплывающие окна на слайдах */
-        $('#slide1').click(function(){
-            $.ajax({
-                type: 'POST',
-                url: '/slide1?tmpl=component',
-                success: function(data){
-                  $('.main').html(data+"" +
-                      "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
-                            "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
-                }
-            });
-        });
 
-        $('#slide2').click(function(){
-            $.ajax({
-                type: 'POST',
-                url: '/slide2?tmpl=component',
-                success: function(data){
-                    $('.main').html(data+"" +
-                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
-                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
-                }
-            });
-        });
+        for (var i=1; i<4; i++) {
+            $('#slide'+i).click(function(){
+                 $('.main').fadeOut(2000);
+                     $.ajax({
+                     type: 'POST',
+                     url: '/slide'+i+'?tmpl=component',
+                     success: function(data){
 
-        $('#slide3').click(function(){
-            $.ajax({
-                type: 'POST',
-                url: '/slide3?tmpl=component',
-                success: function(data){
-                    $('.main').html(data+"" +
-                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
-                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
-                }
-            });
-        });
+                     $('.main').html(data);
+                     $('html').append('<link rel="stylesheet" href="/templates/moto/css/inner.css" type="text/css">');
+                     $('.main').fadeIn(1500);
+                     }
+                 });
+             });
+        }
 
-        $('#slide4').click(function(){
-            $.ajax({
-                type: 'POST',
-                url: '/slide4?tmpl=component',
-                success: function(data){
-                    $('.main').html(data+"" +
-                        "<style>.rotate{animation:none;background: rgba(0,0,0,0.9);opacity: 1;-webkit-animation: none; top:0px;left:0px; right: 0px;bottom:0px;}section.icons .icon_wrap{background: rgba(0,0,0,0.8);} main {top:0px;margin: 100px 260px 0px 350px;}@media (max-width: 1439px){main {position: absolute;"+
-                        "top:0px;}}@media (max-width: 1280px){main {top: 0px; margin: 100px 260px 0px 250px;}}section.menu{ background: rgba(0,0,0,0.8);} </style>");
-                }
-            });
-        });
 
-	});
+
+    });
 })(jQuery);

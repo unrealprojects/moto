@@ -373,7 +373,7 @@ section.order form input[type=submit]{
     padding: 15px 15px;
     font-size: 18px;
     color:#ac8019;
-    width: 150px;
+    width: 160px;
     cursor:pointer;
 }
 
@@ -1764,9 +1764,6 @@ div.static_page hr.line_inst{
     }
 
     /* Регистратор или экшн камера */
-    section.main div.item-page div.static_page p.static_page__text {
-        font-size: 12px;
-    }
 
     section.main div.item-page div.static_page  h2.static_page__header {
         font-size: 30px;

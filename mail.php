@@ -6,6 +6,7 @@ $to .= "Info <info@foxeye.ru>";
 
 $name=$_POST['name'];
 $phone=$_POST['phone'];
+$email=!empty($_POST['email'])?$_POST['email']:"Нет данных.";
 $subject = "Заявка";
 
 $message = ' 
@@ -14,8 +15,9 @@ $message = '
             <title>Заявка</title>
         </head>
         <body>
-            <p>Имя: '.$name.'</p>
-            <p>Телефон: '.$phone.'</p>
+            <p>Имя: '. $name .'</p>
+            <p>Телефон: '. $phone .'</p>
+            <p>Email: '. $email .'</p>
         </body>
     </html>
 ';

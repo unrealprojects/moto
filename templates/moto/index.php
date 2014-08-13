@@ -32,49 +32,12 @@ $path = $uri->getPath();
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
     <jdoc:include type="head" />
 
-    <?php if($path!='/'){ ?>
-        <style>
-            .rotate{
-                animation:none;
-                background: rgba(0,0,0,0.9);
-                opacity: 1;
-                -webkit-animation: none;
-                top:0px;
-                left:0px;
-                right: 0px;
-                bottom:0px;
-            }
-
-            section.icons .icon_wrap{
-                background: rgba(0,0,0,0.8);
-            }
-
-            main {
-                top:0px;
-                margin: 100px 260px 0px 350px;
-            }
-
-            @media (max-width: 1439px){
-                main {
-                    position: absolute;
-                    /*margin: 80px 300px 0px 300px;*/
-                    top:0px;
-                 }
-            }
-            @media (max-width: 1280px){
-                main {
-                    top: 0px;
-                    margin: 100px 260px 0px 250px;
-                }
-            }
-            section.menu{
-                background: rgba(0,0,0,0.8);
-            }
-        </style>
-    <?php }?>
+    <?php if($path!='/'){
+        $doc->addStyleSheet('templates/' . $this->template . '/css/inner.css');
+    }?>
 
 </head>
 <body>
@@ -89,9 +52,9 @@ $path = $uri->getPath();
         <section class="menu">
             <nav class="nav-left">
                 <ul>
-                    <li><a href="/">Видеозаписи</a></li>
-                    <li><a href="/">Как поставить?</a></li>
-                    <li><a href="/" class="ajax">Команда FOXEYE™</a></li>
+                    <li><a href="/video">Видеозаписи</a></li>
+                    <li><a href="/install">Как поставить?</a></li>
+                    <li><a href="/teem" class="ajax">Команда FOXEYE™</a></li>
                 </ul>
             </nav>
             <nav class="nav-right">
@@ -125,6 +88,7 @@ $path = $uri->getPath();
             <form method="POST">
                 <input type="text" autocomplete="off" name="name" placeholder="Имя">
                 <input type="text" autocomplete="off" name="phone" placeholder="Телефон">
+                <input type="text" autocomplete="off" name="email" placeholder="Email">
                 <input type="submit" name="order" value="ЗАКАЗАТЬ">
                 <p>*При покупке у наc скидка 50%<br>
                     на установку регистратора<br>
@@ -162,7 +126,7 @@ $path = $uri->getPath();
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/article">
                             <div class="icon_wrap">
                                 <span></span>
                             </div>
@@ -178,7 +142,7 @@ $path = $uri->getPath();
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/test-drive">
 
                             <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
                             <div class="icon_wrap">
@@ -197,17 +161,17 @@ $path = $uri->getPath();
                     <img src="templates/moto/images/gc-logo.png" alt="Мотовидеорегистратор">
                 </a>
                 <ul>
-                    <li><a href="/">ИНСТРУКЦИЯ</a></li>
-                    <li class="list_dot"><a href="#">ПАРТНЁРЫ</a></li>
-                    <li class="list_dot"><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
-                    <li class="list_dot"><a href="#">КОНТАКТЫ</a></li>
+                    <li><a href="/docs">ИНСТРУКЦИЯ</a></li>
+                    <li class="list_dot"><a href="/partners">ПАРТНЁРЫ</a></li>
+                    <li class="list_dot"><a href="/ship_and_pay">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li class="list_dot"><a href="/contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
             <nav class="nav-right">
                 <ul>
-                    <a href="/"><li class="list_social_f"></li></a>
-                    <a href="/"><li class="list_social_t"></li></a>
+                    <a href="http://facebook.com/"><li class="list_social_f"></li></a>
+                    <a href="http://twitter.com/"><li class="list_social_t"></li></a>
                     <li class="list_dot">© 2014 FOXeye GC1</li>
                 </ul>
             </nav>

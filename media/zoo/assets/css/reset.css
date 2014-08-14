@@ -3,7 +3,7 @@
 /*
  * reset
  */
- 
+
 .yoo-zoo div,
 .yoo-zoo dl,
 .yoo-zoo dt,
@@ -26,13 +26,13 @@
 .yoo-zoo blockquote,
 .yoo-zoo th,
 .yoo-zoo td {
-	margin: 0; 
+	margin: 0;
 	padding: 0;
 }
 
 .yoo-zoo fieldset, .yoo-zoo img { border: 0; }
 .yoo-zoo a:focus { outline: none; }
- 
+
 /*
  * default values
  */
@@ -41,7 +41,7 @@
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
- 
+
 .yoo-zoo ul, .yoo-zoo ol, .yoo-zoo dl {
 	margin: 10px 0;
 	padding-left: 30px
@@ -49,12 +49,12 @@
 
 .yoo-zoo dl { margin: 10px 0; }
 .yoo-zoo dd { padding-left: 40px; }
- 
+
 .yoo-zoo td, .yoo-zoo th { padding: 1px; }
- 
+
 .yoo-zoo a:link, .yoo-zoo a:visited { text-decoration: none; }
 .yoo-zoo a:hover { text-decoration: underline; }
- 
+
 .yoo-zoo fieldset {
 	margin: 10px 0 10px 0;
 	padding: 0 10px 10px 10px;
@@ -92,7 +92,7 @@
 .yoo-zoo input[type='reset'],
 .yoo-zoo select,
 .yoo-zoo button { cursor: pointer; }
- 
+
 .yoo-zoo textarea,
 .yoo-zoo input[type='text'],
 .yoo-zoo input[type='password'],
@@ -100,12 +100,12 @@
 	border: 1px solid #c8c8c8;
 	background: #ffffff;
 }
- 
+
 .yoo-zoo textarea:hover,
 .yoo-zoo input[type='text']:hover,
 .yoo-zoo input[type='password']:hover,
 .yoo-zoo select:hover { border-color: #aaaaaa; }
- 
+
 .yoo-zoo textarea:focus,
 .yoo-zoo input[type='text']:focus,
 .yoo-zoo input[type='password']:focus,
@@ -113,7 +113,7 @@
 	border-color: #8c8c8c;
 	outline: 2px solid #dcdcdc;
 }
- 
+
 .yoo-zoo h1, .yoo-zoo h2, .yoo-zoo h3, .yoo-zoo h4, .yoo-zoo h5, .yoo-zoo h6 {
 	margin-bottom: 10px;
 	font-weight: normal;
@@ -133,7 +133,7 @@
 	height: 1px;
 	border: none;
 }
- 
+
 .yoo-zoo q { font-style: italic; }
 
 .yoo-zoo blockquote {
@@ -142,7 +142,7 @@
 	font-size: 130%
 }
 .yoo-zoo blockquote > *:first-child:first-letter { font-size: 150% }
- 
+
 .yoo-zoo pre {
 	margin: 10px 0 10px 0px;
 	padding: 5px 0 5px 10px;
@@ -154,7 +154,7 @@
 	font-family: "Courier New", Courier, monospace;
 	white-space: pre-wrap;
 }
- 
+
 .yoo-zoo acronym, .yoo-zoo abbr {
 	border-bottom: 1px dashed #969696;
 	cursor: help;

@@ -33,6 +33,7 @@ $path = $uri->getPath();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <jdoc:include type="head" />
 
     <?php if($path!='/'){
@@ -104,16 +105,16 @@ $path = $uri->getPath();
     <main>
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
-            <jdoc:include type="component" />
+<!--            <jdoc:include type="component" />-->
 
 
              <section class="contacts">
-                 <div class="map">
+                 <div id="map">
                  </div>
                  <div class="contacts_info">
-                     <p>Контакты</p>
-                     <p>Адрес</p>
-                     <p>Телефон</p>
+                     <p>Контакты:</p>
+                     <p>Адрес:</p>
+                     <p>Телефон:</p>
                      <p></p>
                  </div>
              </section>

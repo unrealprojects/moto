@@ -1294,16 +1294,26 @@ section.question div.question_block div.close:hover{
 }
 
 /*Страница Контакты*/
-section.contacts div.map{
-    width: 49%;
+section.contacts{
+    margin-top: 28px;
+}
+section.contacts div#map{
+    width: 600px;
+    height: 550px;
     border: 8px solid #1c1c1c;
-    display: inline-block;
+    float: left;
 }
 
 section.contacts div.contacts_info {
-    width: 48%;
-    display: inline-block;
+    width: 25%;
+    float: left;
 }
+section.contacts div.contacts_info p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
 
 /* МЕДИА: 1920 */
 @media (min-width:1600px) {

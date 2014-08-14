@@ -1218,6 +1218,93 @@ div.static_page hr.line_inst{
     margin-top: 9px;
 }
 
+/*Блок Задать вопрос*/
+ section.question div.question_block{
+     width: 633px;
+     height: 596px;
+     background: black;
+ }
+
+section.question div.question_block form input{
+    display: inline-block;
+    background: none;
+    border: 1px solid #1c1c1c;
+    width: 316px;
+    height: 47px;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+ }
+
+
+section.question div.question_block h1{
+    font-size: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-left: 42px;
+    padding-top: 42px;
+    margin-bottom: 51px;
+}
+
+section.question div.question_block  input.send{
+    display: inline-block;
+    background: none;
+    border: 1px solid #1c1c1c;
+    width: 148px;
+    height: 58px;
+    color: #ac8019;
+    font-size: 18px;
+    margin-top: 28px;
+}
+
+section.question div.question_block  input.send:hover{
+    cursor: pointer;
+}
+
+section.question div.question_block div.question_name span,
+section.question div.question_block div.question_email span,
+section.question div.question_block div.question_text span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5b5b5b;
+    display: inline-block;
+    width: 123px;
+    margin-left: 41px;
+    text-align: left;
+}
+
+section.question div.question_block div.question_name,
+section.question div.question_block div.question_email{
+    margin-bottom: 32px;
+}
+
+section.question div.question_block div.close{
+    float: right;
+    width: 19px;
+    height: 19px;
+    margin-right: 24px;
+    margin-top: 19px;
+    background: url("/templates/moto/images/close.png");
+
+}
+
+section.question div.question_block div.close:hover{
+    background: url("/templates/moto/images/close_orange.png");
+    cursor: pointer;
+}
+
+/*Страница Контакты*/
+section.contacts div.map{
+    width: 49%;
+    border: 8px solid #1c1c1c;
+    display: inline-block;
+}
+
+section.contacts div.contacts_info {
+    width: 48%;
+    display: inline-block;
+}
+
 /* МЕДИА: 1920 */
 @media (min-width:1600px) {
     div.static_page div.inst_line_1, div.static_page div.inst_line_2{
@@ -1267,13 +1354,6 @@ div.static_page hr.line_inst{
     .slide_left{
         left:0px;
     }
-
-    /* Команда Фоксай*/
-
-    div.command div.info {
-        width: 40%;
-    }
-
 }
 
 
@@ -1581,13 +1661,6 @@ div.static_page hr.line_inst{
         width: 100%;
     }
 
-    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
-    section.group div.command div.photo_manager_development,
-    section.group div.command div.photo_filial_2,
-    section.group div.command div.photo_it_director{
-
-    }
-
     /* Регистратор или экшн камера */
     section.main div.item-page div.static_page p.static_page__text {
         font-size: 13px;
@@ -1695,10 +1768,8 @@ div.static_page hr.line_inst{
     }
 
     /* Команда Фоксай фото */
-    section.group div.command div.photo_project_manager,  section.group div.command div.photo_filial_1,
-    section.group div.command div.photo_manager_development, section.group div.command div.photo_filial_2,
-    section.group div.command div.photo_it_director {
-
+    section.group div.command  {
+        width: 100%;
     }
 
 
@@ -1788,6 +1859,27 @@ div.static_page hr.line_inst{
     section.main div.installation_scheme_2{
         width: 49%;
     }
+
+    /*Блок Задать вопрос*/
+    section.question div.question_block{
+        width: 603px;
+        height: 566px;
+        background: black;
+    }
+
+    section.question div.question_block form input{
+        width: 286px;
+        height: 33px;
+
+    }
+
+    section.question div.question_block div.question_name,
+    section.question div.question_block div.question_email{
+        margin-bottom: 20px;
+    }
+
+
+
 }
 /* МЕДИА: 980 */
 @media (max-width:1180px) {
@@ -1800,8 +1892,6 @@ div.static_page hr.line_inst{
         left:-40px;
     }
 }
-    /* Команда Фоксай фото */
-
 
     
 

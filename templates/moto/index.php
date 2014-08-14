@@ -105,6 +105,18 @@ $path = $uri->getPath();
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
             <jdoc:include type="component" />
+
+
+             <section class="contacts">
+                 <div class="map">
+                 </div>
+                 <div class="contacts_info">
+                     <p>Контакты</p>
+                     <p>Адрес</p>
+                     <p>Телефон</p>
+                     <p></p>
+                 </div>
+             </section>
         </section>
       </main>
 

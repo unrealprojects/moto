@@ -55,8 +55,37 @@ $path = $uri->getPath();
     if($path!='/' && $path!='/test-drive' && $path!='/registrator' && $path!='/sale' && $path!='/test-drive' && $path!='/article' ){
         $doc->addStyleSheet('templates/' . $this->template . '/css/inner__no_icons.css');
     }
-    ?>
 
+    ?>
+<?php if($path=='/contacts'){?>
+    <script>
+    (function($){
+        $(document).ready(function(){
+        /* Google карта*/
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(55.753952, 37.620656);
+            var myOptions = {
+                zoom: 8,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+
+
+            var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title:"Hello World!"
+              });
+        }
+
+        initialize();
+        });
+    })(jQuery);
+    </script>
+    <?php }?>
 </head>
 <body>
     <div class="rotate"></div>
@@ -77,7 +106,7 @@ $path = $uri->getPath();
             </nav>
             <nav class="nav-right">
                 <ul>
-                    <li><a href="/">ЗАДАТЬ ВОПРОС</a></li>
+                    <li><a href="/question" id="ask_question">ЗАДАТЬ ВОПРОС</a></li>
                     <li class="list_dot">8-800-775-31-97</li>
                 </ul>
             </nav>

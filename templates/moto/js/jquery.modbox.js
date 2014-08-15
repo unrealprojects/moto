@@ -92,9 +92,10 @@
                          if(e.data.settings.success_ajax){
                              e.data.settings.success_ajax();
                          }
+                         return false;
                      }
                  });
-
+                return false;
             }else if(e.data.settings.auto_ajax == true){
                 $.ajax({
                     type: 'POST',

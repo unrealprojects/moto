@@ -14,6 +14,7 @@
         });
 
 
+
         $("section.order form input[name=phone]").mask("8 ( 999 ) 999-99-99");
 
         $('section.order form input[type=submit]').click(function(){
@@ -22,7 +23,7 @@
             var phone = $("section.order form input[name=phone]").val();
             var name =$("section.order form input[name=name]").val();
             var email =$("section.order form input[name=email]").val();
-            if(!phone && !name){
+            if(!phone || !name){
                 $('section.order form input[type=submit]').after('<p style="color:#ac8019   ; margin-bottom:10px;">Заполните все поля</p>');
             }else{
                 $.ajax({
@@ -38,7 +39,59 @@
             return false;
         });
 
-        $("body").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"9999999"});
+        $("ul.uk-list.uk-list-line.blog-default").niceScroll({cursorcolor:"white",cursorwidth:'5',cursorborderradius:'0',cursorborder:'none',zindex:"9999999"});
+
+
+
+
+
+
+        /* Всплывающая форма ЗАДАТЬ ВОПРОС*/
+    /*    function getBox(){
+            ajaxData='';
+            $.ajax({
+                type: 'POST',
+                url: '/question?tmpl=component',
+                success: function(data){
+                    console.log(data);
+                    ajaxData=data;
+                }
+            });
+            console.log(ajaxData);
+            return ajaxData;
+        }*/
+
+
+        /*
+            * Событие ЗАДАТЬ ВОПРОС
+        */
+        function sendMessage(){
+            $(document).on('click','section.question div.question_block input.send[type=submit]',function(){
+
+                var name = $("section.question div.question_block form input[name=name]").val();
+                var email = $("section.question div.question_block form input[name=email]").val();
+                var text = $("section.question div.question_block textarea[name=text]").val();
+
+                if(!name || !email || !text){
+                    $('section.question div.question_block #error').remove('');
+
+                    $('section.question div.question_block input[type=submit]').after('<p id="error" style="color:#ac8019; margin-bottom:10px;float: left;clear: both; margin-left: 165px;margin-top: 10px;">Заполните все поля</p>');
+                }else{
+                    $.ajax({
+                        type: 'POST',
+                        url: 'mail_question.php',
+                        data: 'email='+email+'&name='+name+'&text='+text,
+                        success: function(data){
+                            $('section.question div.question_block form').html('');
+                            $('section.question form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px;margin-left: 46px;'>Спасибо, "+name+".<br/>Мы ответим Вам в ближайшее время!</p>");
+                        }
+                    });
+                }
+                return false;
+            });
+        }
+
+        $('#ask_question').modbox('',{ajax:"/question?tmpl=component",close_object:'section.question div.question_block div.close',success_ajax:sendMessage});
 
 
         /* Слайдер */
@@ -97,13 +150,38 @@
                      url: '/slide'+i+'?tmpl=component',
                      success: function(data){
 
-                     $('.main').html(data);
-                     $('html').append('<link rel="stylesheet" href="/templates/moto/css/inner.css" type="text/css">');
-                     $('.main').fadeIn(1500);
+                        $('.main').html(data);
+                        $('html').append('<link rel="stylesheet" href="/templates/moto/css/inner.css" type="text/css">');
+                        $('.main').fadeIn(1500);
                      }
                  });
              });
         }
+
+
+
+        /* video lightbox*/
+        $('.blog-default .items a').modbox('asdfsad',{ajax:false,auto_ajax:true,close_object:'.modbox .static_page__close'});
+
+        /*article*/
+        $('.blog-expo a').modbox('',
+            {
+                ajax:false,
+                auto_ajax:true,
+                close_object:'.modbox .static_page__close',
+                centered:false,
+                style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
+            });
+
+                 /*article*/
+        $('ul.uk-list.uk-list-line.blog-default a').modbox('',
+            {
+                ajax:false,
+                auto_ajax:true,
+                close_object:'.modbox .static_page__close',
+                centered:false,
+                style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
+            });
 
 
 

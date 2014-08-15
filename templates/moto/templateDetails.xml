@@ -4,6 +4,7 @@
 	<name>moto</name>
 
 	<positions>
-		<position></position>
+		<position>footer-icons</position>
+        <position>left-block</position>
 	</positions>
 </extension>

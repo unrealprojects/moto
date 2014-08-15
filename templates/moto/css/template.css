@@ -31,17 +31,17 @@ video {
     *zoom: 1;
 }
 
-input:active,input:focus{
+input:active,input:focus,textarea:active,textarea:focus{
     outline: none !important;
     border:1px solid #888888 !important;
 }
-input{
+input,textarea{
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -o-transition: border 0.3s;
     transition: border 0.3s;
 }
-input:hover{
+input:hover,textarea:hover{
     border:1px solid #888888 !important;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
@@ -104,6 +104,7 @@ body{
     background: url('../images/background1.jpg') 50% 0%;
     background-size:cover;
     min-width: 1024px;
+    overflow: hidden;
 }
 
 .rotate {
@@ -160,7 +161,7 @@ nav img{
     display:  inline-block;
 }
 
-form input{
+form input,form textarea{
     display: block;
 }
 
@@ -555,6 +556,7 @@ section.icons nav.nav_bottom li:nth-of-type(5):hover .icon_wrap span {
 
 section.menu_bottom{
     position: fixed;
+    z-index: 501;
     bottom:0px;
     right:0px;
     left:0px;
@@ -1221,12 +1223,14 @@ div.static_page hr.line_inst{
 /*Блок Задать вопрос*/
  section.question div.question_block{
      width: 633px;
-     height: 596px;
      background: black;
+     margin: 0 auto;
+     height: 630px;
  }
 
-section.question div.question_block form input{
-    display: inline-block;
+section.question div.question_block form input, section.question div.question_block form textarea{
+    display: block;
+    float: left;
     background: none;
     border: 1px solid #1c1c1c;
     width: 316px;
@@ -1235,6 +1239,10 @@ section.question div.question_block form input{
     padding: 15px;
     box-sizing: border-box;
  }
+
+section.question div.question_block form textarea{
+    height: 190px;
+}
 
 
 section.question div.question_block h1{
@@ -1247,7 +1255,8 @@ section.question div.question_block h1{
 }
 
 section.question div.question_block  input.send{
-    display: inline-block;
+    display: block;
+    float: left;
     background: none;
     border: 1px solid #1c1c1c;
     width: 148px;
@@ -1255,6 +1264,7 @@ section.question div.question_block  input.send{
     color: #ac8019;
     font-size: 18px;
     margin-top: 28px;
+    margin-left: 164px;
 }
 
 section.question div.question_block  input.send:hover{
@@ -1267,15 +1277,19 @@ section.question div.question_block div.question_text span{
     font-size: 16px;
     font-weight: 400;
     color: #5b5b5b;
-    display: inline-block;
+    display: block;
+    float: left;
     width: 123px;
     margin-left: 41px;
     text-align: left;
+    line-height: 44px;
 }
 
 section.question div.question_block div.question_name,
 section.question div.question_block div.question_email{
     margin-bottom: 32px;
+    float: left;
+    clear: both;
 }
 
 section.question div.question_block div.close{
@@ -1456,7 +1470,7 @@ section.contacts div.contacts_info {
     }
 
     #slide3 .info_icon:nth-of-type(3) span{
-        background: url('/templates/moto/images/Usb.png');
+        background: url('/templates/moto/images/usb.png');
         width: 32px;
         height: 30px;
     }
@@ -1870,12 +1884,18 @@ section.contacts div.contacts_info {
     section.question div.question_block form input{
         width: 286px;
         height: 33px;
-
+    }
+    section.question div.question_block form textarea{
+        width: 286px;
     }
 
     section.question div.question_block div.question_name,
     section.question div.question_block div.question_email{
         margin-bottom: 20px;
+    }
+
+    section.question div.question_block div.question_name span, section.question div.question_block div.question_email span, section.question div.question_block div.question_text span{
+        line-height: 33px;
     }
 
 
@@ -1940,8 +1960,8 @@ section.contacts div.contacts_info {
 
 
 
-/* МЕДИА: 1280 */
-@media (min-width:1280px) {
+/* МЕДИА: 1370 */
+@media (min-width:1370px) {
     /* Анимация заказа */
     section.order:hover{
         right:100px;
@@ -2021,3 +2041,18 @@ section.contacts div.contacts_info {
 .page-header{
     display: none;
 }
+
+
+/* modbox */
+.modbox_content{
+    z-index: 10000;
+    position: relative !important;
+    margin: 100px;
+}
+
+.modbox_back{
+    z-index: 1000;
+    position: absolute;
+}
+
+

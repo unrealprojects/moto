@@ -14,7 +14,7 @@ $month = $this->app->html->_('date', $item->created, $this->app->date->format('%
 $year = $this->app->html->_('date', $item->created, $this->app->date->format('%Y'), $this->app->date->getOffset());
 
 ?>
-
+    <div class="static_page__close">&nbsp;</div>
 <?php if ($this->checkPosition('top')) : ?>
 <div class="pos-top">
 	<?php echo $this->renderPosition('top', array('style' => 'block')); ?>

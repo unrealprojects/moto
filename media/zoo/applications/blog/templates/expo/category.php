@@ -60,8 +60,8 @@ $css_class = $this->application->getGroup().'-'.$this->template->name;
 		<?php endif; ?>
 		
 	</div>
-	<?php endif; ?>	
-
+	<?php endif; ?>
+    <a href='/'><div class="static_page__close">&nbsp;</div></a>
 	<?php
 
 		// render items

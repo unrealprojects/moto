@@ -22,6 +22,7 @@ $doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.nicescroll.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.maskedinput.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.color.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.modbox.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
 $uri = JUri::getInstance();
@@ -37,9 +38,21 @@ $path = $uri->getPath();
 
     <?php if($path!='/'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/inner.css');
+        ?>
+    <script>
+        (function($){
+            $(document).ready(function(){
+                $("main").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"99999999"});
+            });
+        })(jQuery);
+    </script>
+   <?php
     }
     if($path=='/'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/main.css');
+    }
+    if($path!='/' && $path!='/test-drive' && $path!='/registrator' && $path!='/sale' && $path!='/test-drive' && $path!='/article' ){
+        $doc->addStyleSheet('templates/' . $this->template . '/css/inner__no_icons.css');
     }
     ?>
 
@@ -63,25 +76,14 @@ $path = $uri->getPath();
             </nav>
             <nav class="nav-right">
                 <ul>
-                    <li><a href="/">ЗАДАТЬ ВОПРОС</a></li>
+                    <li><a href="/question" id="ask_question">ЗАДАТЬ ВОПРОС</a></li>
                     <li class="list_dot">8-800-775-31-97</li>
                 </ul>
             </nav>
         </section>
 
         <!-- СЕКЦИЯ: Описание сайта -->
-        <section class="info">
-            <h1>МОТОВИДЕОРЕГИСТРАТОР<br>НОВОГО ПОКОЛЕНИЯ —</h1>
-            <p>Идеальный выбор для<br>
-                владельцев мотоциклов и<br>
-                скутеров! Полностью<br>
-                влагозащищенный,<br>
-                стационарный мото<br>
-                видеорегистратор<br>
-                заменит любую экшн камеру<br>
-                и сделает вашу поездку<br>
-                более уверенной.</p>
-        </section>
+        <jdoc:include type="modules" name="left-block" style="none" />
 
         <!-- СЕКЦИЯ: Сделать заказ -->
         <section class="order">
@@ -105,70 +107,11 @@ $path = $uri->getPath();
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
             <jdoc:include type="component" />
-
-
-             <section class="contacts">
-                 <div class="map">
-                 </div>
-                 <div class="contacts_info">
-                     <p>Контакты</p>
-                     <p>Адрес</p>
-                     <p>Телефон</p>
-                     <p></p>
-                 </div>
-             </section>
         </section>
       </main>
 
       <footer>
-          <!-- СЕКЦИЯ: Иконки в футере -->
-        <section class="icons">
-            <nav class="nav_bottom">
-                <ul>
-                    <li>
-                        <a href="/registrator">
-                            <div class="icon_wrap">
-                                <span>?</span>
-                            </div>
-                            <h4>РЕГИСТРАТОР<br> ИЛИ ЭКШН-КАМЕРА?</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/guarantee">
-                            <div class="icon_wrap">
-                                <span><strong>+</strong>2</span>
-                            </div>
-                            <h4>ГАРАНТИИ<br> МОТОСЕЗОНА</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/article">
-                            <div class="icon_wrap">
-                                <span></span>
-                            </div>
-                            <h4>СТАТЬИ<br> И ОТЗЫВЫ</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/sale">
-                            <div class="icon_wrap">
-                                <span>50%</span>
-                            </div>
-                            <h4>СКИДКА<br> НА УСТАНОВКУ</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/test-drive">
-
-                            <h4>БЕСПЛАТНЫЙ<br> ТЕСТ-ДРАЙВ</h4>
-                            <div class="icon_wrap">
-                                <span></span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+          <jdoc:include type="modules" name="footer-icons" style="none" />
 
         <!-- СЕКЦИЯ: Нижнее меню -->
         <section class="menu_bottom">
@@ -191,58 +134,8 @@ $path = $uri->getPath();
                     <li class="list_dot">© 2014 FOXeye GC1</li>
                 </ul>
             </nav>
+
         </section>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php if ($this->countModules('position-1')){ ?>
-
-
-    <section class="asdf">
-        <jdoc:include type="modules" name="position-1" style="none" />
-    </section>
-
-
-    <section class="asdf">
-        <jdoc:include type="modules" name="position-5" style="none" />
-    </section>
-
-        <jdoc:include type="message" />
-
-<?php } ?>

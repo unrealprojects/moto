@@ -1,23 +1,29 @@
 (function($){
 	$(document).ready(function(){
-        /* Google карта*/
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+     /* Google карта*/
+              function initialize() {
+            var myLatlng = new google.maps.LatLng(55.753952, 37.620656);
             var myOptions = {
                 zoom: 8,
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
+
+
+
             var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title:"Hello World!"
+            });
         }
 
        initialize();
         /*Метки*/
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title:"Hello World!"
-        });
+
+
 
 
         /* Ресайз для высоцких экранов под hdmi*/

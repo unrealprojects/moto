@@ -1295,27 +1295,53 @@ section.question div.question_block div.close:hover{
 
 /*Страница Контакты*/
 section.contacts{
-    margin-top: 28px;
+    margin-bottom: 28px;
 }
 section.contacts div#map{
-    width: 600px;
+    width: 49%;
     height: 550px;
     border: 8px solid #1c1c1c;
     float: left;
+    box-sizing: border-box;
 }
 
 section.contacts div.contacts_info {
-    width: 25%;
+    width: 49%;
     float: left;
+    box-sizing: border-box;
 }
 section.contacts div.contacts_info p{
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 15px;
     margin-left: 15px;
+    color: #969292;
+    clear: both;
+}
+
+section.contacts div.contacts_info p span.string_contacts_info_2{
+    font-size: 22px;
+    color: #ffffff;
+
+}
+
+section.contacts div.contacts_info p span.string_contacts_info_1{
+    margin-right: 6px;
+
+}
+
+section.contacts h1.contacts_header{
+    font-family: 'bebas_neue_cyrillicregular';
+    font-size: 48px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    float: left;
+
 }
 
 
-/* МЕДИА: 1920 */
+
+
+/* МЕДИА: 1600 */
 @media (min-width:1600px) {
     div.static_page div.inst_line_1, div.static_page div.inst_line_2{
         float: left;
@@ -1687,8 +1713,9 @@ section.contacts div.contacts_info p{
     section.icons{
         bottom:66px;
     }
-}
 
+}
+/*Медиа 1370*/
 
 @media (max-width:1370px) {
     .slide_right{
@@ -1716,6 +1743,7 @@ section.contacts div.contacts_info p{
     .slide_right:hover{
         background: url('/templates/moto/images/ARROW_RIGHT_YELLOW_SMALL.png');
     }
+
 }
 
 
@@ -1888,10 +1916,15 @@ section.contacts div.contacts_info p{
         margin-bottom: 20px;
     }
 
+    /*Страница Контакты*/
 
+    section.contacts h1.contacts_header {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
 
 }
-/* МЕДИА: 980 */
+/* МЕДИА: 1180 */
 @media (max-width:1180px) {
     /* Контент: слайды*/
     .slide_right{
@@ -1900,6 +1933,11 @@ section.contacts div.contacts_info p{
     }
     .slide_left{
         left:-40px;
+    }
+
+    /*Страница Контакты*/
+    section.contacts div#map{
+        height: 450px;
     }
 }
 

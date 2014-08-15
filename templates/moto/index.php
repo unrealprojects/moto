@@ -112,10 +112,10 @@ $path = $uri->getPath();
                  <div id="map">
                  </div>
                  <div class="contacts_info">
-                     <p>Контакты:</p>
-                     <p>Адрес:</p>
-                     <p>Телефон:</p>
-                     <p></p>
+                     <h1 class="contacts_header">Контакты</h1>
+                     <p><span class="string_contacts_info_1">Адрес:</span><span class="string_contacts_info_2">г. Москва, какая-то улица</span></p>
+                     <p><span class="string_contacts_info_1">Телефон:</span><span class="string_contacts_info_2">+380546846898</span></p>
+                     <p><span class="string_contacts_info_1">Skype:</span><span class="string_contacts_info_2">asdf@skype.ru</span></p>
                  </div>
              </section>
         </section>

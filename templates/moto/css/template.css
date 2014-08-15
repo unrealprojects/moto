@@ -1186,9 +1186,21 @@ h1.header_question{
 section.main div.static_page p.installation_center{
         color: #b88717;
         margin-top: 25px;
-        border-bottom-color: #ffffff;
+        border-bottom: 1px solid #ffffff;
         font-size:16px;
         clear:both;
+        padding-bottom: 5px;
+    -webkit-transition:border-bottom 0.4s;
+    -moz-transition: border-bottom 0.4s;
+    -o-transition: border-bottom 0.4s;
+    transition: border-bottom 0.4s;
+
+
+}
+
+section.main div.static_page p.installation_center:hover{
+    border-bottom: none;
+    padding-bottom: 6px;
 
 }
 
@@ -1213,12 +1225,6 @@ div.static_page div.video_scooter span.string_under_photo{
     margin-bottom: 59px;
 }
 
-div.static_page hr.line_inst{
-    border: none;
-    border-top: 1px solid #4e4e4e;
-    width: 100%;
-    margin-top: 9px;
-}
 
 /*Блок Задать вопрос*/
  section.question div.question_block{
@@ -1336,11 +1342,15 @@ section.contacts div.contacts_info p span.string_contacts_info_2{
     font-size: 22px;
     color: #ffffff;
 
+
 }
 
 section.contacts div.contacts_info p span.string_contacts_info_1{
     margin-right: 6px;
-
+    width: 50px;
+    width: 100px;
+    text-align: left;
+    display: inline-block;
 }
 
 section.contacts h1.contacts_header{
@@ -1360,6 +1370,9 @@ section.contacts h1.contacts_header{
     div.static_page div.inst_line_1, div.static_page div.inst_line_2{
         float: left;
         width: 49%;
+    }
+    section.main div.item-page{
+        margin-bottom: 20px;
     }
 }
 
@@ -1393,6 +1406,10 @@ section.contacts h1.contacts_header{
 
     .nav_bottom ul li h4 {
         font-size: 27px;
+    }
+
+    section.main div.item-page{
+        margin-bottom: 20px;
     }
 
 
@@ -1902,6 +1919,10 @@ section.contacts h1.contacts_header{
 
     section.main div.item-page div.static_page__top {
         margin-bottom: 3px;
+    }
+
+    section.main div.item-page{
+        margin-bottom: 20px;
     }
 
     /* Как поставить?*/

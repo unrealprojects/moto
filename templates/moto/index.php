@@ -77,14 +77,25 @@ $path = $uri->getPath();
             </nav>
             <nav class="nav-right">
                 <ul>
-                    <li><a href="/question" id="ask_question">ЗАДАТЬ ВОПРОС</a></li>
+                    <li><a href="/">ЗАДАТЬ ВОПРОС</a></li>
                     <li class="list_dot">8-800-775-31-97</li>
                 </ul>
             </nav>
         </section>
 
         <!-- СЕКЦИЯ: Описание сайта -->
-        <jdoc:include type="modules" name="left-block" style="none" />
+        <section class="info">
+            <h1>МОТОВИДЕОРЕГИСТРАТОР<br>НОВОГО ПОКОЛЕНИЯ —</h1>
+            <p>Идеальный выбор для<br>
+                владельцев мотоциклов и<br>
+                скутеров! Полностью<br>
+                влагозащищенный,<br>
+                стационарный мото<br>
+                видеорегистратор<br>
+                заменит любую экшн камеру<br>
+                и сделает вашу поездку<br>
+                более уверенной.</p>
+        </section>
 
         <!-- СЕКЦИЯ: Сделать заказ -->
         <section class="order">

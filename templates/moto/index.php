@@ -33,8 +33,8 @@ $path = $uri->getPath();
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
+
     <jdoc:include type="head" />
 
     <?php if($path!='/'){
@@ -58,6 +58,7 @@ $path = $uri->getPath();
 
     ?>
 <?php if($path=='/contacts'){?>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
     (function($){
         $(document).ready(function(){
@@ -113,18 +114,7 @@ $path = $uri->getPath();
         </section>
 
         <!-- СЕКЦИЯ: Описание сайта -->
-        <section class="info">
-            <h1>МОТОВИДЕОРЕГИСТРАТОР<br>НОВОГО ПОКОЛЕНИЯ —</h1>
-            <p>Идеальный выбор для<br>
-                владельцев мотоциклов и<br>
-                скутеров! Полностью<br>
-                влагозащищенный,<br>
-                стационарный мото<br>
-                видеорегистратор<br>
-                заменит любую экшн камеру<br>
-                и сделает вашу поездку<br>
-                более уверенной.</p>
-        </section>
+        <jdoc:include type="modules" name="left-block" style="none" />
 
         <!-- СЕКЦИЯ: Сделать заказ -->
         <section class="order">

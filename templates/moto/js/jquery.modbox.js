@@ -100,8 +100,11 @@
                 $.ajax({
                     type: 'POST',
                     url: this+"?tmpl=component",
+                    beforeSend:function(){
+                        $('body').append('<div class="load"></div>');
+                    },
                     success: function(data){
-
+                        $('.load').remove();
                         $('body').append('<div class="modbox">' +
                             '<div class="modbox_back"></div>' +
                             '<div class="modbox_content">' +
@@ -146,9 +149,10 @@
                         if(e.data.settings.success_ajax){
                             e.data.settings.success_ajax();
                         }
-
+                        return false;
                     }
                 });
+                return false;
             }else{
 
                 $('body').append('<div class="modbox">' +

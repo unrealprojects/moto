@@ -401,6 +401,35 @@ Whitelight
 }
 
 
+/* Примеры установки */
+#yoo-zoo.blog-default .item div.pos-content .element-image{
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+    height: 180px;
+}
+
+#yoo-zoo.blog-default .item div.pos-content .element-gallery img{
+    width: 200px;
+    height: 150px;
+}
+#yoo-zoo.blog-default .item div.pos-content .element-gallery img:hover{
+    border: 8px solid #ac8019;
+
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+#yoo-zoo.blog-default .element-gallery:before{
+    content:'ФОТОГРАФИИ УСТАНОВКИ';
+    margin-bottom: 20px;
+    display: block;
+    color: white;
+    font-family: bebas_neue_cyrillicregular;
+    font-size: 28px;
+}
 
 
 /* Модуль: Примеры установок */
@@ -464,6 +493,8 @@ ul.uk-list.uk-list-line.blog-default:before{
     font-size: 28px;
 }
 
+
+
 @media(max-width: 1280px){
     ul.uk-list.uk-list-line.blog-default {
         top: 140px;
@@ -484,4 +515,5 @@ ul.uk-list.uk-list-line.blog-default:before{
         margin-bottom: 10px;
     }
 }
+
 

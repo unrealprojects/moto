@@ -2125,3 +2125,14 @@ section.contacts h1.contacts_header{
 }
 
 
+.load{
+    background: url('/templates/moto/images/loading-squares.gif');
+    position: fixed;
+    left:50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    z-index: 10000;
+    width: 64px;
+    height: 64px;
+}

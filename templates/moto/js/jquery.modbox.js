@@ -61,11 +61,14 @@
             * Если ajax
             */
             if(e.data.settings.ajax!=false){
-                console.log(124123);
                  $.ajax({
                      type: 'POST',
                      url: e.data.settings.ajax,
+                     beforeSend:function(){
+                         $('body').append('<div class="load"></div>');
+                     },
                      success: function(data){
+                         $('.load').remove();
                          $('body').append('<div class="modbox">' +
                                              '<div class="modbox_back"></div>' +
                                               '<div class="modbox_content">' +
@@ -76,11 +79,19 @@
                          $('.modbox_back').css(e.data.settings.modbox_back);
                          $('.modbox_content').css(e.data.settings.modbox_content);
 
-
-                             $('.modbox_content').css('marginTop',($(window).height()+$('.modbox_content').height())/2);
+                             if(e.data.settings.centered){
+                                 $('.modbox_content').css('marginTop',($(window).height()+$('.modbox_content').height())/2);
+                             }
                              $('.modbox').fadeIn({start:function(){
-                                 $('.modbox_content').css('marginTop',($(window).height()-$('.modbox_content').outerHeight())/2);
+                                 if(e.data.settings.centered){
+                                    $('.modbox_content').css('marginTop',($(window).height()-$('.modbox_content').outerHeight())/2);
+                                 }
                              },duration:1000});
+
+
+                         if(e.data.settings.scroll){
+                             $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"99999999"});
+                         }
 
                              $('.modbox_back').bind('click.modbox',methods.close);
                              if(e.data.settings.close_object){
@@ -136,7 +147,7 @@
 
 
 
-                        if(scroll){
+                        if(e.data.settings.scroll){
                             $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"99999999"});
                         }
 

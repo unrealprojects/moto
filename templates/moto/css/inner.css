@@ -435,11 +435,12 @@ Whitelight
 /* Модуль: Примеры установок */
 ul.uk-list.uk-list-line.blog-default {
     position: fixed;
-    top: 140px;
+    top: 160px;
     left: 30px;
     bottom: 100px;
     padding-right: 10px;
     z-index: 500;
+
 }
 
 ul.uk-list.uk-list-line.blog-default img{
@@ -497,7 +498,7 @@ ul.uk-list.uk-list-line.blog-default:before{
 
 @media(max-width: 1280px){
     ul.uk-list.uk-list-line.blog-default {
-        top: 140px;
+        top: 110px;
         left: 30px;
         margin-top: 9px;
     }

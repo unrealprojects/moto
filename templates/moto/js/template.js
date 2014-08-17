@@ -93,10 +93,12 @@
             });
         }
 
-        $('#ask_question').modbox('',{ajax:"/question?tmpl=component",close_object:'section.question div.question_block div.close',success_ajax:sendMessage});
 
 
-        /* Слайдер */
+
+        /**
+         *  Слайдер
+         **/
         number = 1;
 
         function slide(){
@@ -111,11 +113,11 @@
         interval=setInterval(slide,6000);
 
         $('.slide').mouseover(function(){
-            clearInterval(interval);
+//            clearInterval(interval);
         });
 
         $('.slide').mouseout(function(){
-            interval=setInterval(slide,6000);
+//            interval=setInterval(slide,6000);
         });
 
         $('.slide_right').click(function(){
@@ -143,7 +145,7 @@
 
 
         /* Всплывающие окна на слайдах */
-
+/*
         for (var i=1; i<4; i++) {
             $('#slide'+i).click(function(){
                  $('.main').fadeOut(2000);
@@ -151,19 +153,26 @@
                      type: 'POST',
                      url: '/slide'+i+'?tmpl=component',
                      success: function(data){
-
                         $('.main').html(data);
                         $('html').append('<link rel="stylesheet" href="/templates/moto/css/inner.css" type="text/css">');
                         $('.main').fadeIn(1500);
                      }
                  });
              });
-        }
+        }*/
 
+        $('#slide1').modbox('',{ajax:"/slide1?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
+        $('#slide2').modbox('',{ajax:"/slide2?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
+        $('#slide3').modbox('',{ajax:"/slide3?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
+        $('#slide4').modbox('',{ajax:"/slide4?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
+
+
+        /* Задать вопрос */
+        $('#ask_question').modbox('',{ajax:"/question?tmpl=component",close_object:'section.question div.question_block div.close',success_ajax:sendMessage});
 
 
         /* video lightbox*/
-        $('.blog-default .items a').modbox('asdfsad',{ajax:false,auto_ajax:true,close_object:'.modbox .static_page__close'});
+        $('.blog-default .items a').modbox('asdfsad',{ajax:false,auto_ajax:true,close_object:'.modbox .static_page__close', centered:false});
 
         /*article*/
         $('.blog-expo a').modbox('',
@@ -176,16 +185,19 @@
             });
 
                  /*article*/
-        $('ul.uk-list.uk-list-line.blog-default a').modbox('',
-            {
-                ajax:false,
-                auto_ajax:true,
-                close_object:'.modbox .static_page__close',
-                centered:false,
-                style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
-            });
+//        $('ul.uk-list.uk-list-line.blog-default a').modbox('',
+//            {
+//                ajax:false,
+//                auto_ajax:true,
+//                close_object:'.modbox .static_page__close',
+//                centered:false,
+//                style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
+//            });
 
 
 
     });
 })(jQuery);
+
+
+

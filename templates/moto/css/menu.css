@@ -14,16 +14,17 @@ section.main div.item-page{
     width: 100%;
 }
 
-.menu_block a{
-    font-size: 48px;
+.menu_block a {
+    font-size: 38px;
     display: block;
     border-bottom: 1px solid #1c1c1c;
     padding-left: 48px;
-    padding-right: 30px;
-    height:100px;
-    line-height: 100px;
-    box-sizing: border-box;
+    padding-right: 0px;
+    line-height: normal;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     overflow: hidden;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
 main{
@@ -35,10 +36,12 @@ main{
 
 @media(max-width: 600px){
     .menu_block a{
-        font-size: 26px;
-        height:70px;
-        line-height: 70px;
+        font-size: 22px;
+        line-height: normal;
         padding-left: 30px;
         overflow: hidden;
+        box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 }

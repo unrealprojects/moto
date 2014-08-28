@@ -148,7 +148,7 @@
          *  Слайдер
          **/
         number = 1;
-		if( $("html").hasClass("ie8") ){
+		if( $("html").hasClass("ie8") || $(window).width()<1025){
 			function slide(){
 				 $('#slide'+number).hide();
 					 if(number<4){
@@ -159,7 +159,7 @@
 				 $('#slide'+number).show();
 			}
 			interval=setInterval(slide,4000);
-0
+
 			$('.slide').mouseover(function(){
 				clearInterval(interval);
 			});
@@ -170,39 +170,39 @@
 
 			$('.slide_right').click(function(){
 
+				clearInterval(interval);
+				$('#slide'+number).hide();
+				if(number<4){
+					number++;
+				}else{
+					number = 1;
+				}
+				$('#slide'+number).show();
+			});
+
+			$('.slide_left').click(function(){
+				clearInterval(interval);
+				$('#slide'+number).hide();
+				if(number>1){
+					number--;
+				}else{
+					number = 4;
+				}
+				$('#slide'+number).show();
+			});
+
+            $('.slidecontent').on('swiperight',function(){
                 clearInterval(interval);
                 $('#slide'+number).hide();
                 if(number<4){
                     number++;
                 }else{
                     number = 1;
-                }
+		        }
                 $('#slide'+number).show();
             });
 
-            $('.slide_left').click(function(){
-                clearInterval(interval);
-                $('#slide'+number).hide();
-                if(number>1){
-                    number--;
-                }else{
-                    number = 4;
-                }
-                $('#slide'+number).show();
-            });
-
-            $('.slider').on('swiperight',function(){
-                clearInterval(interval);
-                $('#slide'+number).hide();
-                if(number<4){
-                    number++;
-                }else{
-                    number = 1;
-                }
-                $('#slide'+number).show();
-            });
-
-            $('.slider  ').on('swipeleft',function(){
+            $('.slidecontent').on('swipeleft',function(){
                 clearInterval(interval);
                 $('#slide'+number).hide();
                 if(number>1){
@@ -234,7 +234,6 @@
 			});
 
 			$('.slide_right').click(function(){
-
 				clearInterval(interval);
 				$('#slide'+number).stop().fadeOut({easing:'easeInQuad',duration:500});
 				if(number<4){
@@ -255,6 +254,29 @@
 				}
 				$('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
 			});
+
+            $('.slidecontent').on('swiperight',function(){
+                clearInterval(interval);
+                $('#slide'+number).stop().fadeOut({easing:'easeInQuad',duration:500});
+                if(number<4){
+                    number++;
+                }else{
+                    number = 1;
+                }
+                $('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
+            });
+
+            $('.slidecontent').on('swipeleft',function(){
+                clearInterval(interval);
+                $('#slide'+number).stop().fadeOut({easing:'easeInQuad',duration:500});
+                if(number>1){
+                    number--;
+                }else{
+                    number = 4;
+                }
+                $('#slide'+number).stop().fadeIn({easing:'easeInQuad',duration:2000});
+            });
+
 		}
 		
 		
@@ -277,7 +299,7 @@
              });
         }*/
 
-        $('.slidecontent img').modbox('',{ajax:"/slide1?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
+        $('.slidecontent .slide_img').modbox('',{ajax:"/slide1?tmpl=component",close_object:'.modbox .static_page__close',scroll:true});
 
 
         /* Задать вопрос */
@@ -358,6 +380,36 @@
                 location.href='/';
             });
         }
+        $( document ).bind( 'mobileinit', function(){
+            $.mobile.loader.prototype.options.text = "go";
+            $.mobile.loader.prototype.options.textVisible = false;
+            $.mobile.loader.prototype.options.theme = "a";
+            $.mobile.loader.prototype.options.html = "";
+
+            $.extend(  $.mobile , {
+                ajaxFormsEnabled : false,
+                ajaxLinksEnabled : false,
+                ajaxEnabled : false,
+                ignoreContentEnabled : true,
+                pushStateEnabled : false
+            });
+        });
+
+        $.extend(  $.mobile , {
+            ajaxFormsEnabled : false,
+            ajaxLinksEnabled : false,
+            ajaxEnabled : false,
+            ignoreContentEnabled : true,
+            pushStateEnabled : false
+        });
+
+        $.mobile.loading( 'show', {
+            text: '',
+            textVisible: false,
+            theme: 'a',
+            html: ""
+        });
+//        $.mobile.pageLoading(true);
     });
 })(jQuery);
 

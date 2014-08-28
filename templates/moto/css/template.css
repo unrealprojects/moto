@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'bebas_neue_cyrillicregular';
-    src: url('../fonts/bebas_neue_cyrillic.eot');
-    src: url('../fonts/bebas_neue_cyrillic.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/bebas_neue_cyrillic.woff') format('woff'),
-    url('../fonts/bebas_neue_cyrillic.ttf') format('truetype'),
-    url('../fonts/bebas_neue_cyrillic.svg#bebas_neue_cyrillicregular') format('svg');
+    src: url('/templates/moto/fonts/bebas_neue_cyrillic.eot');
+    src: url('/templates/moto/fonts/bebas_neue_cyrillic.eot?#iefix') format('embedded-opentype'),
+    url('/templates/moto/fonts/bebas_neue_cyrillic.woff') format('woff'),
+    url('/templates/moto/fonts/Bebas_Neue_Cyrillic.ttf') format('truetype'),
+    url('/templates/moto/fonts/bebas_neue_cyrillic.svg#bebas_neue_cyrillicregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -109,6 +109,7 @@ body{
     background-size:cover;
     min-width: 1024px;
     overflow: hidden;
+    position: relative;
 }
 
 .rotate {
@@ -370,7 +371,7 @@ section.order form input{
     margin: 0px auto 20px;
     font-size: 14px;
     color: white;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
 
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -1126,7 +1127,7 @@ section.group div.command img.photo_it_director{
     color: white;
     width: 50%;
     padding-left: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     font-size: 28px;
     margin-top: -8px;
     margin-bottom: 0px;
@@ -1137,7 +1138,7 @@ section.group div.command img.photo_it_director{
     color: white;
     width: 50%;
     margin-left: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     font-size: 16px;
     margin-bottom: 8px;
 }
@@ -1155,7 +1156,7 @@ section.group div.command img.photo_it_director{
      clear: right;
      color: white;
      margin-left: 20px;
-     box-sizing: border-box;
+     box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
      font-size: 16px;
     border-bottom: 1px solid #888888;
     padding-bottom: 3px;
@@ -1185,7 +1186,7 @@ section.group div.command img.photo_it_director{
         margin-bottom: 18px;
         float: left;
         width: 50%;
-        box-sizing: border-box;
+        box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     }
     #yoo-zoo.blog-sans .items div.pos-content .element-text{
         width: 46%;
@@ -1210,6 +1211,7 @@ section.group div.command img.photo_it_director{
 
 .static_page .static_page__header{
     font-family: 'bebas_neue_cyrillicregular';
+    font-weight: normal;
     font-size: 48px;
     margin-bottom: 15px;
 }
@@ -1363,7 +1365,7 @@ section.question div.question_block form input, section.question div.question_bl
     height: 47px;
     color: white;
     padding: 15px;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
  }
 
 section.question div.question_block form textarea{
@@ -1453,7 +1455,7 @@ section.order_install div.order_install_block form input, section.order_install 
     height: 47px;
     color: white;
     padding: 15px;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
 }
 
 section.order_install div.order_install_block form textarea{
@@ -1536,7 +1538,7 @@ section.contacts div#map{
     height: 550px;
     border: 8px solid #1c1c1c;
     float: left;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
 }
 @media (max-width: 1380px) {
     section.contacts div#map{
@@ -1547,7 +1549,7 @@ section.contacts div#map{
 section.contacts div.contacts_info {
     width: 49%;
     float: left;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     margin-left: 5px;
 }
 section.contacts div.contacts_info p{
@@ -2627,7 +2629,7 @@ section.contacts h1.contacts_header{
     background: none;
     border: 1px solid #888888;
     margin: 0px auto 20px;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     text-align: center;
     margin-top: 60px !important;
     font-size: 18px;
@@ -2675,6 +2677,7 @@ section.contacts{
 .slide_img{
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 

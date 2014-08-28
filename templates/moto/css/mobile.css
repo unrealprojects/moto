@@ -33,8 +33,8 @@
 
     /*SECTION::LOGO*/
     section.logo span{
-        width: 220px;
-        height: 81px;
+        width: 180px;
+        height: 67px;
         background: url('/templates/moto/images/logo.png');
         background-size: 100%;
         display: block;
@@ -48,8 +48,8 @@
 
     section.logo:after{
         content:'МОТОВИДЕОРЕГИСТРАТОР НОВОГО ПОКОЛЕНИЯ';
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 22px;
+        line-height: 24px;
         text-align: center;
         margin: 0 auto;
         width: 200px;
@@ -57,6 +57,7 @@
         font-family: 'bebas_neue_cyrillicregular';
         display: block;
         margin-top: 10px;
+        margin-bottom: 20px;
     }
 
 
@@ -110,30 +111,38 @@
     }
 
 
+
+
     .mobile_menu{
         display: block;
         background: url('/templates/moto/images/mobile_menu.png');
         background-size: 100%;
         cursor:pointer;
         position: absolute;
-        width: 24px;
-        height: 17px;
+        width: 28px;
+        height: 19px;
         top: 10px;
         left: 10px;
 
-        z-index: 10;
+        z-index: 100;
     }
+
     .mobile_order{
         display: block;
         background: url('/templates/moto/images/mobile_order.png');
         background-size: 100%;
-        width: 22px;
-        height: 21px;
+        width: 26px;
+        height: 25px;
         top: 10px;
         right: 10px;
         cursor:pointer;
         position: absolute;
-        z-index: 10;
+        z-index: 100;
+    }
+
+    .mobile_order_a,.mobile_menu_a{
+        display: block;
+        float: left;
     }
 
 
@@ -177,6 +186,14 @@
         margin-top: -50px;
     }
 
+    /* Лайтбокс slider*/
+    .static_page .static_page__header{
+        font-size: 34px;
+    }
+    .modbox_content{
+        margin: 30px;
+    }
+
     /* Сброс наведения */
     .menu_block a:hover{
         color: white !important;
@@ -184,6 +201,21 @@
 }
 
 @media(max-width: 600px){
+
+    .static_page .static_page__header {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    .static_page .static_page__image{
+        margin-right: 20px;
+        width: 100%;
+        box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    .static_page .static_page__text{
+        margin-right: 0px;
+    }
+
     #slide1 .slide_img{
         background:url('/templates/moto/images/mobile_moto.png');
         background-size: 100%;
@@ -218,6 +250,7 @@
     .slide_right {
         top: 120px;
     }
+
 
 
 

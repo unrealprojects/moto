@@ -122,8 +122,8 @@ $path = $uri->getPath();
     <header>
 
         <!-- СЕКЦИЯ: Логотип -->
-        <a href="/menu"><span class="mobile_menu"></span>
-        <a href="/order"><span class="mobile_order"></span></a>
+        <a class="mobile_menu_a" href="/menu"><span class="mobile_menu"></span>
+        <a class="mobile_order_a" href="/order"><span class="mobile_order"></span></a>
         <section class="logo">
             <a href="/"><span></span></a>
         </section>

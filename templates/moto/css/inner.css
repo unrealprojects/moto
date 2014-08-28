@@ -69,7 +69,7 @@ section.menu{
 
 #yoo-zoo.blog-default .item .element-textarea iframe{
     border: 8px solid #1c1c1c;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     margin-bottom: 10px !important;
 }
 
@@ -289,7 +289,7 @@ Whitelight
 
 .yoo-zoo .items img, .yoo-zoo .item img{
     border: 8px solid #1c1c1c;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
 }
 
 #yoo-zoo.blog-default .items div.teaser-item-bg{
@@ -328,7 +328,7 @@ Whitelight
 
 #yoo-zoo.blog-expo .item .element-textarea iframe{
     border: 8px solid #1c1c1c;
-    box-sizing: border-box;
+    box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
     margin-bottom: 10px !important;
 }
 

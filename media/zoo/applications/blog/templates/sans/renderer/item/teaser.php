@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 $params = $item->getParams('site');
 
 ?>
-
+<a href="/"><div class="static_page__close">&nbsp;</div></a>
 <?php if (($params->get('template.teaseritem_media_alignment') == "above") && $this->checkPosition('media')) : ?>
 <div class="pos-media media-<?php echo $params->get('template.teaseritem_media_alignment'); ?>">
 	<?php echo $this->renderPosition('media', array('style' => 'block')); ?>

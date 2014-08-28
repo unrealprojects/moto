@@ -16,7 +16,7 @@ $day = $this->app->html->_('date', $item->created, $this->app->date->format('%d'
 $month = $this->app->html->_('date', $item->created, $this->app->date->format('%B'), $this->app->date->getOffset());
 
 ?>
-
+<a href="/"><div class="static_page__close">&nbsp;</div></a>
 <?php if (($params->get('template.teaseritem_media_alignment') == "above") && $this->checkPosition('media')) : ?>
 <div class="pos-media media-<?php echo $params->get('template.teaseritem_media_alignment'); ?>">
 	<?php echo $this->renderPosition('media', array('style' => 'block')); ?>
@@ -50,6 +50,7 @@ $month = $this->app->html->_('date', $item->created, $this->app->date->format('%
 	<?php if ((($params->get('template.teaseritem_media_alignment') == "left") || ($params->get('template.teaseritem_media_alignment') == "right")) && $this->checkPosition('media')) : ?>
 	<div class="pos-media media-<?php echo $params->get('template.teaseritem_media_alignment'); ?>">
 		<?php echo $this->renderPosition('media', array('style' => 'block')); ?>
+        <div class="adress__make_order">ЗАКАЗАТЬ</div>
 	</div>
 	<?php endif; ?>
 

@@ -7,12 +7,12 @@ $to .= "Info <info@foxeye.ru>";
 $name=$_POST['name'];
 $email=$_POST['email'];
 $text=$_POST['text'];
-$subject = "Заявка";
+$subject = "Вопрос FOXEYE";
 
 $message = ' 
     <html>
         <head>
-            <title>Заявка</title>
+            <title>Вопрос</title>
         </head>
         <body>
             <p>Имя: '. $name .'</p>

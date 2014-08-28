@@ -1,22 +1,20 @@
 <?php
 class JConfig {
 	public $offline = '0';
-	public $offline_message = 'Сайт закрыт на техническое обслуживание.<br /> Пожалуйста, зайдите позже.';
+	public $offline_message = '';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Мото-видеорегистратор';
+	public $sitename = 'foxeye';
 	public $editor = 'jce';
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysqli';
+	public $dbtype = 'mysql';
 	public $host = 'localhost';
-//	public $host = 'sql.unrealprojects.com';
 	public $user = 'root';
 	public $password = '';
-//	public $password = 'password';
 	public $db = 'moto';
 	public $dbprefix = 'j_';
 	public $live_site = '';
@@ -34,12 +32,12 @@ class JConfig {
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'office@unrealprojects.com';
-	public $fromname = 'Мото-видеорегистратор';
+	public $fromname = 'Р СљР С•РЎвЂљР С•-Р Р†Р С‘Р Т‘Р ВµР С•РЎР‚Р ВµР С–Р С‘РЎРѓРЎвЂљРЎР‚Р В°РЎвЂљР С•РЎР‚';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
 	public $smtppass = '';
-	public $smtphost = 'localhost';
+	public $smtphost = 'foxeye.mysql';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
 	public $caching = '0';
@@ -54,7 +52,7 @@ class JConfig {
 	public $sef = '1';
 	public $sef_rewrite = '1';
 	public $sef_suffix = '0';
-	public $unicodeslugs = '1';
+	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $log_path = 'C:\\Program Files (x86)\\Ampps\\www\\moto/logs';
 	public $tmp_path = 'C:\\Program Files (x86)\\Ampps\\www\\moto/tmp';

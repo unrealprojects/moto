@@ -1,0 +1,62 @@
+footer,
+ul.uk-list.uk-list-line.blog-pure,
+section.logo:after,main,.rotate,
+ul.uk-list.uk-list-line.blog-pure{
+    display: none !important;
+}
+
+section.order{
+    display: block;
+    position: static;
+    border: none;
+}
+
+.rotate{
+    background: black;
+}
+
+main{
+    margin: 0px;
+    padding: 0px;
+    top:0px;
+    bottom: 0px;
+}
+
+section.order form input ,
+section.order form input[type=submit]{
+    width: 100%;
+}
+
+section.order form p {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+section.order .order-header {
+    border-bottom: none;
+}
+
+section.order form input {
+    margin: 0px auto 30px;
+}
+
+section.order h3 {
+    font-size: 32px;
+    margin-top: 20px;
+    font-family: 'bebas_neue_cyrillicregular';
+}
+
+@media(max-width: 400px){
+    section.order form input {
+        margin: 0px auto 15px;
+    }
+}
+
+@media(min-width: 1024px){
+    section.order {
+        margin-top: 120px;
+    }
+    section.order:hover form input,section.order:hover form input[type=submit]{
+        width: 100%;
+    }
+}

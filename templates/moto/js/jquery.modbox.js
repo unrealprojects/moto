@@ -18,8 +18,8 @@
                     left: '0px',
                     right: '0px',
                     display:'none',
-                    'z-index': '9999',
-                    background: 'rgba(0, 0, 0, 0.9  )',
+                    'z-index': '100000000',
+
                     ajax: false,
                     close_object: false,
                     success_ajax: function(){},
@@ -30,8 +30,13 @@
                 },
                 'modbox_back': {
                     width: '100%',
-                    position: 'absolute',
-                    height: '100%'
+                    position: 'fixed',
+                    height: '100%',
+                    top: '0px',
+                    bottom: '0px',
+                    left: '0px',
+                    right: '0px',
+                    background: 'rgba(0, 0, 0, 0.95)'
                 },
                 'modbox_content':{}
             }, options);
@@ -90,7 +95,7 @@
 
 
                          if(e.data.settings.scroll){
-                             $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"99999999"});
+                             $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"999999999"});
                          }
 
                              $('.modbox_back').bind('click.modbox',methods.close);
@@ -103,14 +108,18 @@
                          if(e.data.settings.success_ajax){
                              e.data.settings.success_ajax();
                          }
+						 if( $("html").hasClass("ie8") ){
+							 $('.modbox_back').css({backgroundColor:'#020202'});
+						 }
                          return false;
                      }
                  });
                 return false;
             }else if(e.data.settings.auto_ajax == true){
+
                 $.ajax({
                     type: 'POST',
-                    url: this+"?tmpl=component",
+                    url: $(this).attr('href').split("?")[0]+"?tmpl=component",
                     beforeSend:function(){
                         $('body').append('<div class="load"></div>');
                     },
@@ -148,7 +157,7 @@
 
 
                         if(e.data.settings.scroll){
-                            $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"99999999"});
+                            $(".modbox").niceScroll({cursorcolor:"white",cursorwidth:'8',cursorborderradius:'0',cursorborder:'none',zindex:"999999999"});
                         }
 
                         $('.modbox_back').bind('click.modbox',methods.close);
@@ -160,6 +169,9 @@
                         if(e.data.settings.success_ajax){
                             e.data.settings.success_ajax();
                         }
+						 if( $("html").hasClass("ie8") ){
+							 $('.modbox_back').css({backgroundColor:'#020202'});
+						 }						
                         return false;
                     }
                 });
@@ -188,7 +200,10 @@
                     }
                 },duration:1000});
 
-                $('.modbox').bind('click.modbox',methods.close);
+//                $('.modbox').bind('click.modbox',methods.close);
+				if( $("html").hasClass("ie8") ){
+					 $('.modbox_back').css({backgroundColor:'#020202'});
+				}
                 return false;
             }
 

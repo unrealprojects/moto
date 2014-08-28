@@ -1,0 +1,269 @@
+@media(max-width: 1024px){
+    /* DEFAULT */
+    section.info,section.order,section.header,section.menu,section.menu_bottom,section.icons
+    {
+        display:none;
+    }
+
+    body{
+        min-width: 100%;
+        background: url('../images/background1_small.jpg') 50% 0%;
+        overflow-y: auto;
+    }
+
+    .rotate{
+        display: none;
+    }
+
+    main{
+        position: static;
+        margin-top: 100px;
+    }
+
+    main .slider {
+        top: 215px;
+    }
+
+    /* SECTION::LOGO*/
+    section.logo{
+        position: relative;
+        margin: 0 auto;
+        left: 0px;
+    }
+
+    /*SECTION::LOGO*/
+    section.logo span{
+        width: 220px;
+        height: 81px;
+        background: url('/templates/moto/images/logo.png');
+        background-size: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    section.logo span:hover{
+        background: url('/templates/moto/images/logo.png');
+        background-size: 100%;
+    }
+
+    section.logo:after{
+        content:'МОТОВИДЕОРЕГИСТРАТОР НОВОГО ПОКОЛЕНИЯ';
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 auto;
+        width: 200px;
+        color: white;
+        font-family: 'bebas_neue_cyrillicregular';
+        display: block;
+        margin-top: 10px;
+    }
+
+
+    section.logo:after {
+
+    }
+
+    section.logo{
+        top: 10px;
+    }
+
+    /*SECTION::SLIDER*/
+    main{
+        margin: -225px 0px 0px 0px;
+    }
+    .slidecontent{
+        width: 396px;
+    }
+    .slidecontent .slide_img {
+        margin: 0 auto;
+        width: 280px;
+        margin-bottom: 40px;
+        margin-top: 60px;
+        display: block;
+    }
+
+    .slide_left{
+        left:100px;
+    }
+    .slide_right{
+        right:100px;
+    }
+
+    #slide4 .info_icon.slide_ico_3 {
+        width: 75px;
+        height: 75px;
+    }
+
+    /*SECTION::LOGO*/
+    .info_icon{
+        position: static;
+        float: left;
+        margin: 0px 32px 0px 0px;
+    }
+
+    .info_icon.slide_ico_4{
+        margin: 0px;
+    }
+    .info_icon div{
+        display:none;
+    }
+
+
+    .mobile_menu{
+        display: block;
+        background: url('/templates/moto/images/mobile_menu.png');
+        background-size: 100%;
+        cursor:pointer;
+        position: absolute;
+        width: 24px;
+        height: 17px;
+        top: 10px;
+        left: 10px;
+
+        z-index: 10;
+    }
+    .mobile_order{
+        display: block;
+        background: url('/templates/moto/images/mobile_order.png');
+        background-size: 100%;
+        width: 22px;
+        height: 21px;
+        top: 10px;
+        right: 10px;
+        cursor:pointer;
+        position: absolute;
+        z-index: 10;
+    }
+
+
+    #slide1 .slide_img{
+        background:url('/templates/moto/images/mobile_moto.png');
+        background-size: 100%;
+        width: 400px;
+        height: 395px;
+    }
+    #slide2 .slide_img{
+        background:url('/templates/moto/images/mobile_photo1.png');
+        background-size: 100%;
+        width: 400px;
+        height: 402px;
+    }
+    #slide3 .slide_img{
+        background:url('/templates/moto/images/mobile_photo2.png');
+        background-size: 100%;
+        width: 400px;
+        height: 328px;
+        margin-top:60px;
+    }
+
+    #slide4 .slide_img{
+        background:url('/templates/moto/images/mobile_photo4.png');
+        background-size: 100%;
+        width: 400px;
+        height: 328px;
+    }
+
+    /*Слайды*/
+    #slide1 {
+        margin-top: -45px;
+    }
+
+    #slide2 {
+        margin-top: -42px;
+    }
+
+    #slide4 {
+        margin-top: -50px;
+    }
+
+    /* Сброс наведения */
+    .menu_block a:hover{
+        color: white !important;
+    }
+}
+
+@media(max-width: 600px){
+    #slide1 .slide_img{
+        background:url('/templates/moto/images/mobile_moto.png');
+        background-size: 100%;
+        width: 220px;
+        height: 217px;
+    }
+    #slide2 .slide_img{
+        background:url('/templates/moto/images/mobile_photo1.png');
+        background-size: 100%;
+        width: 220px;
+        height: 227px;
+    }
+    #slide3 .slide_img{
+        background:url('/templates/moto/images/mobile_photo2.png');
+        background-size: 100%;
+        width: 220px;
+        height: 183px;
+        margin-top:60px;
+    }
+
+    #slide4 .slide_img{
+        background:url('/templates/moto/images/mobile_photo4.png');
+        background-size: 100%;
+        width: 220px;
+        height: 200px;
+    }
+
+    .slide_left {
+        top: 120px;
+    }
+
+    .slide_right {
+        top: 120px;
+    }
+
+
+
+}
+
+@media(max-width: 400px){
+
+
+
+
+    /*SECTION::SLIDE*/
+
+
+    .slidecontent {
+        width: 320px;
+    }
+
+    .slidecontent img {
+        width: 200px;
+        margin-top: 130px;
+        margin-bottom: 30px;
+    }
+
+    #slide3 img {
+         margin-top: 120px;
+    }
+
+    .slide_left{
+        left:20px;
+    }
+    .slide_right{
+        right:20px;
+    }
+    .info_icon {
+        margin: 0px 5px 10px 0px;
+    }
+    .info_icon.slide_ico_4{
+        margin: 0px;
+    }
+
+
+
+
+}
+
+
+/*
+1024px
+*/

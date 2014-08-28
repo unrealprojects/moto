@@ -1,0 +1,317 @@
+@media(max-width: 1024px){
+    section.logo:after{
+        display: none;
+    }
+
+    main{
+        margin: 0px 0px 0px 0px !important;
+        padding: 30px !important;
+        padding-top: 50px !important;
+        top: 0px !important;
+        bottom: 0px !important;
+        position: relative;
+    }
+
+    .modbox_content {
+        margin: 30px;
+    }
+
+    #yoo-zoo.blog-default .floatbox{
+         float: none;
+    }
+    .element-image img{
+        width: 100%;
+        height: auto;
+    }
+    /* PAGE::VIDEO */
+    #yoo-zoo.blog-default .items div.teaser-item-bg{
+        width: 50%;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    #yoo-zoo.blog-default .items div.media-left {
+        margin-right: 25px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    #yoo-zoo.blog-default .items div.pos-media .element {
+        width: 100%;
+    }
+
+    #yoo-zoo.blog-default .items .element-image a {
+        width: 100%;
+    }
+
+    /*PAGE::Команда foxeye*/
+    section.main div.item-page div.static_page__top{
+        margin-bottom: 40px;
+    }
+
+    /*PAGE::Статьи*/
+    #yoo-zoo.blog-expo .items .element-itemname a {
+        font-size: 24px;
+    }
+    #yoo-zoo.blog-expo .items .element-textarea, #yoo-zoo.blog-expo .items .element-textarea p{
+       margin-right: 0px;
+    }
+    #yoo-zoo.blog-expo .item .element-itemname {
+        font-size: 24px;
+    }
+
+    #yoo-zoo.blog-expo .item div.pos-content .element-image {
+        margin-right: 0px;
+    }
+
+    #yoo-zoo.blog-expo .item .element.element-textarea p{
+        margin-right: 0px;
+    }
+
+    #yoo-zoo.blog-expo .item div.pos-content .element{
+        margin-bottom: 30px;
+    }
+
+    #yoo-zoo.blog-expo .details h1.title {
+        font-size: 34px;
+    }
+
+    #yoo-zoo.blog-expo .items .element-itemname a{
+        margin-right: 0px;
+    }
+    #yoo-zoo.blog-expo .items .element-date{
+        position: static;
+        float: none;
+        margin-bottom: 15px;
+    }
+    #yoo-zoo.blog-expo .items .element-image{
+        width: 100%;
+    }
+    .yoo-zoo.blog-expo .items img, .yoo-zoo.blog-expo .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*SECTION::SECONDM ENE*/
+    header ul.zoo-category-list {
+        position: absolute;
+        box-sizing: border-box;
+        clear: both;
+        top: 100%;
+        z-index: 10;
+        margin-top: 0px !important;
+        width: 100%;
+        padding-left: 0px;
+        text-align: left;
+        display: block !important;
+        background: black;
+    }
+
+    header ul.zoo-category-list li a{
+        padding-left: 30px;
+        font-size: 24px;
+    }
+
+    header .zoo-category-list .active_link {
+        border-bottom: 1px solid #888888 !important;
+    }
+    header .zoo-category-list a.level0{
+        border-top: 1px solid #888888 !important;
+    }
+
+    ul.uk-list.uk-list-line.blog-pure{
+        position: absolute;
+        box-sizing: border-box;
+        clear: both;
+        top: 100%;
+        z-index: 10;
+        margin-top: 0px !important;
+        width: 100%;
+        padding-left: 30px;
+        text-align: left;
+        display: block !important;
+        background: black;
+        left:0px;
+        right:0px;
+    }
+
+    main ul.zoo-category-list {
+        display: block;
+        float: left;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media(max-width: 600px){
+    #yoo-zoo.blog-default .items div.teaser-item-bg{
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 40px;
+    }
+
+    /*PAGE::VIDEO*/
+    #yoo-zoo.blog-default .item .element-itemname {
+        font-size: 34px;
+    }
+    .modbox #yoo-zoo.blog-default,#yoo-zoo.blog-default .item div.pos-content,#yoo-zoo.blog-default .item .element iframe{
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #yoo-zoo.blog-default .item div.pos-content .element{
+        margin-right: 0px;
+    }
+
+
+
+    /* Страница::Как поставить */
+    section.main div.video_moto, section.main div.video_scooter, section.main div.installation_scheme_1, section.main div.installation_scheme_2 {
+        width: 100%;
+    }
+    section.main div.video_moto img.photo_video_moto,section.main div.installation_scheme_1 img.photo_installation_scheme_1,
+    section.main div.video_scooter img.photo_video_scooter,section.main div.installation_scheme_2 img.photo_installation_scheme_2{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    div.static_page p.text_question{
+        margin-right: 0px;
+    }
+    h1.header_question{
+        font-size: 34px;
+    }
+    div.static_page div.inst_line_1 h2.string_above_photo, div.static_page div.inst_line_2 h2.string_above_photo{
+        margin-top: 40px;
+    }
+
+    /* Страница::Команда foxeye*/
+    #yoo-zoo.blog-sans .items div.pos-content .element-image{
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    #yoo-zoo.blog-sans .items div.pos-content .element-itemname,
+    #yoo-zoo.blog-sans .items div.pos-content .element-text{
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    #yoo-zoo.blog-sans .items div.pos-content .element-email{
+        margin-left: 0px;
+    }
+    #yoo-zoo.blog-sans .items div.teaser-item-bg{
+        margin-bottom: 40px;
+    }
+    #yoo-zoo .details h1.title{
+        font-size: 34px;
+    }
+
+
+    .static_page .static_page__text{
+        margin-right: 0px;
+    }
+
+    .static_page .static_page__image {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    /* PAGE::Контакты */
+    section.contacts div#map{
+         width: 100%;
+         margin-top: 40px;
+    }
+
+    section.contacts div.contacts_info{
+        width: 100%;
+    }
+
+    section.contacts h1{
+        margin-top: 20px;
+    }
+    section.contacts div.contacts_info,section.contacts h1.contacts_header,section.contacts div.contacts_info p{
+        margin-left: 0px;
+    }
+
+    /*PAGE::Установочные*/
+    #yoo-zoo .details h1.title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #yoo-zoo.blog-noble .items div.pos-media .element-googlemaps .googlemaps{
+         height: auto !important;
+    }
+    #yoo-zoo.blog-noble .items div.pos-media .element-googlemaps{
+        width: 100%;
+    }
+    .adress__make_order{
+        margin-top: 10px !important;
+    }
+
+    section.order_install div.order_install_block form input {
+        width: 200px;
+        height: 33px;
+        clear: left;
+        margin-left: 40px;
+    }
+
+    section.order_install div.order_install_block {
+        width: 360px;
+    }
+    section.order_install div.order_install_block div.order_install_text {
+        margin-bottom: 0px;
+    }
+    section.order_install div.order_install_block input.send{
+        margin-top: 5px;
+        margin-left: 40px;
+    }
+
+    /*PAGE::QUESTION*/
+    section.question div.question_block form input {
+        width: 100%;
+        height: 33px;
+        clear: both;
+        margin-left: 0px;
+    }
+
+    section.question div.question_block {
+        width: 100%;
+    }
+    section.question div.question_block form textarea {
+        width: 100%;
+        height: 80px;
+        margin-left: 0px;
+    }
+    section.question div.question_block h1{
+        padding-left: 0px;
+    }
+    section.question div.question_block input.send{
+        width: 100%;
+        margin-left: 0px;
+    }
+    section.question div.question_block div.question_name span, section.question div.question_block div.question_email span, section.question div.question_block div.question_text span {
+        width: 100%;
+        margin-left: 0px;
+    }
+    section.question div.question_block div.question_name, section.question div.question_block div.question_email{
+        width: 100%;
+    }
+    section.question div.question_block h1 {
+        padding-top: 16px;
+    }
+    section.question div.question_block div.question_name, section.question div.question_block div.question_email {
+        margin-bottom: 0px;
+    }
+}
+
+@media(max-width: 400px){
+    main{
+        padding-top: 20px !important;
+    }
+    #yoo-zoo.blog-default .details h1.title{
+        font-size: 34px;
+    }
+}

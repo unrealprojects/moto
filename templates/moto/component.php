@@ -9,5 +9,4 @@
 
 defined('_JEXEC') or die;
 ?>
-<jdoc:include type="head" />
 <jdoc:include type="component" />

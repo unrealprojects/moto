@@ -6,5 +6,6 @@
 	<positions>
 		<position>footer-icons</position>
         <position>left-block</position>
+        <position>after-content</position>
 	</positions>
 </extension>

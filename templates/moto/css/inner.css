@@ -1,6 +1,7 @@
 .rotate{
     animation:none;
-    background: rgba(0,0,0,0.75);
+    /*background: rgba(0,0,0,0.75);*/	
+	background: url('/templates/moto/images/background_black.jpg');
     opacity: 1;
     -webkit-animation: none;
     top:0px;
@@ -8,11 +9,9 @@
     right: 0px;
     bottom:0px;
 }
-
-section.icons .icon_wrap{
-    background: rgba(0,0,0,0.8);
+body{
+	background:black;
 }
-
 
 section.menu{
     box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 1);
@@ -29,6 +28,10 @@ main {
     left:0px;
     right:0px;
     bottom: 163px;
+}
+
+#yoo-zoo .items div.teaser-item:last-child div.teaser-item-bg{
+    background: none;
 }
 
 
@@ -53,12 +56,15 @@ section.menu{
 
 
 
-
+.overlay{
+    display: none !important;
+}
 
 /* КОНТЕНТ: Видеозаписи */
 
 #yoo-zoo.blog-default .item div.pos-content .element {
     margin-bottom: 0px;
+	margin-right: 80px;
 }
 
 #yoo-zoo.blog-default .item .element-textarea iframe{
@@ -86,6 +92,7 @@ section.menu{
 
 #yoo-zoo.blog-default .details h1.title{
     font-size: 48px;
+    line-height: normal;
     margin-bottom: 15px;
     font-family: bebas_neue_cyrillicregular;
     color: white;
@@ -155,6 +162,51 @@ margin-bottom: 5px;
     -o-transition: background 0.3s;
     transition: background 0.3s;
 }
+
+#yoo-zoo.blog-default .item div.pos-content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.modbox #yoo-zoo.blog-default{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#yoo-zoo.blog-default .item .element iframe{
+    height: 700px;
+    width: 100%;
+}
+@media (max-width: 1600px) {
+    .modbox #yoo-zoo.blog-default{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    #yoo-zoo.blog-default .item div.pos-content{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    #yoo-zoo.blog-default .item .element iframe{
+        height: 500px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .modbox #yoo-zoo.blog-default{	
+        width: 600px;
+    }
+
+    #yoo-zoo.blog-default .item div.pos-content{
+        width: 600px;
+    }
+
+    #yoo-zoo.blog-default .item .element iframe{
+	    width: 520px;
+        height: 350px;
+    }
+}
+
 
 /* Наведение на блок */
 #yoo-zoo.blog-default .items div.media-left:hover .element-itemname a{
@@ -235,7 +287,7 @@ Whitelight
     text-decoration: none;
 }
 
-.yoo-zoo img{
+.yoo-zoo .items img, .yoo-zoo .item img{
     border: 8px solid #1c1c1c;
     box-sizing: border-box;
 }
@@ -305,6 +357,7 @@ Whitelight
 #yoo-zoo.blog-expo .item .element.element-textarea p {
     color: #888888;
     font-size: 16px;
+    margin-right: 40px;
 }
 
 
@@ -339,8 +392,39 @@ Whitelight
 }
 
 
-#yoo-zoo.blog-expo .floatbox{
+#yoo-zoo.blog-expo .items .floatbox{
     float: left;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#yoo-zoo.blog-expo .items .floatbox:hover .element-itemname a{
+     color: #ac8019;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#yoo-zoo.blog-expo .items .floatbox:hover img{
+    border: 8px solid #ac8019;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#yoo-zoo.blog-expo .items .floatbox:hover .element-textarea p{
+    color: white !important;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 #yoo-zoo.blog-expo .items div.teaser-item{
@@ -371,11 +455,17 @@ Whitelight
     border-bottom: none;
     letter-spacing: 0px;
     display: block;
+    margin-right: 100px;
+}
+
+#yoo-zoo.blog-expo .items .element-itemname a:hover{
+    color: #ac8019;
 }
 
 #yoo-zoo.blog-expo .items .element-textarea,#yoo-zoo.blog-expo .items .element-textarea p{
     font-size: 16px;
     color: #888888 !important;
+    margin-right: 40px;
 }
 
 
@@ -390,6 +480,9 @@ Whitelight
     margin-top: 3px;
     display: block;
     float: left;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 #yoo-zoo.blog-expo .items .pos-date,#yoo-zoo.blog-expo .item .pos-date{
@@ -400,20 +493,91 @@ Whitelight
     position: relative;
 }
 
+.element-textarea p{
+    color: #888888;
+}
+
+/* Левый список */
+
+ul.zoo-category-list {
+    top: 160px;
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+    text-align: right;
+}
+
+ul.zoo-category-list li > a {
+    display: block;
+    border-bottom: 1px solid #888888;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+
+ul.zoo-category-list ul{
+    padding: 0px !important;
+}
+
+/* Список в центре */
+
+main ul.zoo-category-list {
+    top: 0px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    text-align: left;
+}
+
+main ul.zoo-category-list li > a {
+    display: block;
+    border-bottom: 1px solid #888888;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    float: left;
+    width: 100%;
+}
+main ul.zoo-category-list li > a:hover {
+    border-bottom: 1px solid #ac8019;
+}
+main ul.zoo-category-list li > a:before{
+    content:'Установочные центры ';
+}
+
+main ul.zoo-category-list ul{
+    padding: 0px !important;
+}
+
+
 
 /* Примеры установки */
-#yoo-zoo.blog-default .item div.pos-content .element-image{
+#yoo-zoo.blog-pure .item .element-itemname{
+    font-size: 38px;
+    font-family: bebas_neue_cyrillicregular;
+    color: white;
+    margin-bottom: 15px !important;
+    border-bottom: none;
+    letter-spacing: 0px;
+    display: block;
+    margin-right: 100px;
+}
+
+
+#yoo-zoo.blog-pure .item div.pos-date{
+    display: none;
+}
+#yoo-zoo.blog-pure .item div.pos-content .element-image{
     float: left;
     margin-right: 20px;
     width: 250px;
     height: 180px;
 }
 
-#yoo-zoo.blog-default .item div.pos-content .element-gallery img{
+#yoo-zoo.blog-pure .item div.pos-content .element-gallery img{
     width: 200px;
     height: 150px;
 }
-#yoo-zoo.blog-default .item div.pos-content .element-gallery img:hover{
+#yoo-zoo.blog-pure .item div.pos-content .element-gallery img:hover{
     border: 8px solid #ac8019;
 
     -webkit-transition: background 0.3s;
@@ -422,7 +586,7 @@ Whitelight
     transition: background 0.3s;
 }
 
-#yoo-zoo.blog-default .element-gallery:before{
+#yoo-zoo.blog-pure .element-gallery:before{
     content:'ФОТОГРАФИИ УСТАНОВКИ';
     margin-bottom: 20px;
     display: block;
@@ -433,7 +597,7 @@ Whitelight
 
 
 /* Модуль: Примеры установок */
-ul.uk-list.uk-list-line.blog-default {
+ul.uk-list.uk-list-line.blog-pure  {
     position: fixed;
     top: 160px;
     left: 30px;
@@ -443,25 +607,25 @@ ul.uk-list.uk-list-line.blog-default {
 
 }
 
-ul.uk-list.uk-list-line.blog-default img{
+ul.uk-list.uk-list-line.blog-pure  img{
     width: 60px;
     height: 40px;
     margin-right: 20px;
 }
 
-ul.uk-list.uk-list-line.blog-default a{
+ul.uk-list.uk-list-line.blog-pure a{
     display: block;
     float: left;
 }
 
-ul.uk-list.uk-list-line.blog-default li{
+ul.uk-list.uk-list-line.blog-pure li{
     clear: both;
     float: left;
     display: block;
     margin-bottom: 20px;
 }
 
-ul.uk-list.uk-list-line.blog-default li a:nth-of-type(2){
+ul.uk-list.uk-list-line.blog-pure li a:nth-of-type(2){
     padding-bottom: 2px;
     border-bottom: 1px solid #888888;
     margin-top: 7px;
@@ -472,7 +636,7 @@ ul.uk-list.uk-list-line.blog-default li a:nth-of-type(2){
     transition: border 0.3s;
 }
 
-ul.uk-list.uk-list-line.blog-default li a:nth-of-type(2):hover{
+ul.uk-list.uk-list-line.blog-pure li a:nth-of-type(2):hover{
     border-bottom: none;
 
     -webkit-transition: border 0.3s;
@@ -481,7 +645,7 @@ ul.uk-list.uk-list-line.blog-default li a:nth-of-type(2):hover{
     transition: border 0.3s;
 }
 
-ul.uk-list.uk-list-line.blog-default:before{
+ul.uk-list.uk-list-line.blog-pure:before{
     content:'ПРИМЕРЫ УСТАНОВКИ';
     /*position: fixed;*/
     /*top: 50px;*/
@@ -497,24 +661,64 @@ ul.uk-list.uk-list-line.blog-default:before{
 
 
 @media(max-width: 1280px){
-    ul.uk-list.uk-list-line.blog-default {
+    ul.uk-list.uk-list-line.blog-pure {
         top: 110px;
         left: 30px;
         margin-top: 9px;
     }
 
-    ul.uk-list.uk-list-line.blog-default a{
+    ul.uk-list.uk-list-line.blog-pure a{
         font-size: 12px;
     }
 
-    ul.uk-list.uk-list-line.blog-default img{
+    ul.uk-list.uk-list-line.blog-pure img{
         width: 60px;
         height: 40px;
         margin-right: 10px;
     }
-    ul.uk-list.uk-list-line.blog-default li{
+    ul.uk-list.uk-list-line.blog-pure li{
         margin-bottom: 10px;
     }
 }
 
 
+.yoo-zoo.blog-noble h3{
+    margin: 0px;
+}
+
+#yoo-zoo .details h1.title{
+    font-family: bebas_neue_cyrillicregular;
+    font-size: 48px;
+}
+
+.yoo-zoo.blog-noble .element.element-itemname h3 {
+    float: left;
+}
+
+.yoo-zoo.blog-noble  .element.element-text h3 {
+    float: left;
+    width: 110px;
+}
+
+#yoo-zoo.blog-noble .items .element-itemname{
+    font-size: 38px;
+    font-family: bebas_neue_cyrillicregular;
+    color: white;
+    margin-top: -7px;
+    margin-bottom: 30px !important;
+}
+
+
+#yoo-zoo.blog-noble .details h1.title:before {
+    content: "УСТАНОВОЧНЫЕ ЦЕНТРЫ - ";
+}
+
+.yoo-zoo.blog-sans .items img:hover{
+	border: 8px solid #1c1c1c;
+}
+
+@media (max-width:1439px) {
+    main {
+        margin: 0px;
+    }
+}

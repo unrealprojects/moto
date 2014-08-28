@@ -1,5 +1,5 @@
 <?php
-$to  = "Oleg <olegblud@gmail.com>, " ;
+$to  = "Oleg <olegblud@gmail.com>," ;
 $to .= "Afonin <Afonin.design@gmail.com>,";
 $to .= "Info <info@foxeye.ru>";
 

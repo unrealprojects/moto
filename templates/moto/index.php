@@ -16,29 +16,50 @@ $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/mobile.css');
 
+$doc->addScript('templates/' . $this->template . '/js/jquery.mobile.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
+$doc->addScript('templates/' . $this->template . '/js/respond.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.nicescroll.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.maskedinput.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.color.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.modbox.js');
+$doc->addScript('templates/' . $this->template . '/js/jquery.placeholder.js');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
 
 $uri = JUri::getInstance();
 $path = $uri->getPath();
 ?>
 <!DOCTYPE html>
+<!--[if IE 8]>    <html  lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" class="ie8"> <![endif]-->
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>-->
+	<link href="/templates/moto/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+      document.createElement('main');
+   </script>
+<![endif]-->
 
     <jdoc:include type="head" />
+	
+<!--[if IE 8]>
+	<link rel="stylesheet" href="/templates/moto/css/ie8.css" type="text/css">
+<![endif]-->
 
     <?php if($path!='/'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/inner.css');
+        $doc->addStyleSheet('templates/' . $this->template . '/css/mobile_inner.css');
         ?>
     <script>
         (function($){
@@ -52,10 +73,18 @@ $path = $uri->getPath();
     if($path=='/'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/main.css');
     }
-    if($path!='/' && $path!='/test-drive' && $path!='/registrator' && $path!='/sale' && $path!='/test-drive' && $path!='/article' ){
+    if($path!='/' && $path!='/test-drive' && $path!='/registrator' && $path!='/sale' && $path!='/test-drive' 
+			      && $path!='/article' && $path!='/guarantee' && $path!='/sale/category/piter' && $path!='/sale/category/moscow'){
         $doc->addStyleSheet('templates/' . $this->template . '/css/inner__no_icons.css');
     }
 
+    if($path=='/menu'){
+        $doc->addStyleSheet('templates/' . $this->template . '/css/menu.css');
+    }
+
+    if($path=='/order'){
+        $doc->addStyleSheet('templates/' . $this->template . '/css/order.css');
+    }
     ?>
 <?php if($path=='/contacts'){?>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -91,10 +120,14 @@ $path = $uri->getPath();
 <body>
     <div class="rotate"></div>
     <header>
+
         <!-- СЕКЦИЯ: Логотип -->
+        <a href="/menu"><span class="mobile_menu"></span>
+        <a href="/order"><span class="mobile_order"></span></a>
         <section class="logo">
             <a href="/"><span></span></a>
         </section>
+
 
         <!-- СЕКЦИЯ: Меню -->
         <section class="menu">
@@ -112,6 +145,8 @@ $path = $uri->getPath();
                 </ul>
             </nav>
         </section>
+
+
 
         <!-- СЕКЦИЯ: Описание сайта -->
         <jdoc:include type="modules" name="left-block" style="none" />
@@ -138,6 +173,7 @@ $path = $uri->getPath();
         <!-- СЕКЦИЯ: Основной контент -->
         <section class="main">
             <jdoc:include type="component" />
+            <jdoc:include type="modules" name="after-content" style="none" />
         </section>
       </main>
 
@@ -147,13 +183,13 @@ $path = $uri->getPath();
         <!-- СЕКЦИЯ: Нижнее меню -->
         <section class="menu_bottom">
             <nav class="nav-left">
-                <a href="#">
+                <a href="/">
                     <img src="templates/moto/images/gc-logo.png" alt="Мотовидеорегистратор">
                 </a>
                 <ul>
                     <li><a href="/docs">ИНСТРУКЦИЯ</a></li>
                     <li class="list_dot"><a href="/partners">ПАРТНЁРЫ</a></li>
-                    <li class="list_dot"><a href="/ship_and_pay">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li class="list_dot"><a href="/shipping-and-payment">ДОСТАВКА И ОПЛАТА</a></li>
                     <li class="list_dot"><a href="/contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>

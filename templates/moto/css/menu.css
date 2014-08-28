@@ -1,0 +1,44 @@
+header,footer{
+    display: none;
+}
+
+.rotate{
+    background: black;
+}
+
+section.main div.item-page{
+    margin-bottom: 0px;
+}
+
+.menu_block{
+    width: 100%;
+}
+
+.menu_block a{
+    font-size: 48px;
+    display: block;
+    border-bottom: 1px solid #1c1c1c;
+    padding-left: 48px;
+    padding-right: 30px;
+    height:100px;
+    line-height: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main{
+    margin: 0px !important;
+    padding: 0px !important;
+    top:0px;
+    bottom: 0px;
+}
+
+@media(max-width: 600px){
+    .menu_block a{
+        font-size: 26px;
+        height:70px;
+        line-height: 70px;
+        padding-left: 30px;
+        overflow: hidden;
+    }
+}

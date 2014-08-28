@@ -13,7 +13,7 @@ $day = $this->app->html->_('date', $item->created, $this->app->date->format('%d'
 $month = $this->app->html->_('date', $item->created, $this->app->date->format('%b'), $this->app->date->getOffset());
 
 ?>
-
+<a href="/install"><div class="static_page__close">&nbsp;</div></a>
 <?php if ($this->checkPosition('top')) : ?>
 <div class="pos-top">
 	<?php echo $this->renderPosition('top', array('style' => 'block')); ?>

@@ -200,7 +200,10 @@
                     }
                 },duration:1000});
 
-//                $('.modbox').bind('click.modbox',methods.close);
+                $('.modbox_back').bind('click.modbox',methods.close);
+                if(e.data.settings.close_object){
+                    $(e.data.settings.close_object).bind('click.modbox',methods.close);
+                }
 				if( $("html").hasClass("ie8") ){
 					 $('.modbox_back').css({backgroundColor:'#020202'});
 				}

@@ -224,7 +224,7 @@ margin-bottom: 5px;
     -o-transition: border 0.3s;
     transition: border 0.3s;
 }
-Whitelight
+
 #yoo-zoo.blog-default .items div.media-left:hover .element-image a:hover:after{
     background: url('/templates/moto/images/play_hover.png');
 
@@ -527,6 +527,13 @@ main ul.zoo-category-list {
     z-index: 10;
     width: 100%;
     text-align: left;
+}
+@media(min-width:1000px){
+    main ul.zoo-category-list {
+        position: static;
+        float: left;
+        padding-bottom: 30px;
+    }
 }
 
 main ul.zoo-category-list li > a {

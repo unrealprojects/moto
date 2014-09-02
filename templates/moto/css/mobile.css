@@ -1,3 +1,10 @@
+@viewport {
+    user-zoom: fixed;
+}
+*:focus{
+    outline:none;
+}
+
 @media(max-width: 1024px){
     /* DEFAULT */
     section.info,section.order,section.header,section.menu,section.menu_bottom,section.icons
@@ -5,8 +12,28 @@
         display:none;
     }
 
+    .icons_descriotion__in_modbox{
+        color:white;
+    }
+    .icons_descriotion__in_modbox p{
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .info_icon{
+        cursor: pointer;
+    }
+
+    section.main div.item-page {
+        margin-bottom: 0px;
+    }
+
+
     body{
         min-width: 100%;
+        min-height: 100%;
+        height: 100%;
         background: url('../images/background1_small.jpg') 50% 0%;
         overflow-y: auto;
     }
@@ -16,13 +43,11 @@
     }
 
     main{
-        position: static;
-        margin-top: 100px;
+        position: absolute;
+        top:50%;
+        bottom: 0px;
     }
 
-    main .slider {
-        top: 215px;
-    }
 
     /* SECTION::LOGO*/
     section.logo{
@@ -38,7 +63,7 @@
         background: url('/templates/moto/images/logo.png');
         background-size: 100%;
         display: block;
-        margin: 0 auto;
+        margin: 0px auto;
     }
 
     section.logo span:hover{
@@ -75,20 +100,23 @@
     }
     .slidecontent{
         width: 396px;
+        min-height: 440px;
     }
     .slidecontent .slide_img {
         margin: 0 auto;
         width: 280px;
         margin-bottom: 40px;
-        margin-top: 60px;
+        top: 60px;
         display: block;
     }
 
     .slide_left{
         left:100px;
+        margin-top: 75px;
     }
     .slide_right{
         right:100px;
+        margin-top: 75px;
     }
 
     #slide4 .info_icon.slide_ico_3 {
@@ -100,7 +128,7 @@
     .info_icon{
         position: static;
         float: left;
-        margin: 0px 32px 0px 0px;
+        margin: 0px 0px 0px 0px;
     }
 
     .info_icon.slide_ico_4{
@@ -124,7 +152,7 @@
         top: 10px;
         left: 10px;
 
-        z-index: 100;
+        z-index: 1002;
     }
 
     .mobile_order{
@@ -137,12 +165,13 @@
         right: 10px;
         cursor:pointer;
         position: absolute;
-        z-index: 100;
+        z-index: 1002;
     }
 
     .mobile_order_a,.mobile_menu_a{
         display: block;
         float: left;
+        z-index: 1002;
     }
 
 
@@ -163,7 +192,8 @@
         background-size: 100%;
         width: 400px;
         height: 328px;
-        margin-top:60px;
+        margin-top: 0px;
+        top: 100px;
     }
 
     #slide4 .slide_img{
@@ -171,15 +201,20 @@
         background-size: 100%;
         width: 400px;
         height: 328px;
+        top:90px;
     }
 
     /*Слайды*/
     #slide1 {
-        margin-top: -45px;
+        margin-top: -50px;
     }
 
     #slide2 {
-        margin-top: -42px;
+        margin-top: -50px;
+    }
+
+    #slide3 {
+        margin-top: -50px;
     }
 
     #slide4 {
@@ -198,9 +233,57 @@
     .menu_block a:hover{
         color: white !important;
     }
+
+
+    /* Сброс иконок слайдера */
+    .slide_icons {
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+
+    }
+
+    .slidecontent{
+        position: static;
+    }
+    .slide{
+        position: static;
+    }
+
+
+    .slidecontent .slide_img{
+        position: relative;
+    }
+    .info_icon_wrap{
+        width: 25%;
+        display: block;
+        height: 100%;
+        position: static;
+        float: left;
+
+    }
+    .info_icon{
+        margin: 0 auto !important;
+        position: static;
+        float: none;
+        display: inline-block;
+    }
+
+    body{
+        min-height: 650px;
+    }
+    .ui-page.ui-page-theme-a.ui-page-active{
+        height: 100%;
+    }
 }
 
 @media(max-width: 600px){
+
+    main .slider {
+        top: 15px;
+    }
 
     .static_page .static_page__header {
         font-size: 24px;
@@ -221,19 +304,21 @@
         background-size: 100%;
         width: 220px;
         height: 217px;
+        top: 130px;
     }
     #slide2 .slide_img{
         background:url('/templates/moto/images/mobile_photo1.png');
         background-size: 100%;
         width: 220px;
         height: 227px;
+        top: 130px;
     }
     #slide3 .slide_img{
         background:url('/templates/moto/images/mobile_photo2.png');
         background-size: 100%;
         width: 220px;
         height: 183px;
-        margin-top:60px;
+        top: 160px;
     }
 
     #slide4 .slide_img{
@@ -241,30 +326,48 @@
         background-size: 100%;
         width: 220px;
         height: 200px;
+        top: 150px;
     }
 
     .slide_left {
-        top: 120px;
+        top: 155px;
     }
 
     .slide_right {
-        top: 120px;
+        top: 155px;
     }
 
 
+    main {
+        margin: -200px 0px 0px 0px;
+    }
+    body{
+        min-height: 520px;
+    }
 
-
+    .slide_icons {
+        bottom:10px;
+    }
 }
 
 @media(max-width: 400px){
 
 
+    body{
+        background: url('../images/background1.jpg') 50% 0%;
+    }
 
+    body{
+        min-height: 400px;
+    }
 
     /*SECTION::SLIDE*/
-
+    main{
+        margin: -180px 0px 0px 0px;
+    }
 
     .slidecontent {
+        min-height: 440px;
         width: 320px;
     }
 
@@ -272,10 +375,6 @@
         width: 200px;
         margin-top: 130px;
         margin-bottom: 30px;
-    }
-
-    #slide3 img {
-         margin-top: 120px;
     }
 
     .slide_left{
@@ -291,12 +390,11 @@
         margin: 0px;
     }
 
-
-
-
 }
 
 
 /*
-1024px
+1 Летят иконки при возврате
+2 Отступ "Установочные центры москва"
+3 Крестик налазит
 */

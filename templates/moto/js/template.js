@@ -12,10 +12,66 @@
                     var prop=$(window).height()/$(window).width();
                     $('body').css('backgroundSize',100*prop*1.777+'%');
                 }
+                $('.slidecontent').css('min-height','100%');
             }else{
                 if(jQuery(document).height()<$(document).height()*2.02){
                     var prop=$(document).height()/$(window).width();
                     $('body').css('backgroundSize',100*prop*2.02+'%');
+                }else if($(window).width()<400 && $(window).height()<600 ){
+
+                }
+
+                /* Выравнивание по низу иконок */
+                if($(window).height()>440 && $(window).width()<600){
+                     $('.slidecontent').css('min-height',$(window).height()-15+'px');
+                }
+
+                if($(window).height()>480 && $(window).width()<600){
+                    $('.slidecontent').css('min-height',$(window).height()-35+'px');
+                }
+
+                if($(window).height()>520 && $(window).width()<600){
+                    $('.slidecontent').css('min-height',$(window).height()-55+'px');
+                }
+
+                if($(window).height()>560 && $(window).width()<600){
+                    $('.slidecontent').css('min-height',$(window).height()-80+'px');
+                }
+
+                if($(window).height()>600 && $(window).width()<600){
+                    $('.slidecontent').css('min-height',$(window).height()-100+'px');
+                }
+
+                if($(window).height()>640 && $(window).width()<600){
+                    $('.slidecontent').css('min-height',$(window).height()-120+'px');
+                }
+
+                /* Выравнивание по низу иконок :: большие экраны*/
+                if($(window).width()>600 && $(window).height()<700){
+                    $('.slidecontent').css('min-height',$(document).height()-80+'px');
+                }
+
+                if($(window).width()>600 && $(window).height()>699){
+                    $('.slidecontent').css('min-height',$(document).height()-120+'px');
+                }
+                if($(window).width()>600 && $(window).height()>800){
+                    $('.slidecontent').css('min-height',$(document).height()-200+'px');
+                }
+
+                if($(window).width()>600 && $(window).height()>850){
+                    $('.slidecontent').css('min-height',$(document).height()-250+'px');
+                }
+
+                if($(window).width()>600 && $(window).height()>900){
+                    $('.slidecontent').css('min-height',$(document).height()-300+'px');
+                }
+
+                if($(window).width()>600 && $(window).height()>950){
+                    $('.slidecontent').css('min-height',$(document).height()-320+'px');
+                }
+
+                if($(window).width()>600 && $(window).height()>1000){
+                    $('.slidecontent').css('min-height',$(document).height()-350+'px');
                 }
             }
         }
@@ -215,13 +271,22 @@
 		}
 		else{
 			function slide(){
-				 $('#slide'+number).fadeOut(1000);
+                if($(window).width()>1025){
+				    $('#slide'+number).fadeOut(1000);
+                }else{
+                    $('#slide'+number).hide();
+                }
 					 if(number<4){
 						 number++;
 					 }else{
 						 number = 1;
 					 }
-				 $('#slide'+number).fadeIn(4000);
+                if($(window).width()>1025){
+				     $('#slide'+number).fadeIn(4000);
+                }else{
+                    $('#slide'+number).show();
+                }
+                console.log(2);
 			}
 			interval=setInterval(slide,4000);
 
@@ -306,6 +371,13 @@
         $('#ask_question').modbox('',{ajax:"/question?tmpl=component",close_object:'.modbox section.question div.question_block div.close',success_ajax:sendMessage,
             "modbox_back":{backgroundColor: 'rgba(0, 0, 0, 0.4)',width:'100%',height:'100%',position:"fixed",top:'0px',bottom:'0px'}
         });
+
+        /* Иконки в modbox */
+        if($(window).width()<1024){
+            $('.info_icon').each(function(){
+                $(this).modbox('<div class="static_page__close"></div><div class="icons_descriotion__in_modbox">'+$(this).html().replace('<br>', '&nbsp;')+'</div>',{ajax:false,close_object:'.modbox .static_page__close'});
+            });
+        }
 
 
         /* video lightbox*/

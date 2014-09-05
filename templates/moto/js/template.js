@@ -382,20 +382,43 @@
         }
 
 
-        /* video lightbox*/
-        $('.blog-default .items .teaser-item a').modbox('',{ajax:false,auto_ajax:true,close_object:'.modbox .static_page__close', centered:false,scroll:false});
+      //  Возврат на главную страницу
+            if(window.location.pathname.substr(0,6)=='/video'){
+                $('.static_page__close').click(function(){
+                    window.location.href='/video';
+                });
 
-        /*article*/
-        $('.blog-expo .teaser-item a').modbox('',
-            {
-                ajax:false,
-                auto_ajax:true,
-                close_object:'.modbox .static_page__close',
-                centered:false,
-                scroll:true,
-                style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
+            }
+
+            if(window.location.pathname.substr(0,8)=='/article'){
+                $('.static_page__close').click(function(){
+                    window.location.href='/article';
+                });
+            }
+
+        if(window.location.pathname=='/order_install'){
+            $('.close').click(function(){
+                window.location.href='/sale';
             });
+            sendMessageInstall();
+        }
 
+        /* video lightbox*/
+        if($(window).width()>1024){
+            $('.blog-default .items .teaser-item a').modbox('',{ajax:false,auto_ajax:true,close_object:'.modbox .static_page__close', centered:false,scroll:false});
+        }
+        /*article*/
+        if($(window).width()>1024){
+            $('.blog-expo .teaser-item a').modbox('',
+                {
+                    ajax:false,
+                    auto_ajax:true,
+                    close_object:'.modbox .static_page__close',
+                    centered:false,
+                    scroll:true,
+                    style:".modbox .item,.modbox .yoo-zoo,.modbox .pos-date{float:left;clear: both;}.modbox_content{float:left;}.modbox{top: 0px;bottom: 0px;position: fixed !important;overflow-y: scroll;}"
+                });
+        }
                  /*article*/
 //        $('ul.uk-list.uk-list-line.blog-default a').modbox('',
 //            {
@@ -418,11 +441,15 @@
         /*
         * Сделай заказ в списке пунктов
         * */
-
-        $('.adress__make_order').modbox('',{ajax:"/order_install?tmpl=component",close_object:'.modbox section.order_install div.order_install_block div.close',success_ajax:sendMessageInstall,
-            "modbox_back":{backgroundColor: 'rgba(0, 0, 0, 0.4)',width:'100%',height:'100%',position:"fixed",top:'0px',bottom:'0px'}
-        });
-		
+            if($(window).width()>1024){
+                $('.adress__make_order').modbox('',{ajax:"/order_install?tmpl=component",close_object:'.modbox section.order_install div.order_install_block div.close',success_ajax:sendMessageInstall,
+                "modbox_back":{backgroundColor: 'rgba(0, 0, 0, 0.4)',width:'100%',height:'100%',position:"fixed",top:'0px',bottom:'0px'}
+                });
+            }else{
+                $('.adress__make_order').click(function(){
+                    window.location.href='/order_install';
+                });
+            }
         /**
          * Подсветка активного пункта меню
          */

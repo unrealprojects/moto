@@ -88,6 +88,7 @@
 
     #yoo-zoo.blog-expo .item div.pos-content .element{
         margin-bottom: 30px;
+        word-wrap: break-word;
     }
 
     #yoo-zoo.blog-expo .details h1.title {
@@ -196,6 +197,8 @@
     section.question div.question_block div.question_name, section.question div.question_block div.question_email {
         margin-bottom: 0px;
     }
+
+
 }
 
 
@@ -342,6 +345,25 @@
 
 
 
+    /* afterwords*/
+    section.contacts:before{
+        content: 'Контакты';
+        font-family: 'bebas_neue_cyrillicregular';
+        font-size: 48px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        color: white;
+    }
+
+    section.contacts div#map {
+        margin-top: 10px;
+        margin-bottom:20px;
+    }
+
+    .contacts_header{
+        display: none;
+
+    }
 
 }
 

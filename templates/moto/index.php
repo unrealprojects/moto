@@ -19,6 +19,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
 $doc->addStyleSheet('templates/' . $this->template . '/css/mobile.css');
 
 $doc->addScript('templates/' . $this->template . '/js/jquery.mobile.min.js');
+//$doc->addScript('templates/' . $this->template . '/js/jgestures.min.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery-ui.min.js');
 $doc->addScript('templates/' . $this->template . '/js/respond.js');
 $doc->addScript('templates/' . $this->template . '/js/jquery.parallax.min.js');

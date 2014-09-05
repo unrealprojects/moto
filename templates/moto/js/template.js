@@ -1,7 +1,8 @@
 (function($){
+
 	$(document).ready(function(){
         /*Метки*/
-
+        $(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});
 		/*standart*/
 		$('input, textarea').placeholder();
 		
@@ -94,7 +95,7 @@
             var email =$("section.order form input[name=email]").val();
             if(!phone || !name){
 				$('section.order #error').remove('');
-                $('section.order form input[type=submit]').after('<p id="error" style="color:#ac8019   ; margin-bottom:10px;">Заполните все поля</p>');
+                $('section.order form input[type=submit]').after('<p id="error" style="color:#ac8019; margin-bottom:10px;">Заполните все поля</p>');
             }else{
 				$('section.order #error').remove('');
                 $.ajax({
@@ -102,8 +103,9 @@
                         url: 'mail.php',
                         data: 'phone='+phone+'&name='+name+'&email='+email,
                         success: function(data){
-                            $('section.order form input,section.order form p').remove();
-                            $('section.order form').html("<p style='color:white;  font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, "+name+".<br/>Мы перезвоним Вам в ближайшее время!</p>");
+                            $('section.order form input,section.order form p').hide();
+                            $('section.order .order-header').after("<p style='padding: 30px;color:white; font-size: 18px;text-transform: none;line-height: 28px'>Спасибо, "+name+".<br/>Мы перезвоним Вам в ближайшее время!</p>");
+                            setTimeout(function(){window.location.href='/'},3000);
                         }
                     });
             }
@@ -375,7 +377,7 @@
         /* Иконки в modbox */
         if($(window).width()<1024){
             $('.info_icon').each(function(){
-                $(this).modbox('<div class="static_page__close"></div><div class="icons_descriotion__in_modbox">'+$(this).html().replace('<br>', '&nbsp;')+'</div>',{ajax:false,close_object:'.modbox .static_page__close'});
+                $(this).modbox('<div class="static_page__close"></div><div class="icons_descriotion__in_modbox">'+$(this).html().replace('<br>', ' ')+'</div>',{ajax:false,close_object:'.modbox .static_page__close'});
             });
         }
 
@@ -452,6 +454,7 @@
                 location.href='/';
             });
         }
+
         $( document ).bind( 'mobileinit', function(){
             $.mobile.loader.prototype.options.text = "go";
             $.mobile.loader.prototype.options.textVisible = false;
